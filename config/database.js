@@ -4,6 +4,6 @@
 // }
 
 module.exports={
-    database:'mongodb://<happy-brain>:<HBE@123>@ds125713.mlab.com:25713/happy-brain',
+    database:'mongodb://admin:admin1@ds125713.mlab.com:25713/happy-brain',
     secret:'yoursecret'
 }
