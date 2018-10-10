@@ -1,0 +1,32 @@
+
+<h2 class="page-header">Subject Edit</h2>
+
+<form (submit)="updateSubject(subject._id)" class="example-form">
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Name" [(ngModel)]="subject.name" name="name">
+  </mat-form-field>
+
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Sections" [(ngModel)]="subject.sections" name="sections">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Description" [(ngModel)]="subject.description" name="description">
+  </mat-form-field>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+
+</form>

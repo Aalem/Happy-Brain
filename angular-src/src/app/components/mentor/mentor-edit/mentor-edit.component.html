@@ -1,0 +1,84 @@
+<div>
+  <h2 class="mat-h2">Edit Mentor</h2>
+  <form (submit)="updateMentor(mentor._id)" class="example-form">
+
+    <mat-form-field class="example-full-width">
+       <input  matInput type="text" placeholder="Name"  [(ngModel)]="mentor.name" name="name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="email" [(ngModel)]="mentor.email" name="email" placeholder="Email" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="phone" [(ngModel)]="mentor.phone" name="phone" placeholder="Phone">
+    </mat-form-field>
+    <mat-radio-group (change)="onChange($event)" name="gender">
+      <label style="color: gray;">Gender : </label>
+      <mat-radio-button checked="{{mentor.gender=='male'}}"  name="male" value="male" style="color: gray;"> Male &nbsp;</mat-radio-button>
+      <mat-radio-button checked="{{mentor.gender=='female'}}"  name="female" value="female" style="color: gray;"> Female </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text"[(ngModel)]="mentor.language" name="language" placeholder="Enter languages">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text" [(ngModel)]="mentor.location" name="location"
+             placeholder="Location (Please include how far you are willing to travel and whether you have access
+        to a mode of transport (car, bike, public transport))">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+    <input  matInput type="text"[(ngModel)]="mentor.vce_subjects" name="vce_subjects"
+             placeholder="Which subjects did you study in VCE? What were your study scores for these subjects?
+        (skip if the question is not relevant to you)">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text" [(ngModel)]="mentor.studying" name="studying"
+             placeholder="Are you currently studying? If so, what are you studying? If not, what are your plans for 2018?">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text" [(ngModel)]="mentor.experience" name="experience" placeholder="Do you have any tutoring or mentoring experience? Please elaborate.">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text"[(ngModel)]="mentor.volunteering" name="volunteering"
+             placeholder="Do you have any other experience in volunteering or community work?">
+    </mat-form-field>
+
+    <label style="color: gray;">Do you have a working with children check? </label>
+
+    <mat-radio-group (change)="onChange($event)" name='wwcc'>
+      <mat-radio-button checked="{{mentor.wwcc=='Yes'}}" name="wwcc" value="Yes" style="color: gray;"> Yes &nbsp;</mat-radio-button>
+      <mat-radio-button  name="wwcc" checked="{{mentor.wwcc=='No'}}" value="No" style="color: gray;"> No </mat-radio-button>
+      <mat-radio-button  name="wwcc" checked="{{mentor.wwcc=='In process of obtaining one'}}" value="In process of obtaining one" style="color: gray;"> In the process of ontaining one. </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text" [(ngModel)]="mentor.why_join" name="why_join" class="form-control" id="why_join"
+             placeholder="Why do you want to join this program? (100-200 words)">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text"[(ngModel)]="mentor.about_us" name="about_us" class="form-control" id="about_us"
+             placeholder="Where did you hear about us?">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text" [(ngModel)]="mentor.refugee_definition" name="refugee_definition" placeholder="What does the term 'refugee' mean to you? (100-200 words)">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input  matInput type="text"[(ngModel)]="mentor.preference" name="preference"
+             placeholder="Do you have any special preferences with regards to students? (e.g. 'not willing to
+        mentor VCE level students')">
+    </mat-form-field>
+
+    <mat-checkbox [(ngModel)]="mentor.send_me_copy"  name="send_me_copy" style="color: gray;">Send Me A Copy Of My Responses.</mat-checkbox>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" >Save</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+</div>
+
+

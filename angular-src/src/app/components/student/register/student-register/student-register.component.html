@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<div>
+  <h2 class="page-header">Student Registration Form</h2>
+  <form class="example-form" (submit)="onRegisterSubmit()">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Name" [(ngModel)]="name" name="name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="password"  placeholder="Password" [(ngModel)]="password" name="password" autocomplete="true" >
+    </mat-form-field>
+
+
+    <mat-radio-group (change)="onChange($event)" name="gender">
+      <label style="color: gray;">Gender : </label>
+      <mat-radio-button id="male" name="male" value="male" style="color: gray;"> Male &nbsp;</mat-radio-button>
+      <mat-radio-button id="female" name="female" value="female" style="color: gray;"> Female </mat-radio-button>
+    </mat-radio-group>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="phone" [(ngModel)]="phone" name="phone" placeholder="Enter phone number">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="phone" [(ngModel)]="parents_phone" name="parents_phone" placeholder="Parent/Guardian's phone number">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="country" name="country" placeholder="Country of origin">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="address" name="address" placeholder="Address">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="mentoring_address" name="mentoring_address" placeholder="Mentoring Location">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="language" name="language" placeholder="language spoken">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="school_level" name="school_level" placeholder="Current year level at school">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="school_name" name="school_name"  placeholder="Type your school name">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="family_situation" name="family_situation"  placeholder="Current family situation">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="english_level" name="english_level"  placeholder="Level of english competency.">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="volunteering" name="volunteering" placeholder="Do you have any other experience in volunteering or community work?">
+    </mat-form-field>
+
+    <label style="color: gray;">Preferred gender of tutor </label>
+
+    <mat-radio-group (change)="onChange($event)" name='tutor_gender'>
+      <mat-radio-button  name="tutor_gender" value="male" style="color: gray;"> Male &nbsp;</mat-radio-button>
+      <mat-radio-button  name="tutor_gender" value="female" style="color: gray;"> Female </mat-radio-button>
+      <mat-radio-button  name="tutor_gender" value="No Preference" style="color: gray;">No Preference</mat-radio-button>
+    </mat-radio-group>
+
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" >Save</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+  </form>
+
+</div>

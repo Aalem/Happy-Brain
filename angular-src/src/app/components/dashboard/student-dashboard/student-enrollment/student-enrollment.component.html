@@ -1,0 +1,22 @@
+<h2 class="mat-h2" >Select a subject to study</h2>
+
+
+<form class="example-form" (submit)="onRegisterSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-select [(ngModel)]="subject_id" name="subject_id"  placeholder="Type">
+      <mat-option *ngFor="let subject of subjects" [value]="subject._id">{{subject.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+  <br/>
+  <br/>
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </div>
+  <br/>
+  <br/>
+  <br/></form>
+
+
+

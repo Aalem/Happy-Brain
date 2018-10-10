@@ -1,0 +1,139 @@
+<h1 class="mat-h1">Student Details</h1>
+
+<div class="row" style="display: flex">
+    <div style="flex: 3">
+        <table style="border-right: 1px solid lightgray;">
+            <tbody>
+            <tr>
+                <th style="border: none; text-align: left">Name</th>
+                <td style="border: none; text-align: left">{{student.name}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Contact</th>
+                <td style="border: none; text-align: left">{{student.phone}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Email</th>
+                <td style="border: none; text-align: left">{{student.email}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Parent's Cont.</th>
+                <td style="border: none; text-align: left">{{student.parents_phone}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Gender</th>
+                <td style="border: none; text-align: left">{{student.gender}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="flex: 3">
+        <table style="border-right: 1px solid lightgray; margin-left: 10px;">
+            <tbody>
+            <tr>
+                <th style="border: none; text-align: left">Prf. Mentor Gender</th>
+                <td style="border: none; text-align: left">{{student.tutor_gender}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Country</th>
+                <td style="border: none; text-align: left">{{student.country}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Language</th>
+                <td style="border: none; text-align: left">{{student.language}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">English Level</th>
+                <td style="border: none; text-align: left">{{student.english_level}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">School</th>
+                <td style="border: none; text-align: left">{{student.school_name}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="flex: 3; margin-left: 10px;">
+        <table style="margin-left: 10px;" >
+            <tbody>
+            <tr>
+                <th style="border: none; text-align: left">School Level</th>
+                <td style="border: none; text-align: left">{{student.school_level}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Address</th>
+                <td style="border: none; text-align: left">{{student.address}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Pref. Mentoring Location</th>
+                <td style="border: none; text-align: left">{{student.mentoring_address}}</td>
+            </tr>
+            <tr>
+                <th style="border: none; text-align: left">Subject</th>
+                <td style="border: none; text-align: left">{{subject.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br/>
+<br/>
+
+<h1 class="mat-h1">Select A Mentor</h1>
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8 ">
+    <table *ngIf="true" mat-table [dataSource]="dataSource" matSort>
+
+        <!-- Number Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> No.</th>
+            <td mat-cell *matCellDef="let row"> {{row.id+1}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+            <td mat-cell *matCellDef="let row"> {{row.name}}</td>
+        </ng-container>
+
+        <!-- Phone Column -->
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone</th>
+            <td mat-cell *matCellDef="let row"> {{row.phone}}</td>
+        </ng-container>
+        <!-- Country Column -->
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Coverage & Transportation</th>
+            <td mat-cell *matCellDef="let row"> {{row.location}}</td>
+        </ng-container>
+        <!-- Subject Column -->
+        <ng-container matColumnDef="starting_date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Starting Date</th>
+            <td mat-cell *matCellDef="let row">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </td>
+        </ng-container>
+
+        <!-- Delete Column -->
+        <ng-container matColumnDef="assign">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Select Mentor</th>
+            <td mat-cell *matCellDef="let row">
+                <button mat-button color="primary" (click)="onAssignMentor(row._id)">Select</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+    </table>
+
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

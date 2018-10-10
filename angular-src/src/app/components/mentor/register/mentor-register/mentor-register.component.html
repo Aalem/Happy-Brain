@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<h1 class="mat-h1">Mentor Registration Form</h1>
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your information</ng-template>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Name" formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="email" placeholder="Email Address" formControlName="email" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" formControlName="password" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="phone" placeholder="Enter phone number" formControlName="phone" required>
+            </mat-form-field>
+            <mat-radio-group (change)="onChange($event)" formControlName="gender" required>
+                <label style="color: gray;">Gender : </label>
+                <mat-radio-button id="male" name="male" value="male" style="color: gray;"> Male &nbsp;
+                </mat-radio-button>
+                <mat-radio-button id="female" name="female" value="female" style="color: gray;"> Female
+                </mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Enter languages" formControlName="language" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Location (Please include how far you are willing to travel and whether you have access
+        to a mode of transport (car, bike, public transport))." formControlName="location" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Which subjects did you study in VCE? What were your study scores for these subjects?
+        (skip if the question is not relevant to you)" formControlName="vce_subjects" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Are you currently studying? If so, what are you studying? If not, what are your plans
+        for 2018?" formControlName="studying" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text"
+                       placeholder="Do you have any tutoring or mentoring experience? Please elaborate."
+                       formControlName="experience" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text"
+                       placeholder="Do you have any other experience in volunteering or community work?"
+                       formControlName="volunteering" required>
+            </mat-form-field>
+            <label style="color: gray;">Do you have a working with children check? </label>
+            <mat-radio-group (change)="onChange($event)" formControlName="wwcc" required>
+                <mat-radio-button name="wwcc" value="Yes" style="color: gray;"> Yes &nbsp;</mat-radio-button>
+                <mat-radio-button name="wwcc" value="No" style="color: gray;"> No</mat-radio-button>
+                <mat-radio-button name="wwcc" value="In process of obtaining one" style="color: gray;"> In the process
+                    of ontaining one.
+                </mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Why do you want to join this program? (100-200 words)"
+                       formControlName="why_join" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Where did you hear about us?" formControlName="about_us"
+                       required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="What does the term 'refugee' mean to you? (100-200 words)"
+                       formControlName="refugee_definition" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Do you have any special preferences with regards to students? (e.g. 'not willing to
+        mentor VCE level students')" formControlName="preference" required>
+            </mat-form-field>
+            <mat-checkbox name="send_me_copy" style="color: gray;" formControlName="send_me_copy">Send Me A Copy Of My
+                Responses.
+            </mat-checkbox>
+            <br/>
+            <br/>
+            <div>
+                <button color="primary" mat-raised-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup" enctype="multipart/form-data">
+            <ng-template matStepLabel>WWCC</ng-template>
+            <mat-form-field style="display: none;" >
+                <input matInput placeholder="Last name, First name" required formControlName="x">
+            </mat-form-field>
+            <div class="form-group">
+                <div>
+                    <div id="fileSelector">
+                        <input type="file" class="form-control" required formControlName="wwcc_back"  id="wwcc_front"
+                               ng2FileSelect [uploader]="uploader" >
+                    </div>
+                    <br/>
+                    <div>
+                        <div class="row uploadList" *ngFor="let item of uploader.queue">
+                            <div class="col-sm-4">{{item.file.name}}</div>
+                            <div class="col-sm-4">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success"
+                                         [ngStyle]="{'width':item.progress+'%'}"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="margin-top: -8px;">
+                                <button mat-button color="primary" (click)="item.upload()">Upload</button>
+                                <button mat-button color="warn" (click)="item.remove()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-sm-10 " *ngIf="uploader?.queue?.length > 0">
+                        <button mat-stroked-button color="primary" (click)="uploader.uploadAll()" style="float: right">
+                            Upload All
+                        </button>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+            </div>
+            <br>
+            <mat-label class="row">It's really important that our students stay safe whilst being a part of this
+                program. Thus, we require that all our tutors have a valid Working with Children Check.If you do not
+                have a valid WWCC, could you please visit <a target="_blank"
+                                                             href="http://www.workingwithchildren.vic.gov.au/">this
+                    website </a> and apply for a Volunteer WWCC?
+            </mat-label>
+            <br>
+            <br>
+            <div>
+                <button mat-raised-button color="primary" matStepperPrevious>Back</button>&nbsp;
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step thirdFormGroup>
+        <ng-template matStepLabel>Videos</ng-template>
+        You are now done.
+        <div>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>&nbsp;
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+            <button mat-raised-button color="primary" matStepperPrevious>Back</button>&nbsp;
+            <button mat-raised-button color="primary" (click)="onRegisterSubmit()" matStepperNext>Next</button>
+        </div>
+    </mat-step>
+
+
+</mat-horizontal-stepper>

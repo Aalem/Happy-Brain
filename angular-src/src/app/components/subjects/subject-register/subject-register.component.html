@@ -1,0 +1,31 @@
+<h2 class="page-header">Subject Registration</h2>
+
+<form (submit)="onRegisterSubmit(formList)" #formList="ngForm" class="example-form">
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Name" [(ngModel)]="name" name="name">
+    </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Sections" [(ngModel)]="sections" name="sections">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Description" [(ngModel)]="description" name="description">
+    </mat-form-field>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+</form>

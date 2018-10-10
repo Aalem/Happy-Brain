@@ -1,0 +1,35 @@
+
+<h2 class="mat-h1">New Online Resources</h2>
+
+<form (submit)="updateOnlineRes(onlineRes._id)" #formList="ngForm" class="example-form" enctype="multipart/form-data">
+
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Title" [(ngModel)]="onlineRes.title" name="title">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Description" [(ngModel)]="onlineRes.description" name="description">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-select [(ngModel)]="onlineRes.subject" name="subject" placeholder="Subject">
+      <mat-option *ngFor="let subject of subjects" [value]="subject.name">{{subject.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="Link" [(ngModel)]="onlineRes.link" name="link">
+  </mat-form-field>
+  <br/>
+  <br/>
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="warn" style="margin: 10px;" [routerLink]="['/local-list']">Cancel</button>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+
+</form>

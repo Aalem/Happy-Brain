@@ -1,0 +1,30 @@
+<h2 class="page-header">Edit Admin</h2>
+
+<form class="example-form" (submit)="updateAdmin(admin._id)" #formList="ngForm">
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Name" [(ngModel)]="admin.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Email Address" [(ngModel)]="admin.email" name="email">
+    </mat-form-field>
+
+    <!--<mat-form-field class="example-full-width">-->
+        <!--<input matInput type="password" placeholder="Password" [(ngModel)]="admin.password" name="password"-->
+               <!--autocomplete="true">-->
+    <!--</mat-form-field>-->
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button style="margin-left: 10px" mat-raised-button color="warn" [routerLink]="['/admin-list']" >Cancel</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+</form>

@@ -1,0 +1,39 @@
+<h1 class="mat-h1">Select the subjects you are willing to teach</h1>
+<hr />
+<br/>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position+1}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+        <th mat-header-cell *matHeaderCellDef> Select</th>
+        <td mat-cell *matCellDef="let row">
+            <mat-checkbox [disabled]="row.checked"
+                          (change)="toggle(row)"
+                          [checked]="row.checked">
+            </mat-checkbox>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="selection.toggle(row)">
+    </tr>
+</table>
+<br/>
+<div class="button-row">
+    <button mat-raised-button color="primary" disabled="{{!enableSaveButton}}" (click)="onRegisterSubmit()" style="float:right;">Save</button>
+</div>

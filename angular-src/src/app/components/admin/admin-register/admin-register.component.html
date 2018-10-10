@@ -1,0 +1,37 @@
+<h2 class="mat-h1">Admin Registration</h2>
+
+<form (submit)="onRegisterSubmit(formList)" #formList="ngForm" class="example-form">
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Name" [(ngModel)]="name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password"
+               autocomplete="true">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Confirm Password" [(ngModel)]="confirmPassword"
+               name="confirmPassword" autocomplete="true">
+    </mat-form-field>
+
+    <br/>
+    <br/>
+
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-raised-button color="warn" style="margin: 10px;" [routerLink]="['/admin-list']">Cancel</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+</form>

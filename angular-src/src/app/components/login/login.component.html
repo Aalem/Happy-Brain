@@ -1,0 +1,32 @@
+<h2 class="page-header">Login</h2>
+
+<form (submit)="onLoginSubmit()" class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-select [(ngModel)]="type" name="type" placeholder="Type">
+            <mat-option value="admin">Admin</mat-option>
+            <mat-option value="mentor">Mentor</mat-option>
+            <mat-option value="student">Student</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password"
+               autocomplete="true">
+    </mat-form-field>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit">Login</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+</form>

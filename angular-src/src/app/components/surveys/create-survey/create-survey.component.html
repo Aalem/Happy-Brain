@@ -1,0 +1,40 @@
+<h2 class="mat-h1">New Survey</h2>
+
+<form (submit)="onSubmit()" class="example-form">
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="date" name="date" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Subject" disabled value="{{subject}}" name="subject">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Mentor" disabled value="{{mentor}}" name="mentor">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <textarea matInput rows="10" type="textarea" placeholder="Comment" [(ngModel)]="comment"
+                  name="comment"></textarea>
+    </mat-form-field>
+
+    <mat-label>Rate your mentor:</mat-label>
+    <app-star-rating [rating]="rating" [starCount]="starCount" [color]="starColor"
+                     (ratingUpdated)="onRatingChanged($event)"></app-star-rating>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+
+</form>

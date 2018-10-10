@@ -1,0 +1,27 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menu {
+  width: 200px;
+  /*margin-left: 200px;*/
+}
+
+.expansion-body {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.mat-nav-list a.active {
+  background: #b9b9b9;
+}
