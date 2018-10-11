@@ -27,11 +27,11 @@ export class AuthService {
         const headers = new HttpHeaders({'Authorization': this.authToken, 'Content-Type': 'application/json'});
         const userTypeToken = JSON.parse(localStorage.getItem('user'));
         if (userTypeToken.type === 'mentor') {
-            return this.http.get('http://localhost:3000/mentor_subjects/profile', {headers: headers});
+            return this.http.get('/mentor_subjects/profile', {headers: headers});
         } else if (userTypeToken.type === 'student') {
-            return this.http.get('http://localhost:3000/students/profile', {headers: headers});
+            return this.http.get('/students/profile', {headers: headers});
         } else if (userTypeToken.type === 'admin') {
-            return this.http.get('http://localhost:3000/admins/dashboard', {headers: headers});
+            return this.http.get('/admins/dashboard', {headers: headers});
         }
 
     }
