@@ -21,7 +21,7 @@
     <ng-container matColumnDef="select">
         <th mat-header-cell *matHeaderCellDef> Select</th>
         <td mat-cell *matCellDef="let row">
-            <mat-checkbox [disabled]="row.checked"
+            <mat-checkbox [disabled]="row.hasSubject"
                           (change)="toggle(row)"
                           [checked]="row.checked">
             </mat-checkbox>

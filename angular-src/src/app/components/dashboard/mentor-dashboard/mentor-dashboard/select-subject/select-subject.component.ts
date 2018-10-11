@@ -53,12 +53,14 @@ export class SelectSubjectComponent {
                     id: data[this.i]._id,
                     position: this.i,
                     name: data[this.i].name,
-                    checked: false
+                    checked: false,
+                    hasSubject: false
                 });
                 if (this.mentor_subjects.length !== 0) {
                     for (this.j = 0; this.j < this.mentor_subjects.length; this.j++) {
                         if (data[this.i]._id === this.mentor_subjects[this.j]) {
                             this.subjects[this.i].checked = true;
+                            this.subjects[this.i].hasSubject = true;
                             this.alreadyHasSubjects = true;
                         }
                     }
@@ -115,5 +117,6 @@ export class SelectSubjectComponent {
                 }
             });
         }
+        this.enableSaveButton = false;
     }
 }
