@@ -41,9 +41,9 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'public')));
 }
 
-app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'public'));
-});
+// app.get('*', (request, response) => {
+//     response.sendFile(path.join(__dirname, 'public'));
+// });
 
 
 //Body parser middleware
@@ -71,8 +71,8 @@ app.use('/mentoring-meeting', mentoring_meeting);
 app.use('/survey', survey);
 
 //index routes
-app.get('/login', function (req, res) {
-    res.send('Invalid ');
+app.get('/', function (req, res) {
+    res.send('Invalid 6');
 });
 
 app.set('port', process.env.PORT || 3000);
