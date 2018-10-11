@@ -35,7 +35,7 @@ const port = 3000;
 app.use(cors());
 
 //Set static folders and files
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'public')));
