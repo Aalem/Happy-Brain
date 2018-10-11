@@ -20,7 +20,7 @@ export class MentorService {
     }
     authenticateMentor(mentor) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/mentor_subjects/authenticate', mentor, {headers: headers});
+        return this.http.post('mentor_subjects/authenticate', mentor, {headers: headers});
     }
 
     storeMentorData(token, mentor) {

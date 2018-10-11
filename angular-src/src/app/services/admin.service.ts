@@ -19,7 +19,7 @@ export class AdminService {
     }
     authenticateAdmin(admin) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/admins/authenticate', admin, {headers: headers});
+        return this.http.post('/admins/authenticate', admin, {headers: headers});
     }
 
     storeAdminData(token, admin) {

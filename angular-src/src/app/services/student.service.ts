@@ -18,7 +18,7 @@ export class StudentService {
     }
     authenticateStudent(student) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/students/authenticate', student, {headers: headers});
+        return this.http.post('/students/authenticate', student, {headers: headers});
     }
     storeStudentData(token, student) {
         localStorage.setItem('id_token', token);
