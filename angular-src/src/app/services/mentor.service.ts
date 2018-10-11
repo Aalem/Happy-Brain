@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +16,11 @@ export class MentorService {
 
     registerMentor(mentor) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/mentor_subjects/register', mentor, {headers: headers});
+        return this.http.post('/mentor_subjects/register', mentor, {headers: headers});
     }
     authenticateMentor(mentor) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('mentor_subjects/authenticate', mentor, {headers: headers});
+        return this.http.post('/mentor_subjects/authenticate', mentor, {headers: headers});
     }
 
     storeMentorData(token, mentor) {
@@ -32,11 +32,11 @@ export class MentorService {
 
 
     getMentors(){
-        return this.http.get('http://localhost:3000/mentor_subjects/getMentors');
+        return this.http.get('/mentor_subjects/getMentors');
     }
     deleteMentor(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/mentor_subjects/'+id)
+            this.http.delete('/mentor_subjects/'+id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -46,7 +46,7 @@ export class MentorService {
     }
     editMentor(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/mentor_subjects/'+id, data)
+            this.http.put('/mentor_subjects/'+id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -57,7 +57,7 @@ export class MentorService {
     }
     getMentor(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/mentor_subjects/'+id)
+            this.http.get('/mentor_subjects/'+id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res)

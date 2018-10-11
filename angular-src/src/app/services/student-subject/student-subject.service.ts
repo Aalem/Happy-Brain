@@ -13,31 +13,31 @@ export class StudentSubjectService {
 
     registerStudentSubject(StudentSubject) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/student-subject/register', StudentSubject, {headers: headers});
+        return this.http.post('/student-subject/register', StudentSubject, {headers: headers});
     }
 
     getStudentSubjects(id) {
-        return this.http.get('http://localhost:3000/student-subject/getStudentSubjects'+id);
+        return this.http.get('/student-subject/getStudentSubjects'+id);
     }
     getStudentSubjectsById(id) {
-        return this.http.get('http://localhost:3000/student-subject/getStudentSubjectsById/'+id);
+        return this.http.get('/student-subject/getStudentSubjectsById/'+id);
     }
     getStudentSubjectsByMentor(id) {
-        return this.http.get('http://localhost:3000/student-subject/getStudentSubjectsByMentor'+id);
+        return this.http.get('/student-subject/getStudentSubjectsByMentor'+id);
     }
     getStudentSubjectsByStudentId(id) {
-        return this.http.get('http://localhost:3000/student-subject/getStudentSubjectsByStudentId'+id);
+        return this.http.get('/student-subject/getStudentSubjectsByStudentId'+id);
     }
     getStudentSubjectsByMentorId(id) {
-        return this.http.get('http://localhost:3000/student-subject/getStudentSubjectsByMentorId'+id);
+        return this.http.get('/student-subject/getStudentSubjectsByMentorId'+id);
     }
     getUnassignedStudentSubjects() {
-        return this.http.get('http://localhost:3000/student-subject/getUnassignedStudentSubjects');
+        return this.http.get('/student-subject/getUnassignedStudentSubjects');
     }
 
     deleteStudentSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/student-subject/' + id)
+            this.http.delete('/student-subject/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -48,7 +48,7 @@ export class StudentSubjectService {
 
     editStudentSubject(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/student-subject/' + id, data)
+            this.http.put('/student-subject/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -60,7 +60,7 @@ export class StudentSubjectService {
 
     getStudentSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/student-subject/' + id)
+            this.http.get('/student-subject/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);

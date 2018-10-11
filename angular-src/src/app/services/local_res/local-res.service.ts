@@ -13,16 +13,16 @@ export class LocalResService {
 
     registerLocalRes(LocalRes) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/local-res/register', LocalRes, {headers: headers});
+        return this.http.post('/local-res/register', LocalRes, {headers: headers});
     }
 
     getLocalRess() {
-        return this.http.get('http://localhost:3000/local-res/getAll');
+        return this.http.get('/local-res/getAll');
     }
 
     deleteLocalRes(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/local-res/' + id)
+            this.http.delete('/local-res/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -33,7 +33,7 @@ export class LocalResService {
 
     editLocalRes(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/local-res/' + id, data)
+            this.http.put('/local-res/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -45,7 +45,7 @@ export class LocalResService {
 
     getLocalRes(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/local-res/' + id)
+            this.http.get('/local-res/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -59,7 +59,7 @@ export class LocalResService {
     downloadFile(file: String) {
         const body = {filename: file};
 
-        return this.http.post('http://localhost:3000/local-res/download', body, {
+        return this.http.post('/local-res/download', body, {
             responseType: 'blob',
             headers: new HttpHeaders().append('Content-Type', 'application/json')
         });
@@ -67,7 +67,7 @@ export class LocalResService {
     deleteFile(file: String) {
         const body = {filename: file};
 
-        return this.http.post('http://localhost:3000/local-res/deletefile', body, {
+        return this.http.post('/local-res/deletefile', body, {
             responseType: 'blob',
             headers: new HttpHeaders().append('Content-Type', 'application/json')
         });

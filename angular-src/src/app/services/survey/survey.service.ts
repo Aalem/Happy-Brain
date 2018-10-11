@@ -11,7 +11,7 @@ export class SurveyService {
 
     registerSurvey(Survey) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/survey/register', Survey, {headers: headers});
+        return this.http.post('/survey/register', Survey, {headers: headers});
     }
 
 }

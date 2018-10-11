@@ -12,10 +12,10 @@ export class MentoringMeetingService {
 
     registerMentoringMeeting(MentoringMeeting) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/mentoring-meeting/register', MentoringMeeting, {headers: headers});
+        return this.http.post('/mentoring-meeting/register', MentoringMeeting, {headers: headers});
     }
 
     countMentoringMeetingById(id) {
-        return this.http.get('http://localhost:3000/mentoring-meeting/getMentoringMeetingCount/' + id);
+        return this.http.get('/mentoring-meeting/getMentoringMeetingCount/' + id);
     }
 }

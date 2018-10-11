@@ -12,15 +12,15 @@ export class SubjectService {
 
     registerSubject(subject) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/subjects/register', subject, {headers: headers});
+        return this.http.post('/subjects/register', subject, {headers: headers});
     }
 
     getSubjects(){
-        return this.http.get('http://localhost:3000/subjects/getSubjects');
+        return this.http.get('/subjects/getSubjects');
     }
     deleteSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/subjects/'+id)
+            this.http.delete('/subjects/'+id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -30,7 +30,7 @@ export class SubjectService {
     }
     editSubject(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/subjects/'+id, data)
+            this.http.put('/subjects/'+id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -41,7 +41,7 @@ export class SubjectService {
     }
     getSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/subjects/' + id)
+            this.http.get('/subjects/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res)

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class StudentService {
     }
     registerStudent(student) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/students/register', student, {headers: headers});
+        return this.http.post('/students/register', student, {headers: headers});
     }
     authenticateStudent(student) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
@@ -28,11 +28,11 @@ export class StudentService {
     }
 
     getStudents(){
-        return this.http.get('http://localhost:3000/students/getStudents');
+        return this.http.get('/students/getStudents');
     }
     deleteStudent(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/students/'+id)
+            this.http.delete('/students/'+id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -42,7 +42,7 @@ export class StudentService {
     }
     editStudent(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/students/'+id, data)
+            this.http.put('/students/'+id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -53,7 +53,7 @@ export class StudentService {
     }
     getStudent(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/students/'+id)
+            this.http.get('/students/'+id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res)

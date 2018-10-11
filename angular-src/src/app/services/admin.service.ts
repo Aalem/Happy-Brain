@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class AdminService {
 
     registerAdmin(admin) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/admins/register', admin, {headers: headers});
+        return this.http.post('/admins/register', admin, {headers: headers});
     }
     authenticateAdmin(admin) {
         let headers = new HttpHeaders(('Content-Type:application/json'));
@@ -30,11 +30,11 @@ export class AdminService {
     }
 
     getAdmins(){
-        return this.http.get('http://localhost:3000/admins/getAdmins');
+        return this.http.get('/admins/getAdmins');
     }
     deleteAdmin(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/admins/'+id)
+            this.http.delete('/admins/'+id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -44,7 +44,7 @@ export class AdminService {
     }
     editAdmin(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/admins/'+id, data)
+            this.http.put('/admins/'+id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -55,7 +55,7 @@ export class AdminService {
     }
     getAdmin(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/admins/' + id)
+            this.http.get('/admins/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res)

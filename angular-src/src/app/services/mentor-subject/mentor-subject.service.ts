@@ -13,28 +13,28 @@ export class MentorSubjectService {
 
     registerMentorSubject(MentorSubject) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/mentor-subject/register', MentorSubject, {headers: headers});
+        return this.http.post('/mentor-subject/register', MentorSubject, {headers: headers});
     }
 
 
     getMentorSubjects(id) {
-        return this.http.get('http://localhost:3000/mentor-subject/getMentorSubjects/'+id);
+        return this.http.get('/mentor-subject/getMentorSubjects/'+id);
     }
 
     getMentorSubjectsBySubjectId(id) {
-        return this.http.get('http://localhost:3000/mentor-subject/getMentorSubjectsBySubjectId/'+id);
+        return this.http.get('/mentor-subject/getMentorSubjectsBySubjectId/'+id);
     }
 
     getMentorBySubject() {
-        return this.http.get('http://localhost:3000/mentor-subject/getMentorsBySubject');
+        return this.http.get('/mentor-subject/getMentorsBySubject');
     }
 
     getMentorAllSubjects() {
-        return this.http.get('http://localhost:3000/mentor-subject/getMentorAllSubjects');
+        return this.http.get('/mentor-subject/getMentorAllSubjects');
     }
     deleteMentorSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/mentor-subject/' + id)
+            this.http.delete('/mentor-subject/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -45,7 +45,7 @@ export class MentorSubjectService {
 
     editMentorSubject(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/mentor-subject/' + id, data)
+            this.http.put('/mentor-subject/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -57,7 +57,7 @@ export class MentorSubjectService {
 
     getMentorSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/mentor-subject/' + id)
+            this.http.get('/mentor-subject/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);

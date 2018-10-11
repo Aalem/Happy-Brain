@@ -13,16 +13,16 @@ export class OnlineResService {
 
     registerOnlineRes(OnlineRes) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('http://localhost:3000/online-res/register', OnlineRes, {headers: headers});
+        return this.http.post('/online-res/register', OnlineRes, {headers: headers});
     }
 
     getOnlineRess() {
-        return this.http.get('http://localhost:3000/online-res/getAll');
+        return this.http.get('/online-res/getAll');
     }
 
     deleteOnlineRes(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('http://localhost:3000/online-res/' + id)
+            this.http.delete('/online-res/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -33,7 +33,7 @@ export class OnlineResService {
 
     editOnlineRes(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put(' http://localhost:3000/online-res/' + id, data)
+            this.http.put('/online-res/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -45,7 +45,7 @@ export class OnlineResService {
 
     getOnlineRes(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('http://localhost:3000/online-res/' + id)
+            this.http.get('/online-res/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
