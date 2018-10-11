@@ -9,12 +9,12 @@ import {MatSnackBar} from '@angular/material';
     styleUrls: ['./admin-edit.component.css']
 })
 export class AdminEditComponent implements OnInit {
-    admin = {};
+    public admin: any;
 
-    constructor(private  adminService: AdminService,
-                private route: Router,
-                private activatedRoute: ActivatedRoute,
-                private snackBar: MatSnackBar) {
+    constructor(public adminService: AdminService,
+                public route: Router,
+                public activatedRoute: ActivatedRoute,
+                public snackBar: MatSnackBar) {
     }
 
     ngOnInit() {

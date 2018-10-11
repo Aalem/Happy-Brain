@@ -11,8 +11,8 @@ import {MatSnackBar} from '@angular/material';
 })
 export class OnlineEditComponent implements OnInit {
 
-    onlineRes = {};
-    subjects: Object;
+    onlineRes: any;
+    subjects: any;
 
     constructor(private subjectService: SubjectService,
                 private  onlineResService: OnlineResService,

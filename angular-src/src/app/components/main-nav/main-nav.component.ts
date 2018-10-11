@@ -18,7 +18,7 @@ export class MainNavComponent {
 
     constructor(private breakpointObserver: BreakpointObserver,
                 private router: Router,
-                private authService: AuthService) {
+                public authService: AuthService) {
 
     }
 

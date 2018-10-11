@@ -11,8 +11,8 @@ import {AuthService} from "./services/auth.service";
 export class AppComponent {
     title = 'app';
 
-    constructor(private router: Router,
-                private authService: AuthService) {
+    constructor(public router: Router,
+                public authService: AuthService) {
 
     }
     name = 'Angular 4';

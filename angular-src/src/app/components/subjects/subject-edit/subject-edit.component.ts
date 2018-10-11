@@ -11,7 +11,7 @@ import {MatSnackBar} from '@angular/material';
 })
 export class SubjectEditComponent implements OnInit {
 
-    subject = {};
+    subject: any;
 
     constructor(private  subjectService: SubjectService,
                 private route: Router,

@@ -23,7 +23,7 @@ export class StudentEnrollmentComponent {
             });
     }
 
-    onRegisterSubmit(formList: any) {
+    onRegisterSubmit() {
 
         const subject = {
             subject_id: this.subject_id,

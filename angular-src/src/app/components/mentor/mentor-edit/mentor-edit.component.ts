@@ -10,7 +10,7 @@ import {MatRadioChange, MatSnackBar} from "@angular/material";
 })
 export class MentorEditComponent implements OnInit {
 
-    mentor = {};
+    mentor: any;
 
     constructor(private  mentorService: MentorService,
                 private route: Router,
