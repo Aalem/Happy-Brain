@@ -33,9 +33,6 @@ const StudentSchema = mongoose.Schema({
     }, english_level: {
         type: String,
     },
-    volunteering: {
-        type: String,
-    },
     gender: {
         type: String,
     }, address: {

@@ -20,7 +20,6 @@ router.post('/register', function (req, res, next) {
         school_name: req.body.school_name,
         family_situation: req.body.family_situation,
         english_level: req.body.english_level,
-        volunteering: req.body.volunteering,
         tutor_gender: req.body.tutor_gender,
         gender: req.body.gender,
         status: 'pending',

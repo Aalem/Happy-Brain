@@ -25,7 +25,6 @@ export class StudentRegisterComponent {
     gender: String;
     address: String;
     mentoring_address: String;
-    volunteering: String;
 
     constructor(private validateService: ValidateService,
                 private studentService: StudentService,
@@ -50,8 +49,7 @@ export class StudentRegisterComponent {
             tutor_gender: this.tutor_gender,
             gender: this.gender,
             address: this.address,
-            mentoring_address: this.mentoring_address,
-            volunteering: this.volunteering
+            mentoring_address: this.mentoring_address
         }
 
         // Required Fields
