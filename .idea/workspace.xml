@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/1539076677054.profile1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/1539227724023.profile1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-edit/admin-edit.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-edit/admin-edit.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-edit/admin-edit.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-edit/admin-edit.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-enrollment/student-enrollment.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-enrollment/student-enrollment.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-edit/mentor-edit.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-edit/mentor-edit.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-edit/mentor-edit.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-edit/mentor-edit.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-edit/student-edit.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-edit/student-edit.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-edit/student-edit.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-edit/student-edit.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-register/subject-register.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-register/subject-register.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/admin.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/local_res/local-res.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/local_res/local-res.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/mentor-subject/mentor-subject.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/mentor-subject/mentor-subject.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/mentor.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/mentor.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/online_res/online-res.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/online_res/online-res.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/student-subject/student-subject.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/student-subject/student-subject.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/student.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/student.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/subject.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/subject.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/styles.css" afterPath="$PROJECT_DIR$/angular-src/src/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/students.js" afterPath="$PROJECT_DIR$/routes/students.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,69 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="online-edit.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.html">
+      <file leaf-file-name="config.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="44" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="6" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="online-edit.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-edit/online-edit.component.ts">
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="144">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subject-edit.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="30" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subject-edit.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mentor-assignment.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create-survey.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#96#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-register/subject-register.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/spinner/spinner.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/styles.css" />
@@ -206,7 +110,6 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.html" />
         <option value="$PROJECT_DIR$/routes/students.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/select-subject/select-subject.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/online_res/online-res.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/subject.service.ts" />
@@ -230,6 +133,8 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-edit/subject-edit.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
+        <option value="$PROJECT_DIR$/config/database.js" />
       </list>
     </option>
   </component>
@@ -510,12 +415,12 @@
       <workItem from="1539177874886" duration="5490000" />
       <workItem from="1539236345347" duration="1802000" />
       <workItem from="1539245028369" duration="14077000" />
-      <workItem from="1539408369840" duration="3346000" />
+      <workItem from="1539408369840" duration="3444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361890000" />
+    <option name="totallyTimeSpent" value="361988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="22" width="1440" height="829" extended-state="6" />
@@ -579,14 +484,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-enrollment/student-enrollment.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -787,14 +684,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,6 +907,24 @@
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
