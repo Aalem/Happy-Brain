@@ -11,11 +11,13 @@ import {MatRadioChange, MatSnackBar} from '@angular/material';
 export class StudentEditComponent implements OnInit {
 
     public student: any;
+    isDataLoaded: boolean;
 
     constructor(private  studentService: StudentService,
                 private route: Router,
                 private activatedRoute: ActivatedRoute,
                 private snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
 
     }
 
@@ -26,6 +28,7 @@ export class StudentEditComponent implements OnInit {
     getStudent(id) {
         this.studentService.getStudent(id).then((res) => {
             this.student = res;
+            this.isDataLoaded = true;
         }, (err) => {
             console.log(err);
         });

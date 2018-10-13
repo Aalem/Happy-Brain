@@ -42,6 +42,7 @@ export class AdminListComponent  {
                 this.dataSource = new MatTableDataSource(this.users);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             });
     }
 

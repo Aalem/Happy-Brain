@@ -1,43 +1,51 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {ConfigService} from '../config.service';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class StudentSubjectService {
     StudentSubject: any;
+    url: String;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private config: ConfigService) {
+        this.url = this.config.getUrl();
     }
 
     registerStudentSubject(StudentSubject) {
         const headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('/student-subject/register', StudentSubject, {headers: headers});
+        return this.http.post(this.url + '/student-subject/register', StudentSubject, {headers: headers});
     }
 
     getStudentSubjects(id) {
-        return this.http.get('/student-subject/getStudentSubjects'+id);
+        return this.http.get(this.url + '/student-subject/getStudentSubjects' + id);
     }
+
     getStudentSubjectsById(id) {
-        return this.http.get('/student-subject/getStudentSubjectsById/'+id);
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsById/' + id);
     }
+
     getStudentSubjectsByMentor(id) {
-        return this.http.get('/student-subject/getStudentSubjectsByMentor'+id);
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsByMentor' + id);
     }
+
     getStudentSubjectsByStudentId(id) {
-        return this.http.get('/student-subject/getStudentSubjectsByStudentId'+id);
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsByStudentId' + id);
     }
+
     getStudentSubjectsByMentorId(id) {
-        return this.http.get('/student-subject/getStudentSubjectsByMentorId'+id);
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsByMentorId' + id);
     }
+
     getUnassignedStudentSubjects() {
-        return this.http.get('/student-subject/getUnassignedStudentSubjects');
+        return this.http.get(this.url + '/student-subject/getUnassignedStudentSubjects');
     }
 
     deleteStudentSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('/student-subject/' + id)
+            this.http.delete(this.url + '/student-subject/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -48,7 +56,7 @@ export class StudentSubjectService {
 
     editStudentSubject(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put('/student-subject/' + id, data)
+            this.http.put(this.url + '/student-subject/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -60,7 +68,7 @@ export class StudentSubjectService {
 
     getStudentSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('/student-subject/' + id)
+            this.http.get(this.url + '/student-subject/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);

@@ -24,7 +24,7 @@ export class SubjectRegisterComponent {
             name: this.name,
             description: this.description,
             sections: this.sections
-        }
+        };
 
         this.subjectService.registerSubject(subject).subscribe(data => {
             if (data['success']) {

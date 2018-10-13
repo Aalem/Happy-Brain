@@ -13,12 +13,14 @@ export class OnlineEditComponent implements OnInit {
 
     onlineRes: any;
     subjects: any;
+    isDataLoaded: boolean;
 
     constructor(private subjectService: SubjectService,
                 private  onlineResService: OnlineResService,
                 private route: Router,
                 private snackBar: MatSnackBar,
                 private activatedRoute: ActivatedRoute) {
+        this.isDataLoaded = false;
         subjectService.getSubjects().subscribe(subjects => {
             this.subjects = subjects;
         });
@@ -31,6 +33,7 @@ export class OnlineEditComponent implements OnInit {
     getOnlineRes(id) {
         this.onlineResService.getOnlineRes(id).then((res) => {
             this.onlineRes = res;
+            this.isDataLoaded = true;
         }, (err) => {
             console.log(err);
         });

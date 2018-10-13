@@ -1,26 +1,32 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {ConfigService} from './config.service';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
-export class SubjectService {
-  subject: any;
 
-  constructor(private http: HttpClient) { }
+export class SubjectService {
+    subject: any;
+    url: String;
+
+    constructor(private http: HttpClient, private config: ConfigService) {
+        this.url = this.config.getUrl();
+    }
 
     registerSubject(subject) {
-        let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('/subjects/register', subject, {headers: headers});
+        const headers = new HttpHeaders(('Content-Type:application/json'));
+        return this.http.post(this.url + '/subjects/register', subject, {headers: headers});
     }
 
-    getSubjects(){
-        return this.http.get('/subjects/getSubjects');
+    getSubjects() {
+        return this.http.get(this.url + '/subjects/getSubjects');
     }
+
     deleteSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('/subjects/'+id)
+            this.http.delete(this.url + '/subjects/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -28,9 +34,10 @@ export class SubjectService {
                 });
         });
     }
+
     editSubject(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put('/subjects/'+id, data)
+            this.http.put(this.url + '/subjects/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -39,9 +46,10 @@ export class SubjectService {
                 });
         });
     }
+
     getSubject(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('/subjects/' + id)
+            this.http.get(this.url + '/subjects/' + id)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res)
@@ -50,5 +58,4 @@ export class SubjectService {
                 });
         });
     }
-    
 }

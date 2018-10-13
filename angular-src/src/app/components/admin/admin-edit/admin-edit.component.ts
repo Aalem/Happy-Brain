@@ -10,11 +10,13 @@ import {MatSnackBar} from '@angular/material';
 })
 export class AdminEditComponent implements OnInit {
     public admin: any;
+    isDataLoaded: boolean;
 
     constructor(public adminService: AdminService,
                 public route: Router,
                 public activatedRoute: ActivatedRoute,
                 public snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
     }
 
     ngOnInit() {
@@ -24,6 +26,7 @@ export class AdminEditComponent implements OnInit {
     getAdmin(id) {
         this.adminService.getAdmin(id).then((res) => {
             this.admin = res;
+            this.isDataLoaded = true;
         }, (err) => {
             console.log(err);
         });

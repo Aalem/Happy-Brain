@@ -50,7 +50,7 @@ import {
     MatMenu, MatMenuModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatFormFieldControl, MatInputModule,
     MatRadioModule, MatCheckboxModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatSortModule,
     MatDatepickerModule, MatNativeDateModule, MatExpansionModule, MatStepperModule, MatTooltipModule,
-    MatProgressBarModule, MatDialogModule
+    MatProgressBarModule, MatDialogModule, MatSpinner, MatProgressSpinnerModule
 } from '@angular/material';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CreateMentoringMeetingComponent } from './components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component';
@@ -137,7 +137,7 @@ export function tokenGetter() {
         PageNotFoundComponent,
         CreateMentoringMeetingComponent,
         CreateSurveyComponent,
-        StarRatingComponent,
+        StarRatingComponent
     ],
     imports: [
         BrowserModule,
@@ -172,6 +172,7 @@ export function tokenGetter() {
         MatTooltipModule,
         MatDialogModule,
         MatProgressBarModule,
+        MatProgressSpinnerModule,
         JwtModule.forRoot({
             config: {
                 tokenGetter: tokenGetter,

@@ -42,6 +42,7 @@ export class LocalListComponent {
                 this.dataSource = new MatTableDataSource(this.resources);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             });
         this.isAdmin = this.authService.getUserType() === 'admin';
     }

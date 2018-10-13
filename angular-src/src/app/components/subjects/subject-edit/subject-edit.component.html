@@ -1,32 +1,39 @@
+<div class="center-me" *ngIf="!isDataLoaded">
+    <mat-progress-spinner style="margin-top: -100px"
+                          color="primary"
+                          mode="indeterminate">
+    </mat-progress-spinner>
+</div>
 
-<h2 class="page-header">Subject Edit</h2>
+<div *ngIf="isDataLoaded">
+    <h2 class="page-header">Subject Edit</h2>
 
-<form (submit)="updateSubject(subject._id)" class="example-form">
-
-
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" placeholder="Name" [(ngModel)]="subject.name" name="name">
-  </mat-form-field>
+    <form (submit)="updateSubject(subject._id)" class="example-form">
 
 
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Name" [(ngModel)]="subject.name" name="name">
+        </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" placeholder="Sections" [(ngModel)]="subject.sections" name="sections">
-  </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" placeholder="Description" [(ngModel)]="subject.description" name="description">
-  </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Sections" [(ngModel)]="subject.sections" name="sections">
+        </mat-form-field>
 
-  <br/>
-  <br/>
-  <br/>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Description" [(ngModel)]="subject.description" name="description">
+        </mat-form-field>
 
-  <div class="button-row">
-    <button mat-raised-button color="primary" type="submit">Save</button>
-  </div>
-  <br/>
-  <br/>
-  <br/>
+        <br/>
+        <br/>
+        <br/>
 
-</form>
+        <div class="button-row">
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+    </form>
+</div>

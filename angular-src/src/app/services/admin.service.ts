@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {ConfigService} from './config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,18 +9,20 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 export class AdminService {
     authToken: any;
     admin: any;
+    url: String;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private config: ConfigService) {
+        this.url = this.config.getUrl();
         // this.isDev = true;  // Change to false before deployment
     }
 
     registerAdmin(admin) {
-        let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('/admins/register', admin, {headers: headers});
+        const headers = new HttpHeaders(('Content-Type:application/json'));
+        return this.http.post(this.url + '/admins/register', admin, {headers: headers});
     }
     authenticateAdmin(admin) {
-        let headers = new HttpHeaders(('Content-Type:application/json'));
-        return this.http.post('/admins/authenticate', admin, {headers: headers});
+        const headers = new HttpHeaders(('Content-Type:application/json'));
+        return this.http.post(this.url + '/admins/authenticate', admin, {headers: headers});
     }
 
     storeAdminData(token, admin) {
@@ -29,12 +32,12 @@ export class AdminService {
         this.admin = admin;
     }
 
-    getAdmins(){
-        return this.http.get('/admins/getAdmins');
+    getAdmins() {
+        return this.http.get(this.url + '/admins/getAdmins');
     }
     deleteAdmin(id) {
         return new Promise((resolve, reject) => {
-            this.http.delete('/admins/'+id)
+            this.http.delete(this.url + '/admins/' + id)
                 .subscribe(res => {
                     resolve(res);
                 }, (err) => {
@@ -44,7 +47,7 @@ export class AdminService {
     }
     editAdmin(id, data) {
         return new Promise((resolve, reject) => {
-            this.http.put('/admins/'+id, data)
+            this.http.put(this.url + '/admins/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);
@@ -55,10 +58,10 @@ export class AdminService {
     }
     getAdmin(id) {
         return new Promise((resolve, reject) => {
-            this.http.get('/admins/' + id)
+            this.http.get(this.url + '/admins/' + id)
                 .map(res => res)
                 .subscribe(res => {
-                    resolve(res)
+                    resolve(res);
                 }, (err) => {
                     reject(err);
                 });

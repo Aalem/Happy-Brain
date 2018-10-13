@@ -12,11 +12,13 @@ import {MatSnackBar} from '@angular/material';
 export class SubjectEditComponent implements OnInit {
 
     subject: any;
+    isDataLoaded: boolean;
 
     constructor(private  subjectService: SubjectService,
                 private route: Router,
                 private activatedRoute: ActivatedRoute,
                 private snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
     }
 
     ngOnInit() {
@@ -26,6 +28,7 @@ export class SubjectEditComponent implements OnInit {
     getSubject(id) {
         this.subjectService.getSubject(id).then((res) => {
             this.subject = res;
+            this.isDataLoaded = true;
         }, (err) => {
             console.log(err);
         });

@@ -4,14 +4,17 @@ import 'rxjs/add/operator/map';
 import {JwtHelperService} from '@auth0/angular-jwt';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {tokenGetter} from '../app.module';
+import {ConfigService} from './config.service';
 
 @Injectable()
 export class AuthService {
     authToken: any;
     helper = new JwtHelperService();
+    url: String;
 
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private config: ConfigService) {
+        this.url = this.config.getUrl();
     }
 
     public isAuthenticated(): boolean {
@@ -27,11 +30,11 @@ export class AuthService {
         const headers = new HttpHeaders({'Authorization': this.authToken, 'Content-Type': 'application/json'});
         const userTypeToken = JSON.parse(localStorage.getItem('user'));
         if (userTypeToken.type === 'mentor') {
-            return this.http.get('/mentor_subjects/profile', {headers: headers});
+            return this.http.get(this.url + '/mentor_subjects/profile', {headers: headers});
         } else if (userTypeToken.type === 'student') {
-            return this.http.get('/students/profile', {headers: headers});
+            return this.http.get(this.url + '/students/profile', {headers: headers});
         } else if (userTypeToken.type === 'admin') {
-            return this.http.get('/admins/dashboard', {headers: headers});
+            return this.http.get(this.url + '/admins/dashboard', {headers: headers});
         }
 
     }

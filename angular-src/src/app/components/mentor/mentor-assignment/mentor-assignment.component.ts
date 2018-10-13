@@ -23,6 +23,7 @@ export class MentorAssignmentComponent implements OnInit {
     today: any;
     mentor_id: String;
     mentors: any;
+    isDataLoaded: boolean;
 
     i = 0;
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -33,15 +34,14 @@ export class MentorAssignmentComponent implements OnInit {
                 private router: Router,
                 private studentSubjectService: StudentSubjectService,
                 private snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
 
         this.student = JSON.parse(localStorage.getItem('assignment_data')).student;
         this.subject = JSON.parse(localStorage.getItem('assignment_data')).subject;
         this.student_subject_id = JSON.parse(localStorage.getItem('assignment_data'))._id;
         this.mentors = [];
-        console.log(this.subject._id);
 
         this.mentorSubjectService.getMentorSubjectsBySubjectId(this.subject._id).subscribe(data => {
-                console.log(data);
             this.subject_mentors = data;
                 this.mentor_data = [];
                 if (data['length'] !== 0) {
@@ -69,10 +69,10 @@ export class MentorAssignmentComponent implements OnInit {
             if (this.subject_mentors['length'] > this.i) {
                 this.getMentors(this.mentors);
             } else {
-                console.log(this.mentors);
                 this.dataSource = new MatTableDataSource(this.mentors);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             }
         }, (err) => {
             console.log(err);

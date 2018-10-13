@@ -3,11 +3,6 @@ import {SubjectService} from '../../../services/subject.service';
 
 import {Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {MatDialog} from '@angular/material';
-import {SubjectRegisterComponent} from '../subject-register/subject-register.component';
-
-
-
 
 @Component({
     selector: 'app-subject-list',
@@ -29,7 +24,6 @@ export class SubjectListComponent {
     i = 0;
 
     constructor(private subjectService: SubjectService,
-                private dialog: MatDialog,
                 private router: Router) {
         this.isDataLoaded = false;
         this.subjectService.getSubjects()
@@ -41,21 +35,15 @@ export class SubjectListComponent {
                         id: this.i + 1,
                         _id: this.subjects[this.i]._id,
                         name: this.subjects[this.i].name,
-                        sections: this.subjects[this.i].sections,
-                        edit: '',
-                        delete: ''
+                        sections: this.subjects[this.i].sections
                     });
                 }
 
                 this.dataSource = new MatTableDataSource(this.subjectArray);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             });
-    }
-
-
-    openDialog() {
-        this.dialog.open(SubjectRegisterComponent);
     }
 
     applyFilter(filterValue: string) {
@@ -74,20 +62,3 @@ export class SubjectListComponent {
     }
 
 }
-
-// @Component({
-//     selector: 'app-dialog-overview-example-dialog',
-//     templateUrl: 'dialog-overview-example-dialog.html',
-// })
-// export class DialogOverviewExampleDialogComponent {
-//
-//     constructor(public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
-//                 @Inject(MAT_DIALOG_DATA) public data: DialogData) {
-//     }
-//
-//     onNoClick(): void {
-//         this.dialogRef.close();
-//     }
-//
-// }
-

@@ -1,7 +1,7 @@
 import {SubjectService} from '../../../../../services/subject.service';
 import {MentorSubjectService} from '../../../../../services/mentor-subject/mentor-subject.service';
 import {SelectionModel} from '@angular/cdk/collections';
-import {Component} from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {MatSnackBar, MatTableDataSource} from '@angular/material';
 
 
@@ -16,6 +16,7 @@ export class SelectSubjectComponent {
     dataSource: MatTableDataSource<Object>;
     selection = new SelectionModel(true, []);
     alreadyHasSubjects: boolean;
+    isDataLoaded: boolean;
     selectedSubjects: any;
 
     subjects: any;
@@ -31,7 +32,9 @@ export class SelectSubjectComponent {
 
     constructor(private subjectService: SubjectService,
                 private mentorSubjectService: MentorSubjectService,
+                private changeDetectorRefs: ChangeDetectorRef,
                 private snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
         this.enableSaveButton = false;
         this.alreadyHasSubjects = false;
         this.selectedSubjects = [];
@@ -42,8 +45,6 @@ export class SelectSubjectComponent {
                 this.mentor_subjects = data[0].subjects;
                 this.mentor_subject_id = data[0]._id;
             }
-            // console.log(data);
-
         });
 
         this.subjectService.getSubjects().subscribe(data => {
@@ -67,6 +68,7 @@ export class SelectSubjectComponent {
                 }
             }
             this.dataSource = new MatTableDataSource(this.subjects);
+            this.isDataLoaded = true;
         });
     }
 
@@ -98,6 +100,7 @@ export class SelectSubjectComponent {
         for (const index in this.subjects) {
             if (this.subjects[index].checked) {
                 this.subjects_id.push(this.subjects[index].id);
+                this.subjects[index].hasSubject = true;
             }
         }
         const mentor_selected_subject = {
@@ -118,5 +121,6 @@ export class SelectSubjectComponent {
             });
         }
         this.enableSaveButton = false;
+        this.changeDetectorRefs.detectChanges();
     }
 }

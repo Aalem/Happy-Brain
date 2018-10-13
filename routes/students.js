@@ -40,7 +40,6 @@ router.post('/register', function (req, res, next) {
 
 //Authentication route
 router.post('/authenticate', function (req, res, next) {
-    console.log("aaa")
     const email = req.body.email;
     const password = req.body.password;
 

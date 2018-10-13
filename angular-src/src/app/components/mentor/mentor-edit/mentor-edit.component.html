@@ -1,4 +1,11 @@
-<div>
+<div class="center-me" *ngIf="!isDataLoaded">
+  <mat-progress-spinner style="margin-top: -100px"
+                        color="primary"
+                        mode="indeterminate">
+  </mat-progress-spinner>
+</div>
+
+<div *ngIf="isDataLoaded">
   <h2 class="mat-h2">Edit Mentor</h2>
   <form (submit)="updateMentor(mentor._id)" class="example-form">
 

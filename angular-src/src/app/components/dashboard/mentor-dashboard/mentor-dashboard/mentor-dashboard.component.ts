@@ -12,6 +12,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 })
 export class MentorDashboardComponent {
     subjectsArray: any;
+    isDataLoaded: boolean;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -23,6 +24,7 @@ export class MentorDashboardComponent {
                 private router: Router) {
         const userTypeToken = JSON.parse(localStorage.getItem('user'));
         this.subjectsArray = [];
+        this.isDataLoaded = false;
 
         this.studentSubjectService.getStudentSubjectsByMentorId('/' + userTypeToken.id)
             .subscribe(data => {
@@ -41,6 +43,7 @@ export class MentorDashboardComponent {
                 this.dataSource = new MatTableDataSource(this.subjectsArray);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             });
 
     }

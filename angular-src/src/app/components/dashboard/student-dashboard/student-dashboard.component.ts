@@ -11,6 +11,7 @@ import {StudentSubjectService} from '../../../services/student-subject/student-s
 export class StudentDashboardComponent {
     subjects: Object;
     subjectsArray: any;
+    isDataLoaded: boolean;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -19,6 +20,7 @@ export class StudentDashboardComponent {
 
     constructor(private studentSubjectService: StudentSubjectService,
                 private router: Router) {
+        this.isDataLoaded = false;
         this.getStudentSubject();
     }
 
@@ -45,7 +47,7 @@ export class StudentDashboardComponent {
             this.dataSource = new MatTableDataSource(this.subjectsArray);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
-
+            this.isDataLoaded = true;
         });
     }
 

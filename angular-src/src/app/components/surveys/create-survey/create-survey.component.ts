@@ -52,7 +52,6 @@ export class CreateSurveyComponent implements OnInit {
             comment: this.comment,
             rating: this.rating
         };
-        console.log(survey);
         this.surveySerive.registerSurvey(survey).subscribe(data => {
             if (data['success']) {
                 this.snackBar.open('Survey recorded', null, {duration: 1500});

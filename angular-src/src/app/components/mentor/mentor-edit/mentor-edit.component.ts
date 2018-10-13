@@ -11,11 +11,13 @@ import {MatRadioChange, MatSnackBar} from "@angular/material";
 export class MentorEditComponent implements OnInit {
 
     mentor: any;
+    isDataLoaded: boolean;
 
     constructor(private  mentorService: MentorService,
                 private route: Router,
                 private activatedRoute: ActivatedRoute,
                 private snackBar: MatSnackBar) {
+        this.isDataLoaded = false;
 
     }
 
@@ -26,6 +28,7 @@ export class MentorEditComponent implements OnInit {
     getMentor(id) {
         this.mentorService.getMentor(id).then((res) => {
             this.mentor = res;
+            this.isDataLoaded = true;
         }, (err) => {
             console.log(err);
         });
