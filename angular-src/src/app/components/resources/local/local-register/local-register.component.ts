@@ -6,7 +6,7 @@ import {saveAs} from 'file-saver';
 import {MatSnackBar} from "@angular/material";
 import {Router} from "@angular/router";
 
-const uri = 'http://localhost:3000/local-res/upload';
+const uri = 'local-res/upload';
 
 @Component({
     selector: 'app-local-register',

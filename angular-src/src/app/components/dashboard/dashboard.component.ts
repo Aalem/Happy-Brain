@@ -15,6 +15,7 @@ export class DashboardComponent {
 
     subjectsArray: any;
     hasStudents: boolean;
+    isDataLoaded: boolean;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -22,6 +23,7 @@ export class DashboardComponent {
     constructor(private router: Router,
                 private studentSubjectService: StudentSubjectService) {
         this.hasStudents = true;
+        this.isDataLoaded = false;
         this.subjectsArray = [];
         this.studentSubjectService.getUnassignedStudentSubjects()
             .subscribe(data => {
@@ -43,6 +45,7 @@ export class DashboardComponent {
                 this.dataSource = new MatTableDataSource(this.subjectsArray);
                 this.dataSource.paginator = this.paginator;
                 this.dataSource.sort = this.sort;
+                this.isDataLoaded = true;
             });
     }
 
