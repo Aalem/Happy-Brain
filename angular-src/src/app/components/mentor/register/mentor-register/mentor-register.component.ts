@@ -1,14 +1,13 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-import {FlashMessagesService} from "angular2-flash-messages";
 import {Router} from "@angular/router";
 import {ValidateService} from "../../../../services/validate.service";
 import {MentorService} from "../../../../services/mentor.service";
 import {MatRadioChange, MatSnackBar} from "@angular/material";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {FileSelectDirective, FileUploader} from 'ng2-file-upload';
+import {FileUploader} from 'ng2-file-upload';
 import {saveAs} from 'file-saver';
 
-const uri = 'http://localhost:3000/mentor_subjects/upload';
+const uri = 'mentor_subjects/upload';
 
 @Component({
     selector: 'app-mentor-register',
