@@ -6,6 +6,7 @@ import {MatRadioChange, MatSnackBar} from "@angular/material";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FileUploader} from 'ng2-file-upload';
 import {saveAs} from 'file-saver';
+import {ConfigService} from "../../../../services/config.service";
 
 const uri = 'mentor_subjects/upload';
 
@@ -20,7 +21,7 @@ export class MentorRegisterComponent implements OnInit {
     secondFormGroup: FormGroup;
     thirdFormGroup: FormGroup;
 
-    uploader: FileUploader = new FileUploader({url: uri});
+    uploader: FileUploader;
     attachmentList: any = [];
 
     wwcc_back: String;
@@ -35,6 +36,7 @@ export class MentorRegisterComponent implements OnInit {
     phone: String;
     language: String;
     vce_subjects: String;
+    subjects: String;
     location: String;
     studying: String;
     experience: String;
@@ -50,14 +52,16 @@ export class MentorRegisterComponent implements OnInit {
     constructor(private _formBuilder: FormBuilder,
                 private mentorService: MentorService,
                 private router: Router,
+                private config: ConfigService,
                 private snackBar: MatSnackBar,
                 private validateService: ValidateService) {
+        this.uploader = new FileUploader({url: config.getUrl() + '/' + uri});
         this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
 
             this.attachmentList.push(JSON.parse(response));
-            if (this.attachmentList.length === 2) {
-                this.secondFormGroup.controls.x.setValue('Hello');
-            }
+            // if (this.attachmentList.length === 2) {
+            //     this.secondFormGroup.controls.x.setValue('Hello');
+            // }
         };
     }
 
@@ -82,6 +86,7 @@ export class MentorRegisterComponent implements OnInit {
             phone: ['', Validators.required],
             language: ['', Validators.required],
             vce_subjects: ['', Validators.required],
+            subjects: ['', Validators.required],
             location: ['', Validators.required],
             studying: ['', Validators.required],
             experience: ['', Validators.required],
@@ -96,8 +101,8 @@ export class MentorRegisterComponent implements OnInit {
 
         });
         this.secondFormGroup = this._formBuilder.group({
-            wwcc_back: ['', Validators.required],
-            x: ['', Validators.required],
+            wwcc_back: [''],
+            x: [''],
         });
         this.thirdFormGroup = this._formBuilder.group({});
     }
@@ -110,6 +115,7 @@ export class MentorRegisterComponent implements OnInit {
             phone: this.firstFormGroup.controls.phone.value,
             language: this.firstFormGroup.controls.language.value,
             vce_subjects: this.firstFormGroup.controls.vce_subjects.value,
+            subjects: this.firstFormGroup.controls.subjects.value,
             location: this.firstFormGroup.controls.location.value,
             studying: this.firstFormGroup.controls.studying.value,
             experience: this.firstFormGroup.controls.experience.value,
@@ -121,8 +127,8 @@ export class MentorRegisterComponent implements OnInit {
             preference: this.firstFormGroup.controls.preference.value,
             gender: this.firstFormGroup.controls.gender.value,
             send_me_copy: this.firstFormGroup.controls.send_me_copy.value,
-            wwcc_front:  this.attachmentList[0].uploadname,
-            wwcc_back:  this.attachmentList[1].uploadname
+            wwcc_front: this.attachmentList[0] != null ? this.attachmentList[0].uploadname : '',
+            wwcc_back: this.attachmentList[1] != null ? this.attachmentList[1].uploadname : ''
         };
 
         this.mentorService.registerMentor(mentor).subscribe(data => {

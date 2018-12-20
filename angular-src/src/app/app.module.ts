@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './components/login/login.component';
-import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {DashboardComponent, Details} from './components/dashboard/dashboard.component';
 import {ProfileComponent} from './components/profile/profile.component';
 
 import {ValidateService} from './services/validate.service';
@@ -50,12 +50,15 @@ import {
     MatMenu, MatMenuModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatFormFieldControl, MatInputModule,
     MatRadioModule, MatCheckboxModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatSortModule,
     MatDatepickerModule, MatNativeDateModule, MatExpansionModule, MatStepperModule, MatTooltipModule,
-    MatProgressBarModule, MatDialogModule, MatSpinner, MatProgressSpinnerModule
+    MatProgressBarModule, MatDialogModule, MatSpinner, MatProgressSpinnerModule, MatGridListModule, MatTabsModule
 } from '@angular/material';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CreateMentoringMeetingComponent } from './components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component';
 import { CreateSurveyComponent } from './components/surveys/create-survey/create-survey.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import {StudentDetailsComponent} from './components/student/details/details.component';
+import {MentorDetailsComponent} from './components/mentor/details/mentor-details.component';
+import { ClassesComponent } from './components/reports/classes/classes.component';
 
 
 
@@ -97,7 +100,10 @@ const appRoutes: Routes = [
     {path: 'select-subject/:id', component: SelectSubjectComponent, canActivate: [RoleGuard], data: {expectedRole: 'mentor'}},
     {path: 'create-mentoring-meeting/:id', component: CreateMentoringMeetingComponent, canActivate: [RoleGuard], data: {expectedRole: 'mentor'}},
     {path: 'create-survey/:id', component: CreateSurveyComponent, canActivate: [RoleGuard], data: {expectedRole: 'student'}},
-    {path: 'page-not-found', component: PageNotFoundComponent}];
+    {path: 'classes-report', component: ClassesComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'page-not-found', component: PageNotFoundComponent},
+    ];
+
 
 export function tokenGetter() {
     return localStorage.getItem('id_token');
@@ -137,7 +143,10 @@ export function tokenGetter() {
         PageNotFoundComponent,
         CreateMentoringMeetingComponent,
         CreateSurveyComponent,
-        StarRatingComponent
+        StarRatingComponent,
+        StudentDetailsComponent,
+        MentorDetailsComponent,
+        ClassesComponent
     ],
     imports: [
         BrowserModule,
@@ -173,6 +182,8 @@ export function tokenGetter() {
         MatDialogModule,
         MatProgressBarModule,
         MatProgressSpinnerModule,
+        MatGridListModule,
+        MatTabsModule,
         JwtModule.forRoot({
             config: {
                 tokenGetter: tokenGetter,
@@ -182,7 +193,10 @@ export function tokenGetter() {
         })
     ],
     providers: [ValidateService, AuthService, AuthGuard, RoleGuard, LoginGuard],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+        StudentDetailsComponent, MentorDetailsComponent
+    ]
 })
 
 export class AppModule {

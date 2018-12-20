@@ -2,7 +2,8 @@ import {StudentSubjectService} from '../../../../services/student-subject/studen
 import {Router} from '@angular/router';
 
 import {Component, ViewChild} from '@angular/core';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {StudentDetailsComponent} from '../../../student/details/details.component';
 
 
 @Component({
@@ -17,10 +18,11 @@ export class MentorDashboardComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    displayedColumns: string[] = ['id', 'subject', 'student', 'start_date', 'end_date', 'progress', 'mentoring_meeting'];
+    displayedColumns: string[] = ['id', 'student', 'subject',  'start_date', 'end_date', 'mentoring_meeting'];
     dataSource: MatTableDataSource<Object>;
 
     constructor(private studentSubjectService: StudentSubjectService,
+                private matDialog: MatDialog,
                 private router: Router) {
         const userTypeToken = JSON.parse(localStorage.getItem('user'));
         this.subjectsArray = [];
@@ -32,12 +34,13 @@ export class MentorDashboardComponent {
                     this.subjectsArray.push({
                         id: Number(index),
                         _id: data[index]._id,
-                        student: data[index].student['length'] !== 0 ? data[index].student[0].name : '',
+                        // student: data[index].student['length'] !== 0 ? data[index].student[0].name : '',
+                        student: data[index].student[0],
                         subject: data[index].subject['length'] !== 0 ? data[index].subject[0].name : '',
                         start_date: data[index].start_date,
-                        end_date: data[index].end_date,
-                        progress: data[index].mentoringmeeting['length'] !== 0 ?
-                            Math.round((data[index].mentoringmeeting[0].section / data[index].subject[0].sections) * 100) : '0',
+                        end_date: data[index].end_date
+                        // progress: data[index].mentoringmeeting['length'] !== 0 ?
+                        //     Math.round((data[index].mentoringmeeting[0].section / data[index].subject[0].sections) * 100) : '0',
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.subjectsArray);
@@ -54,6 +57,14 @@ export class MentorDashboardComponent {
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
         }
+    }
+
+    openDialog(student) {
+        const dialogRef = this.matDialog.open(StudentDetailsComponent, {data: student});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
     }
 
 

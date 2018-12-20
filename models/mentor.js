@@ -20,6 +20,8 @@ const MentorSchema = mongoose.Schema ({
         type: String
     }, vce_subjects: {
         type: String
+    }, subjects: {
+        type: String
     }, studying: {
         type: String,
     }, language: {

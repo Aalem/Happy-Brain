@@ -11,6 +11,14 @@ import {MatRadioChange, MatSnackBar} from '@angular/material';
 })
 export class StudentRegisterComponent {
     name: String;
+    last_name: String;
+    age: String;
+    dob: String;
+    parents_name: String;
+    about_yourself: String;
+    about_us: String;
+    subjects: String;
+    online_tutoring: String;
     password: String;
     email: String;
     phone: String;
@@ -23,6 +31,9 @@ export class StudentRegisterComponent {
     english_level: String;
     tutor_gender: String;
     gender: String;
+    cm_name: String;
+    cm_phone: String;
+    cm_email: String;
     address: String;
     mentoring_address: String;
 
@@ -36,6 +47,14 @@ export class StudentRegisterComponent {
     onRegisterSubmit() {
         const student = {
             name: this.name,
+            last_name: this.last_name,
+            age: this.age,
+            dob: this.dob,
+            parents_name: this.parents_name,
+            about_yourself: this.about_yourself,
+            about_us: this.about_us,
+            subjects: this.subjects,
+            online_tutoring: this.online_tutoring,
             email: this.email,
             password: this.password,
             phone: this.phone,
@@ -48,6 +67,9 @@ export class StudentRegisterComponent {
             english_level: this.english_level,
             tutor_gender: this.tutor_gender,
             gender: this.gender,
+            cm_name: this.cm_name,
+            cm_phone: this.cm_phone,
+            cm_email: this.cm_email,
             address: this.address,
             mentoring_address: this.mentoring_address
         }

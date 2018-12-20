@@ -16,6 +16,8 @@ const StudentSubjectSchema = mongoose.Schema({
         type: String
     }, teacher_assigned: {
         type: Boolean
+    }, status: {
+        type: String
     }
 });
 

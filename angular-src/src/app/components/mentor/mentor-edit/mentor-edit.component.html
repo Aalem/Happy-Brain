@@ -29,13 +29,15 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input  matInput type="text" [(ngModel)]="mentor.location" name="location"
-             placeholder="Location (Please include how far you are willing to travel and whether you have access
-        to a mode of transport (car, bike, public transport))">
+             placeholder="Location (Please include what suburb you are based in, how far you are willing to travel and whether you have access to a mode of transport (car, bike, public transport))">
     </mat-form-field>
     <mat-form-field class="example-full-width">
     <input  matInput type="text"[(ngModel)]="mentor.vce_subjects" name="vce_subjects"
-             placeholder="Which subjects did you study in VCE? What were your study scores for these subjects?
-        (skip if the question is not relevant to you)">
+             placeholder="Which subjects did you study in VCE/HSC/IB?">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+    <input  matInput type="text"[(ngModel)]="mentor.subjects" name="subjects"
+             placeholder="What subjects are you comfortable tutoring?">
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input  matInput type="text" [(ngModel)]="mentor.studying" name="studying"
@@ -63,7 +65,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input  matInput type="text"[(ngModel)]="mentor.about_us" name="about_us" class="form-control" id="about_us"
-             placeholder="Where did you hear about us?">
+             placeholder="How did you hear about us?">
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input  matInput type="text" [(ngModel)]="mentor.refugee_definition" name="refugee_definition" placeholder="What does the term 'refugee' mean to you? (100-200 words)">

@@ -6,10 +6,9 @@
 </div>
 
 <div *ngIf="isDataLoaded">
-    <h1 class="mat-h1">Your Classes</h1>
+    <h1 class="mat-h1">Your Tutors</h1>
     <div class="button-row">
-        <button mat-raised-button color="primary" [routerLink]="['/student-enrollment']" style="float:right;">New
-            Enrollment
+        <button mat-raised-button color="primary" [routerLink]="['/student-enrollment']" style="float:right;">Request Tutor
         </button>
     </div>
 
@@ -34,8 +33,10 @@
 
             <!-- Phone Column -->
             <ng-container matColumnDef="mentor">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Mentor</th>
-                <td mat-cell *matCellDef="let row"> {{row.mentor}}</td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Tutor</th>
+                <td mat-cell *matCellDef="let row">
+                    <button mat-button (click)="openDialog(row.mentor)">{{row.mentor.name}}</button>
+                </td>
             </ng-container>
             <!-- Country Column -->
             <ng-container matColumnDef="start_date">
@@ -47,27 +48,28 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>End Date</th>
                 <td mat-cell *matCellDef="let row">{{row.end_date}}</td>
             </ng-container>
-            <!-- Subject Column -->
-            <ng-container matColumnDef="progress">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th>
-                <td mat-cell *matCellDef="let row">
-                    {{row.progress}} %
-                    <mat-progress-bar
-                            class="example-margin"
-                            color="primary"
-                            mode="determinate"
-                            value="{{row.progress}}"
-                            bufferValue="75">
-                    </mat-progress-bar>
-                </td>
 
-            </ng-container>
+            <!--&lt;!&ndash; Subject Column &ndash;&gt;-->
+            <!--<ng-container matColumnDef="progress">-->
+                <!--<th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th>-->
+                <!--<td mat-cell *matCellDef="let row">-->
+                    <!--{{row.progress}} %-->
+                    <!--<mat-progress-bar-->
+                            <!--class="example-margin"-->
+                            <!--color="primary"-->
+                            <!--mode="determinate"-->
+                            <!--value="{{row.progress}}"-->
+                            <!--bufferValue="75">-->
+                    <!--</mat-progress-bar>-->
+                <!--</td>-->
+
+            <!--</ng-container>-->
 
             <ng-container matColumnDef="survey">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header style="padding-left: 15px"> Survey</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="padding-left: 15px"> Feedback</th>
                 <td mat-cell *matCellDef="let row">
                     <button disabled="{{!row.teacher_assigned}}" mat-button color="primary"
-                            [routerLink]="['/create-survey', row._id]">Write Survey
+                            [routerLink]="['/create-survey', row._id]">Complete Feedback
                     </button>
                 </td>
             </ng-container>

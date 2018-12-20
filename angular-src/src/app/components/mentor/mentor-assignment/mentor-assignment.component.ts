@@ -3,7 +3,8 @@ import {MentorSubjectService} from '../../../services/mentor-subject/mentor-subj
 import {MentorService} from '../../../services/mentor.service';
 import {StudentSubjectService} from '../../../services/student-subject/student-subject.service';
 import {Router} from '@angular/router';
-import {MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MentorDetailsComponent} from "../details/mentor-details.component";
 
 
 @Component({
@@ -31,6 +32,7 @@ export class MentorAssignmentComponent implements OnInit {
 
     constructor(private mentorSubjectService: MentorSubjectService,
                 private mentorService: MentorService,
+                private matDialog: MatDialog,
                 private router: Router,
                 private studentSubjectService: StudentSubjectService,
                 private snackBar: MatSnackBar) {
@@ -62,7 +64,8 @@ export class MentorAssignmentComponent implements OnInit {
                 name: mentor_data['name'],
                 phone: mentor_data['phone'],
                 location: mentor_data['location'],
-                starting_date: mentor_data['starting_date']
+                starting_date: mentor_data['starting_date'],
+                mentor_data: mentor_data
             });
 
             this.i++;
@@ -89,7 +92,8 @@ export class MentorAssignmentComponent implements OnInit {
         const student_subject = {
             mentor_id: mentor_id,
             start_date: this.today,
-            teacher_assigned: true
+            teacher_assigned: true,
+            status: 'in_progress'
         };
         this.studentSubjectService.editStudentSubject(this.student_subject_id, student_subject).then((result) => {
             this.router.navigate(['/dashboard']);
@@ -106,6 +110,15 @@ export class MentorAssignmentComponent implements OnInit {
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
         }
+    }
+
+    openDialog(mentor) {
+        // console.log(mentor);
+        const dialogRef = this.matDialog.open(MentorDetailsComponent, {data: mentor});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
     }
 
 }

@@ -23,13 +23,13 @@
             </mat-expansion-panel>
             <mat-expansion-panel *ngIf="authService.getUserType()=='admin'" class="sidenav" style="box-shadow: none;">
                 <mat-expansion-panel-header style="padding-left: 0px !important;">
-                    <a mat-list-item>User Managment</a>
+                    <a mat-list-item>User Management</a>
                 </mat-expansion-panel-header>
-                <a mat-list-item [routerLink]="['/student-list']" routerLinkActive="active">Students</a>
+                <a mat-list-item [routerLink]="['/student-list']"  routerLinkActive="active">Students</a>
                 <a mat-list-item [routerLink]="['/mentor-list']" routerLinkActive="active">Mentors</a>
                 <a mat-list-item [routerLink]="['/admin-list']" routerLinkActive="active">Admins</a>
             </mat-expansion-panel>
-            <a mat-list-item *ngIf="authService.getUserType()=='admin'" routerLinkActive="active">Reports</a>
+            <a mat-list-item *ngIf="authService.getUserType()=='admin'" [routerLink]="['/classes-report']" routerLinkActive="active">Reports</a>
             <!--<a mat-list-item [routerLink]="['/profile']" routerLinkActive="active">Profile</a>-->
             <a (click)="logout(drawer)" mat-list-item>Logout</a>
         </mat-nav-list>
@@ -46,11 +46,11 @@
                     *ngIf="(isHandset$ | async) && authService.loggedIn()">
                 <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
-            <span style="flex: auto"></span>
-            <button *ngIf="!authService.loggedIn()" mat-icon-button [matMenuTriggerFor]="menu"
-                    style="margin-right: 20px; margin-right: 20px;">
-                Signup
-            </button>
+            <!--<span style="flex: auto"></span>-->
+            <!--<button *ngIf="!authService.loggedIn()" mat-icon-button [matMenuTriggerFor]="menu"-->
+                    <!--style="margin-right: 20px; margin-right: 20px;">-->
+                <!--Signup-->
+            <!--</button>-->
             <mat-menu #menu="matMenu">
                 <button mat-menu-item class="dropdown-item"
                        [routerLink]="['/mentor-register']">Mentor

@@ -12,7 +12,7 @@ export class SubjectRegisterComponent {
 
     name: String;
     description: String;
-    sections: String;
+    // sections: String;
 
     constructor(private router: Router,
                 private snackBar: MatSnackBar,
@@ -22,8 +22,8 @@ export class SubjectRegisterComponent {
     onRegisterSubmit(formList: any) {
         const subject = {
             name: this.name,
-            description: this.description,
-            sections: this.sections
+            description: this.description
+            // sections: this.sections
         };
 
         this.subjectService.registerSubject(subject).subscribe(data => {

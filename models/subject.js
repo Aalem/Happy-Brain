@@ -8,12 +8,12 @@ const SubjectSchema = mongoose.Schema ({
   description: {
     type: String,
     required: true
-  },
-
-  sections: {
-    type: String,
-    required: true
   }
+
+  // sections: {
+  //   type: String,
+  //   required: true
+  // }
 });
 
 const Subject = module.exports = mongoose.model('Subject', SubjectSchema);

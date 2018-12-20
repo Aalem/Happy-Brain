@@ -46,6 +46,7 @@ router.post('/register',function (req,res,next) {
         phone: req.body.phone,
         language: req.body.language,
         vce_subjects:  req.body.vce_subjects,
+        subjects:  req.body.subjects,
         location:  req.body.location,
         studying:  req.body.studying,
         experience:  req.body.experience,

@@ -3,27 +3,57 @@
 <div>
   <h2 class="page-header">Student Registration Form</h2>
   <form class="example-form" (submit)="onRegisterSubmit()">
+    <!-- Case Manager -->
+    <br/>
+    <h2 class="mat-h2">Case Manager</h2>
+    <mat-divider></mat-divider>
     <mat-form-field class="example-full-width">
-      <input matInput type="text" placeholder="Name" [(ngModel)]="name" name="name" >
+      <input matInput type="text" placeholder="Full Name" [(ngModel)]="cm_name" name="cm_name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="email" placeholder="Email" [(ngModel)]="cm_email" name="cm_email" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Phone" [(ngModel)]="cm_phone" name="cm_phone" >
+    </mat-form-field>
+    <br/>
+    <br/>
+    <br/>
+    <!-- Student -->
+    <h2 class="mat-h2">Student</h2>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="First Name" [(ngModel)]="name" name="name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Last Name" [(ngModel)]="last_name" name="last_name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="number" placeholder="Age" [(ngModel)]="age" name="age" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Parent/Guardian's Name" [(ngModel)]="parents_name" name="parents_name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput type="date" placeholder="Date of Birth" [(ngModel)]="dob" name="dob" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
     </mat-form-field>
-
     <mat-form-field class="example-full-width">
       <input matInput type="password"  placeholder="Password" [(ngModel)]="password" name="password" autocomplete="true" >
     </mat-form-field>
 
 
     <mat-radio-group (change)="onChange($event)" name="gender">
-      <label style="color: gray;">Gender : </label>
+      <label style="color: gray;">Gender : &nbsp;</label>
       <mat-radio-button id="male" name="male" value="male" style="color: gray;"> Male &nbsp;</mat-radio-button>
       <mat-radio-button id="female" name="female" value="female" style="color: gray;"> Female </mat-radio-button>
     </mat-radio-group>
 
 
     <mat-form-field class="example-full-width">
-      <input matInput type="phone" [(ngModel)]="phone" name="phone" placeholder="Enter phone number">
+      <input matInput type="phone" [(ngModel)]="phone" name="phone" placeholder="Phone Number">
     </mat-form-field>
 
 
@@ -31,23 +61,30 @@
       <input matInput type="phone" [(ngModel)]="parents_phone" name="parents_phone" placeholder="Parent/Guardian's phone number">
     </mat-form-field>
 
-
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="country" name="country" placeholder="Country of origin">
-    </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="address" name="address" placeholder="Address">
-    </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="mentoring_address" name="mentoring_address" placeholder="Mentoring Location">
+      <input matInput type="text" [(ngModel)]="subjects" name="subjects" placeholder="Which subjects do you require tutoring with?">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="language" name="language" placeholder="language spoken">
+      <input matInput type="text" [(ngModel)]="country" name="country" placeholder="Country of origin (not the country you are living in now) ">
+    </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="address" name="address" placeholder="Home address ">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Tell us a little about yourself: what was your journey to Australia? How have you found the experience of settling in so far? " [(ngModel)]="about_yourself" name="about_yourself">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="mentoring_address" name="mentoring_address" placeholder="What locations are convenient for you for tutoring? E.g. library/ home/ school">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="language" name="language" placeholder="What languages do you speak?">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
@@ -56,7 +93,7 @@
 
 
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="school_name" name="school_name"  placeholder="Type your school name">
+      <input matInput type="text" [(ngModel)]="school_name" name="school_name"  placeholder="Current School">
     </mat-form-field>
 
 
@@ -66,19 +103,25 @@
 
 
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="english_level" name="english_level"  placeholder="Level of english competency.">
+      <input matInput type="text" [(ngModel)]="english_level" name="english_level"  placeholder="How comfortable are you in speaking English?">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="about_us" name="about_us"  placeholder="Where did you hear about us?">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" [(ngModel)]="online_tutoring" name="online_tutoring"  placeholder="Would you be willing to try online tutoring (Skype or Zoom)? ">
     </mat-form-field>
 
 
-    <label style="color: gray;">Preferred gender of tutor </label>
+    <mat-label style="color: gray;">Preferred gender of tutor: &nbsp;&nbsp;</mat-label>
 
     <mat-radio-group (change)="onChange($event)" name='tutor_gender'>
       <mat-radio-button  name="tutor_gender" value="male" style="color: gray;"> Male &nbsp;</mat-radio-button>
       <mat-radio-button  name="tutor_gender" value="female" style="color: gray;"> Female </mat-radio-button>
       <mat-radio-button  name="tutor_gender" value="No Preference" style="color: gray;">No Preference</mat-radio-button>
     </mat-radio-group>
-
-
 
     <br/>
     <br/>

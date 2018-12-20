@@ -14,7 +14,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 export class SubjectListComponent {
 
     subjects: any;
-    displayedColumns: string[] = ['id', 'name', 'sections', 'edit'];
+    displayedColumns: string[] = ['id', 'name', 'edit'];
     dataSource: MatTableDataSource<Object>;
     subjectArray: any;
     isDataLoaded: boolean;
@@ -34,8 +34,8 @@ export class SubjectListComponent {
                     this.subjectArray.push({
                         id: this.i + 1,
                         _id: this.subjects[this.i]._id,
-                        name: this.subjects[this.i].name,
-                        sections: this.subjects[this.i].sections
+                        name: this.subjects[this.i].name
+                        // sections: this.subjects[this.i].sections
                     });
                 }
 

@@ -1,0 +1,118 @@
+<h2 mat-dialog-title>Student Details</h2>
+<mat-dialog-content class="mat-typography">
+  <h3 class="mat-h3">Case Manager</h3>
+  <mat-divider></mat-divider>
+  <table>
+
+    <tr>
+      <td style="color: #757575">Name:</td>
+      <td>{{valueOf(student.cm_name)}}
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Email:</td>
+      <td>{{valueOf(student.cm_email)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Contact:</td>
+      <td>{{valueOf(student.cm_phone)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <h3 class="mat-h3">Student</h3>
+  <mat-divider></mat-divider>
+
+
+  <table>
+
+    <tr>
+      <td style="color: #757575">Name:</td>
+      <td>{{student.name}} {{valueOf(student.last_name)}}
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Email:</td>
+      <td>{{student.email}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Contact:</td>
+      <td>{{valueOf(student.phone)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Age:</td>
+      <td>{{valueOf(student.age)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td style="color: #757575">Parent's Name:</td>
+      <td>{{valueOf(student.parents_name)}}
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Parent's Phone:</td>
+      <td>{{valueOf(student.parents_phone)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Country:</td>
+      <td>{{valueOf(student.country)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Language:</td>
+      <td>{{valueOf(student.language)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+    </tr>
+
+    <tr>
+      <td style="color: #757575">Date of Birth:</td>
+      <td>{{valueOf(student.dob)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Current Address:</td>
+      <td>{{valueOf(student.address)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Heard about us:</td>
+      <td>{{valueOf(student.about_us)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">English Level:</td>
+      <td>{{valueOf(student.english_level)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+    </tr>
+
+    <tr>
+      <td style="color: #757575">Subjects:</td>
+      <td>{{valueOf(student.subjects)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Mentoring Location:</td>
+      <td>{{valueOf(student.mentoring_address)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Pref. Mentor Gender:</td>
+      <td>{{valueOf(student.tutor_gender)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+      <td style="color: #757575">Online Tutoring:</td>
+      <td>{{valueOf(student.online_tutoring)}}</td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+
+    </tr>
+
+    <tr>
+      <td style="color: #757575">About Student:</td>
+      <td style="column-span: 4">{{valueOf(student.about_yourself)}}</td>
+    </tr>
+
+
+  </table>
+  <br/>
+  <br/>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

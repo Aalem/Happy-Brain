@@ -23,6 +23,14 @@ export class StudentSubjectService {
         return this.http.get(this.url + '/student-subject/getStudentSubjects' + id);
     }
 
+    getAllStudentSubjects() {
+        return this.http.get(this.url + '/student-subject/getAllStudentSubjects');
+    }
+
+    getStudentSubjectsInProgress() {
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsInProgress');
+    }
+
     getStudentSubjectsById(id) {
         return this.http.get(this.url + '/student-subject/getStudentSubjectsById/' + id);
     }

@@ -7,6 +7,21 @@ const StudentSchema = mongoose.Schema({
     name: {
         type: String
     },
+    last_name: {
+        type: String
+    },age: {
+        type: String
+    },dob: {
+        type: String
+    },about_yourself: {
+        type: String
+    },about_us: {
+        type: String
+    },subjects: {
+            type: String
+    },online_tutoring: {
+            type: String
+    },
     email: {
         type: String,
         required: true,
@@ -19,6 +34,8 @@ const StudentSchema = mongoose.Schema({
     password: {
         type: String,
     }, parents_phone: {
+        type: String,
+    }, parents_name: {
         type: String,
     }, country: {
         type: String,
@@ -41,6 +58,12 @@ const StudentSchema = mongoose.Schema({
         type: String,
     },
     tutor_gender: {
+        type: String,
+    },cm_name: {
+        type: String,
+    },cm_email: {
+        type: String,
+    },cm_phone: {
         type: String,
     },
     status: {

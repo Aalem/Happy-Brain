@@ -7,10 +7,46 @@
 
 <div *ngIf="isDataLoaded">
     <h2 class="page-header">Student Update Form</h2>
+
     <form class="example-form" (submit)="updateStudent(student._id)">
+
+        <!-- Case Manager -->
+        <br/>
+        <h2 class="mat-h2">Case Manager</h2>
+        <mat-divider></mat-divider>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Full Name" [(ngModel)]="student.cm_name" name="cm_name" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="email" placeholder="Email" [(ngModel)]="student.cm_email" name="cm_email" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Phone" [(ngModel)]="student.cm_phone" name="cm_phone" >
+        </mat-form-field>
+        <br/>
+        <br/>
+        <br/>
+        <!-- Student -->
+        <h2 class="mat-h2">Student</h2>
+        <mat-divider></mat-divider>
+
         <mat-form-field class="example-full-width">
             <input matInput type="text" placeholder="Name" [(ngModel)]="student.name" name="name">
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="student.last_name" name="last_name"
+                   placeholder="Last Name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Age" [(ngModel)]="student.age" name="age" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Parent/Guardian's Name" [(ngModel)]="student.parents_name" name="parents_name" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="date" placeholder="Date of Birth" [(ngModel)]="student.dob" name="dob" >
+        </mat-form-field>
+
         <mat-form-field class="example-full-width">
             <input matInput type="email" placeholder="Email Address" [(ngModel)]="student.email" name="email">
         </mat-form-field>
@@ -38,6 +74,10 @@
 
 
         <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="student.subjects" name="subjects" placeholder="Which subjects do you require tutoring with?">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
             <input matInput type="text" [(ngModel)]="student.country" name="country" placeholder="Country of origin">
         </mat-form-field>
 
@@ -46,6 +86,9 @@
             <input matInput type="text" [(ngModel)]="student.address" name="address" placeholder="Address">
         </mat-form-field>
 
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Tell us a little about yourself: what was your journey to Australia? How have you found the experience of settling in so far? " [(ngModel)]="student.about_yourself" name="about_yourself">
+        </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <input matInput type="text" [(ngModel)]="student.mentoring_address" name="mentoring_address"
@@ -77,6 +120,14 @@
         <mat-form-field class="example-full-width">
             <input matInput type="text" [(ngModel)]="student.english_level" name="english_level"
                    placeholder="Level of english competency.">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="student.about_us" name="about_us"  placeholder="Where did you hear about us?">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" [(ngModel)]="student.online_tutoring" name="online_tutoring"  placeholder="Would you be willing to try online tutoring (Skype or Zoom)? ">
         </mat-form-field>
 
 

@@ -1,32 +1,51 @@
-<h2 class="page-header">Login</h2>
+<mat-grid-list cols="1" rowHeight="600px">
+    <mat-grid-tile>
+        <div>
+            <form (submit)="onLoginSubmit()" class="example-form">
+                <h1 class="mat-h1">Login</h1>
+                <mat-divider></mat-divider>
+                <br/>
+                <br/>
+                <mat-form-field class="example-full-width">
+                    <mat-select [(ngModel)]="type" name="type" placeholder="Type">
+                        <mat-option value="admin">Admin</mat-option>
+                        <mat-option value="mentor">Mentor</mat-option>
+                        <mat-option value="student">Student</mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-<form (submit)="onLoginSubmit()" class="example-form">
-    <mat-form-field class="example-full-width">
-        <mat-select [(ngModel)]="type" name="type" placeholder="Type">
-            <mat-option value="admin">Admin</mat-option>
-            <mat-option value="mentor">Mentor</mat-option>
-            <mat-option value="student">Student</mat-option>
-        </mat-select>
-    </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
+                </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-        <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email">
-    </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password"
+                           autocomplete="true">
+                </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password"
-               autocomplete="true">
-    </mat-form-field>
+                <br/>
+                <br/>
+                <br/>
 
-    <br/>
-    <br/>
-    <br/>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit">Login</button>
+                </div>
 
-    <div class="button-row">
-        <button mat-raised-button color="primary" type="submit">Login</button>
-    </div>
-    <br/>
-    <br/>
-    <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <mat-divider></mat-divider>
+                <br/>
+                <div style="margin-left: 16%">
+                    <button mat-button color="accent" [routerLink]="['/student-register']">Refer a new student</button>
+                    &nbsp; &nbsp; | &nbsp;&nbsp;
+                    <button mat-button color="accent" [routerLink]="['/mentor-register']">Sign up as a mentor</button>
+                </div>
 
-</form>
+            </form>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>

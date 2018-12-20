@@ -6,8 +6,8 @@ const Subject = require('../models/subject');
 router.post('/register', function (req, res, next) {
     var newSubject = new Subject({
         name: req.body.name,
-        description: req.body.description,
-        sections: req.body.sections
+        description: req.body.description
+        // sections: req.body.sections
     });
 
     Subject.addSubject(newSubject, function (err, subject) {

@@ -5,6 +5,7 @@ import {FileSelectDirective, FileUploader} from 'ng2-file-upload';
 import {saveAs} from 'file-saver';
 import {MatSnackBar} from "@angular/material";
 import {Router} from "@angular/router";
+import {ConfigService} from "../../../../services/config.service";
 
 const uri = 'local-res/upload';
 
@@ -15,7 +16,7 @@ const uri = 'local-res/upload';
 })
 export class LocalRegisterComponent implements OnInit {
 
-    uploader: FileUploader = new FileUploader({url: uri});
+    uploader: FileUploader;
     attachmentList: any = [];
     title: String;
     description: String;
@@ -25,8 +26,11 @@ export class LocalRegisterComponent implements OnInit {
 
     constructor(private snackBar: MatSnackBar,
                 private router: Router,
+                private config: ConfigService,
                 private localResService: LocalResService,
                 private subjectService: SubjectService) {
+
+        this.uploader = new FileUploader({url: config.getUrl() + '/' + uri});
 
         subjectService.getSubjects().subscribe(subjects => {
             this.subjects = subjects;
@@ -45,7 +49,7 @@ export class LocalRegisterComponent implements OnInit {
     onRegisterSubmit(formList: any) {
 
         const myUploader = this.uploader.queue[this.uploader.queue.length - 1];
-        const fileName =  Date.now() + '.' + myUploader.file.name;
+        const fileName = Date.now() + '.' + myUploader.file.name;
 
         myUploader.file.name = fileName;
         myUploader.upload();

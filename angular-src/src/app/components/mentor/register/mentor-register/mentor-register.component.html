@@ -26,15 +26,16 @@
                 </mat-radio-button>
             </mat-radio-group>
             <mat-form-field class="example-full-width">
-                <input matInput type="text" placeholder="Enter languages" formControlName="language" required>
+                <input matInput type="text" placeholder="Spoken Language(s)" formControlName="language" required>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-                <input matInput type="text" placeholder="Location (Please include how far you are willing to travel and whether you have access
-        to a mode of transport (car, bike, public transport))." formControlName="location" required>
+                <input matInput type="text" placeholder="Location (Please include what suburb you are based in, how far you are willing to travel and whether you have access to a mode of transport (car, bike, public transport))." formControlName="location" required>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-                <input matInput type="text" placeholder="Which subjects did you study in VCE? What were your study scores for these subjects?
-        (skip if the question is not relevant to you)" formControlName="vce_subjects" required>
+                <input matInput type="text" placeholder="Which subjects did you study in VCE/HSC/IB?" formControlName="vce_subjects" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="What subjects are you comfortable tutoring?" formControlName="subjects" required>
             </mat-form-field>
             <mat-form-field class="example-full-width">
                 <input matInput type="text" placeholder="Are you currently studying? If so, what are you studying? If not, what are your plans
@@ -55,7 +56,7 @@
                 <mat-radio-button name="wwcc" value="Yes" style="color: gray;"> Yes &nbsp;</mat-radio-button>
                 <mat-radio-button name="wwcc" value="No" style="color: gray;"> No</mat-radio-button>
                 <mat-radio-button name="wwcc" value="In process of obtaining one" style="color: gray;"> In the process
-                    of ontaining one.
+                    of obtaining one.
                 </mat-radio-button>
             </mat-radio-group>
             <mat-form-field class="example-full-width">
@@ -88,12 +89,12 @@
         <form [formGroup]="secondFormGroup" enctype="multipart/form-data">
             <ng-template matStepLabel>WWCC</ng-template>
             <mat-form-field style="display: none;" >
-                <input matInput placeholder="Last name, First name" required formControlName="x">
+                <input matInput placeholder="Last name, First name"  formControlName="x">
             </mat-form-field>
             <div class="form-group">
                 <div>
                     <div id="fileSelector">
-                        <input type="file" class="form-control" required formControlName="wwcc_back"  id="wwcc_front"
+                        <input type="file" class="form-control" formControlName="wwcc_back"  id="wwcc_front"
                                ng2FileSelect [uploader]="uploader" >
                     </div>
                     <br/>
@@ -138,7 +139,7 @@
     </mat-step>
     <mat-step thirdFormGroup>
         <ng-template matStepLabel>Videos</ng-template>
-        You are now done.
+        Complete video test!
         <div>
             <button mat-raised-button color="primary" matStepperPrevious>Back</button>&nbsp;
             <button mat-raised-button color="primary" matStepperNext>Next</button>
@@ -149,7 +150,7 @@
         You are now done.
         <div>
             <button mat-raised-button color="primary" matStepperPrevious>Back</button>&nbsp;
-            <button mat-raised-button color="primary" (click)="onRegisterSubmit()" matStepperNext>Next</button>
+            <button mat-raised-button color="primary" (click)="onRegisterSubmit()" matStepperNext>Finish</button>
         </div>
     </mat-step>
 

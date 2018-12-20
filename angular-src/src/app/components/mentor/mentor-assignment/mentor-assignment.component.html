@@ -105,7 +105,9 @@
                 <!-- Name Column -->
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
-                    <td mat-cell *matCellDef="let row"> {{row.name}}</td>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-button (click)="openDialog(row.mentor_data)">{{row.name}}</button>
+                    </td>
                 </ng-container>
 
                 <!-- Phone Column -->

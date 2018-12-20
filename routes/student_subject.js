@@ -11,7 +11,8 @@ router.post('/register', function (req, res, next) {
         mentor_id: req.body.mentor_id,
         start_date: req.body.start_date,
         end_date: req.body.end_date,
-        teacher_assigned: false
+        teacher_assigned: false,
+        status: 'pending'
     });
 
     StudentSubject.addStudentSubject(newStudentSubject, function (err, student_subject) {
@@ -153,6 +154,35 @@ router.get('/getUnassignedStudentSubjects', function (req, res, next) {
         res.json(mentor_subject);
     });
 
+});
+
+router.get('/getStudentSubjectsInProgress', function (req, res, next) {
+    StudentSubject.aggregate([
+        {$match: {status: "in_progress"}},
+        {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
+        {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
+        {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
+    ], function (err, mentor_subject) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(mentor_subject);
+    });
+
+});
+
+router.get('/getAllStudentSubjects', function (req, res, next) {
+    StudentSubject.aggregate([
+        // {$match: {status: "in_progress"}},
+        {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
+        {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
+        {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
+    ], function (err, mentor_subject) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(mentor_subject);
+    });
 });
 
 /* GET SINGLE Student BY ID */

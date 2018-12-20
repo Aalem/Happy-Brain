@@ -1,0 +1,74 @@
+<h2 mat-dialog-title>Mentor Details</h2>
+<mat-dialog-content class="mat-typography">
+    <table>
+
+        <tr>
+            <td style="color: #757575">Name:</td>
+            <td>{{mentor.name}} {{valueOf(mentor.last_name)}}
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Email:</td>
+            <td>{{mentor.email}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Contact:</td>
+            <td>{{valueOf(mentor.phone)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Language:</td>
+            <td>{{valueOf(mentor.language)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td style="color: #757575">VCE Subjects:</td>
+            <td>{{valueOf(mentor.vce_subjects)}}
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Tutoring Subjects:</td>
+            <td>{{valueOf(mentor.subjects)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Location and Coverage:</td>
+            <td>{{valueOf(mentor.location)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Currently Studying?</td>
+            <td>{{valueOf(mentor.studying)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+        </tr>
+
+        <tr>
+            <td style="color: #757575">Tutoring Experience:</td>
+            <td>{{valueOf(mentor.experience)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Volunteering Experience:</td>
+            <td>{{valueOf(mentor.volunteering)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Student Preference:</td>
+            <td>{{valueOf(mentor.preference)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">WWCC:</td>
+            <td>{{valueOf(mentor.wwcc)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+        </tr>
+
+        <tr>
+            <td colspan="6" style="background-color: rebeccapurple"></td>
+            <td colspan="6" style="background-color: rebeccapurple"></td>
+        </tr>
+
+
+    </table>
+    <br/>
+    <br/>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
