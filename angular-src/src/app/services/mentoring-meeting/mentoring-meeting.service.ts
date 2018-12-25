@@ -21,4 +21,8 @@ export class MentoringMeetingService {
     countMentoringMeetingById(id) {
         return this.http.get(this.url + '/mentoring-meeting/getMentoringMeetingCount/' + id);
     }
+
+    getAllMentoringMeetings() {
+        return this.http.get(this.url + '/mentoring-meeting/getAllMentoringMeetings');
+    }
 }

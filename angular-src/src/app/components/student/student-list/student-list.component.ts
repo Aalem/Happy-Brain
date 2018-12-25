@@ -1,9 +1,10 @@
 import {StudentService} from '../../../services/student.service';
 import {Router} from '@angular/router';
 import {Component, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {StudentDetailsComponent} from '../details/details.component';
 import {ExportExcelService} from '../../../services/export-excel/export-excel.service';
+import {ConfirmComponent} from '../../dialogs/confirm/confirm.component';
+import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
     selector: 'app-student-list',
@@ -11,7 +12,7 @@ import {ExportExcelService} from '../../../services/export-excel/export-excel.se
     styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent {
-    displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'year_level', 'edit', 'delete'];
+    displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'year_level', 'delete'];
     dataSource: MatTableDataSource<Object>;
     isDataLoaded: boolean;
 
@@ -20,7 +21,6 @@ export class StudentListComponent {
 
     users: any;
     students: any;
-    i = 0;
 
     constructor(private studentService: StudentService,
                 private excelService: ExportExcelService,
@@ -34,7 +34,6 @@ export class StudentListComponent {
                 this.users = [];
                 for (const index in students) {
                     this.users.push({
-                        id: Number(index) + 1,
                         _id: students[index]._id,
                         name: students[index].name + ' ' + students[index].last_name,
                         email: students[index].email,
@@ -68,8 +67,8 @@ export class StudentListComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.users);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
     }
@@ -95,6 +94,22 @@ export class StudentListComponent {
 
         dialogRef.afterClosed().subscribe(result => {
             console.log(`Dialog result: ${result}`);
+        });
+    }
+
+    deleteStudentDialog(id) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this student?',
+                warning: 'This action can\'t be reverted!'
+            }});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteStudent(id);
+            }
         });
     }
 

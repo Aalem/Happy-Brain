@@ -24,7 +24,7 @@
             <!-- Number Column -->
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> No.</th>
-                <td mat-cell *matCellDef="let row"> {{row.id}}</td>
+                <td mat-cell *matCellDef="let row; let i = index"> {{i+1}}</td>
             </ng-container>
 
             <!-- Title Column -->
@@ -49,7 +49,7 @@
 
             <!-- Edit Column -->
             <ng-container matColumnDef="download">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Download</th>
+                <th mat-header-cell *matHeaderCellDef > Download</th>
                 <td mat-cell *matCellDef="let row"><a [routerLink]="" (click)="download(row.id-1)">
                     <mat-icon style="color: darkgreen">save_alt</mat-icon>
                 </a>
@@ -59,8 +59,8 @@
 
             <!-- Delete Column -->
             <ng-container matColumnDef="delete" *ngIf="isAdmin">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete</th>
-                <td mat-cell *matCellDef="let row"><a [routerLink]="" (click)="deleteRes(row._id, row.id)">
+                <th mat-header-cell *matHeaderCellDef > Delete</th>
+                <td mat-cell *matCellDef="let row"><a [routerLink]="" (click)="deleteResDialog(row._id, row.id-1)">
                     <mat-icon style="color: red">delete</mat-icon>
                 </a>
 

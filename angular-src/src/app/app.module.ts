@@ -59,6 +59,10 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import {StudentDetailsComponent} from './components/student/details/details.component';
 import {MentorDetailsComponent} from './components/mentor/details/mentor-details.component';
 import { ClassesComponent } from './components/reports/classes/classes.component';
+import { SurveyListComponent } from './components/surveys/survey-list/survey-list.component';
+import { CommentComponent } from './components/surveys/comment-dialog/comment/comment.component';
+import { ConfirmComponent } from './components/dialogs/confirm/confirm.component';
+import { MentoringMeetingListComponent } from './components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component';
 
 
 
@@ -101,6 +105,8 @@ const appRoutes: Routes = [
     {path: 'create-mentoring-meeting/:id', component: CreateMentoringMeetingComponent, canActivate: [RoleGuard], data: {expectedRole: 'mentor'}},
     {path: 'create-survey/:id', component: CreateSurveyComponent, canActivate: [RoleGuard], data: {expectedRole: 'student'}},
     {path: 'classes-report', component: ClassesComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'survey-list', component: SurveyListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'mentoring-meetings', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'page-not-found', component: PageNotFoundComponent},
     ];
 
@@ -146,7 +152,11 @@ export function tokenGetter() {
         StarRatingComponent,
         StudentDetailsComponent,
         MentorDetailsComponent,
-        ClassesComponent
+        ClassesComponent,
+        SurveyListComponent,
+        CommentComponent,
+        ConfirmComponent,
+        MentoringMeetingListComponent,
     ],
     imports: [
         BrowserModule,
@@ -195,7 +205,7 @@ export function tokenGetter() {
     providers: [ValidateService, AuthService, AuthGuard, RoleGuard, LoginGuard],
     bootstrap: [AppComponent],
     entryComponents: [
-        StudentDetailsComponent, MentorDetailsComponent
+        StudentDetailsComponent, MentorDetailsComponent, CommentComponent, ConfirmComponent
     ]
 })
 

@@ -23,46 +23,46 @@ const MentorSchema = mongoose.Schema ({
     }, subjects: {
         type: String
     }, studying: {
-        type: String,
+        type: String
     }, language: {
-        type: String,
+        type: String
     }, location: {
-        type: String,
+        type: String
     }, experience: {
-        type: String,
+        type: String
     }, volunteering: {
-        type: String,
+        type: String
     }, wwcc: {
-        type: String,
+        type: String
     }, why_join: {
-        type: String,
+        type: String
     }, about_us: {
-        type: String,
+        type: String
     }, refugee_definition: {
-        type: String,
+        type: String
     }, preference: {
-        type: String,
+        type: String
     }, send_me_copy: {
-        type: String,
+        type: String
     },
     gender: {
-        type: String,
+        type: String
     },
     status: {
-        type: String,
+        type: String
     },
     deleted: {
-        type: String,
+        type: String
     },
     type: {
-        type: String,
+        type: String
     },
     wwcc_front: {
-        type: String,
+        type: String
     },
     wwcc_back: {
-        type: String,
-    },
+        type: String
+    }
 });
 
 

@@ -20,16 +20,18 @@
     <input matInput type="text" placeholder="Session" disabled value="{{session}}" name="session">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput type="number" placeholder="Section" [(ngModel)]="section"  name="section">
-  </mat-form-field>
+  <!--<mat-form-field class="example-full-width">-->
+    <!--<input matInput type="number" placeholder="Section" [(ngModel)]="section"  name="section">-->
+  <!--</mat-form-field>-->
 
   <mat-form-field class="example-full-width">
     <input matInput type="text" placeholder="Duration in minutes (90)" [(ngModel)]="duration"  name="duration">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput type="text" placeholder="Comment" [(ngModel)]="comment" name="comment">
+
+  <mat-form-field required class="example-full-width">
+        <textarea required matInput rows="10" type="textarea" placeholder="Comment" [(ngModel)]="comment"
+                  name="comment"></textarea>
   </mat-form-field>
 
 

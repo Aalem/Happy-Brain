@@ -1,8 +1,8 @@
-import {Router} from '@angular/router';
 import {SubjectService} from '../../../services/subject.service';
 
-import {Component, ViewChild} from '@angular/core';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {ConfirmComponent} from '../../dialogs/confirm/confirm.component';
 
 @Component({
     selector: 'app-subject-list',
@@ -12,36 +12,33 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 
 export class SubjectListComponent {
-
-    subjects: any;
-    displayedColumns: string[] = ['id', 'name', 'edit'];
-    dataSource: MatTableDataSource<Object>;
-    subjectArray: any;
-    isDataLoaded: boolean;
-
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    i = 0;
+
+    subjects: any;
+    displayedColumns: string[] = ['id', 'name', 'edit', 'delete'];
+    dataSource: MatTableDataSource<Object>;
+    subjectArray: any = [];
+
+    isDataLoaded: boolean;
 
     constructor(private subjectService: SubjectService,
-                private router: Router) {
+                private snackBar: MatSnackBar,
+                private matDialog: MatDialog) {
         this.isDataLoaded = false;
         this.subjectService.getSubjects()
             .subscribe(subjects => {
-                this.subjects = subjects;
-                this.subjectArray = [];
-                for (this.i = 0; this.i < this.subjects.length; this.i++) {
+                for (const index in subjects) {
                     this.subjectArray.push({
-                        id: this.i + 1,
-                        _id: this.subjects[this.i]._id,
-                        name: this.subjects[this.i].name
-                        // sections: this.subjects[this.i].sections
+                        id: Number(index) + 1,
+                        _id: subjects[index]._id,
+                        name: subjects[index].name
                     });
                 }
 
                 this.dataSource = new MatTableDataSource(this.subjectArray);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
     }
@@ -53,12 +50,30 @@ export class SubjectListComponent {
         }
     }
 
-    deleteSubject(id) {
+    deleteSubject(id, index) {
         this.subjectService.deleteSubject(id).then((result) => {
-            this.router.navigate(['/subject-list']);
+            this.subjectArray.splice(index, 1);
+            this.dataSource = new MatTableDataSource(this.subjectArray);
+            this.snackBar.open('Subject Deleted', null, {duration: 1500});
         }, (err) => {
             console.log(err);
         });
     }
 
+    deleteSubjectDialog(id, index) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this subject?',
+                warning: 'This action can\'t be reverted!'
+            }
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteSubject(id, index);
+            }
+        });
+    }
 }

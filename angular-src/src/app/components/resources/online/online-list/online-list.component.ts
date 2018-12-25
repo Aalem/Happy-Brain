@@ -2,8 +2,9 @@ import {OnlineResService} from '../../../../services/online_res/online-res.servi
 import {Router} from '@angular/router';
 
 import {Component, ViewChild} from '@angular/core';
-import {MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
 import {AuthService} from '../../../../services/auth.service';
+import {ConfirmComponent} from "../../../dialogs/confirm/confirm.component";
 
 @Component({
     selector: 'app-online-list',
@@ -23,7 +24,10 @@ export class OnlineListComponent {
 
     resources: any;
 
-    constructor(private onlineService: OnlineResService, private router: Router, private  authService: AuthService) {
+    constructor(private onlineService: OnlineResService,
+                private router: Router,
+                private matDialog: MatDialog,
+                private  authService: AuthService) {
         this.isDataLoaded = false;
         this.isAdmin = false;
 
@@ -41,8 +45,8 @@ export class OnlineListComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.resources);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
         this.isAdmin = this.authService.getUserType() === 'admin';
@@ -56,14 +60,34 @@ export class OnlineListComponent {
         }
     }
 
-    deleteRes(id, index) {
-        this.resources.splice(index - 1, 1);
-        this.dataSource = new MatTableDataSource(this.resources);
+    deleteRes(id) {
 
         this.onlineService.deleteOnlineRes(id).then((result) => {
-            // this.router.navigate(['/online-list']);
+            for (const index in this.resources) {
+                if (id === this.resources[index]._id) {
+                    this.resources.splice(index, 1);
+                    break;
+                }
+            }
+            this.dataSource = new MatTableDataSource(this.resources);
         }, (err) => {
             console.log(err);
+        });
+    }
+
+    deleteResDialog(id, index) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this resource?',
+                warning: 'This action can\'t be reverted!'
+            }});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteRes(id);
+            }
         });
     }
 }

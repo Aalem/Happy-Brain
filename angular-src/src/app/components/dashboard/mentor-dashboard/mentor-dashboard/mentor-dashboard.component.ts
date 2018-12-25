@@ -18,7 +18,7 @@ export class MentorDashboardComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    displayedColumns: string[] = ['id', 'student', 'subject',  'start_date', 'end_date', 'mentoring_meeting'];
+    displayedColumns: string[] = ['id', 'student_name', 'subject',  'start_date', 'end_date', 'mentoring_meeting'];
     dataSource: MatTableDataSource<Object>;
 
     constructor(private studentSubjectService: StudentSubjectService,
@@ -34,7 +34,8 @@ export class MentorDashboardComponent {
                     this.subjectsArray.push({
                         id: Number(index),
                         _id: data[index]._id,
-                        // student: data[index].student['length'] !== 0 ? data[index].student[0].name : '',
+                        student_name: data[index].student['length'] !== 0 ? data[index].student[0].name +
+                            ' ' + data[index].student[0].last_name : '',
                         student: data[index].student[0],
                         subject: data[index].subject['length'] !== 0 ? data[index].subject[0].name : '',
                         start_date: data[index].start_date,
@@ -44,8 +45,8 @@ export class MentorDashboardComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.subjectsArray);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
 

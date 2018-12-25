@@ -3,8 +3,8 @@ import {MentorSubjectService} from '../../../services/mentor-subject/mentor-subj
 import {MentorService} from '../../../services/mentor.service';
 import {StudentSubjectService} from '../../../services/student-subject/student-subject.service';
 import {Router} from '@angular/router';
-import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
-import {MentorDetailsComponent} from "../details/mentor-details.component";
+import {MatDatepickerInputEvent, MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MentorDetailsComponent} from '../details/mentor-details.component';
 
 
 @Component({
@@ -12,7 +12,7 @@ import {MentorDetailsComponent} from "../details/mentor-details.component";
     templateUrl: './mentor-assignment.component.html',
     styleUrls: ['./mentor-assignment.component.css']
 })
-export class MentorAssignmentComponent implements OnInit {
+export class MentorAssignmentComponent {
     displayedColumns: string[] = ['id', 'name', 'phone', 'location', 'starting_date', 'assign'];
     dataSource: MatTableDataSource<Object>;
     student: any;
@@ -26,6 +26,8 @@ export class MentorAssignmentComponent implements OnInit {
     mentors: any;
     isDataLoaded: boolean;
 
+    isNoMentor: boolean;
+
     i = 0;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -37,6 +39,7 @@ export class MentorAssignmentComponent implements OnInit {
                 private studentSubjectService: StudentSubjectService,
                 private snackBar: MatSnackBar) {
         this.isDataLoaded = false;
+        this.isNoMentor = false;
 
         this.student = JSON.parse(localStorage.getItem('assignment_data')).student;
         this.subject = JSON.parse(localStorage.getItem('assignment_data')).subject;
@@ -44,29 +47,36 @@ export class MentorAssignmentComponent implements OnInit {
         this.mentors = [];
 
         this.mentorSubjectService.getMentorSubjectsBySubjectId(this.subject._id).subscribe(data => {
-            this.subject_mentors = data;
+                this.subject_mentors = data;
                 this.mentor_data = [];
                 if (data['length'] !== 0) {
                     this.getMentors(this.subject_mentors);
-
+                } else {
+                    this.isNoMentor = true;
+                    this.isDataLoaded = true;
                 }
-
             }
         );
 
     }
 
+    addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+        this.today = event.value.toISOString().split('T')[0];
+    }
+
     getMentors(mentor) {
         this.mentorService.getMentor(this.subject_mentors[this.i].mentor_id).then((mentor_data) => {
-            this.mentors.push({
-                id: this.i,
-                _id: mentor_data['_id'],
-                name: mentor_data['name'],
-                phone: mentor_data['phone'],
-                location: mentor_data['location'],
-                starting_date: mentor_data['starting_date'],
-                mentor_data: mentor_data
-            });
+            if (mentor_data != null) {
+                this.mentors.push({
+                    id: this.i,
+                    _id: mentor_data['_id'],
+                    name: mentor_data['name'],
+                    phone: mentor_data['phone'],
+                    location: mentor_data['location'],
+                    starting_date: mentor_data['starting_date'],
+                    mentor_data: mentor_data
+                });
+            }
 
             this.i++;
             if (this.subject_mentors['length'] > this.i) {
@@ -80,12 +90,6 @@ export class MentorAssignmentComponent implements OnInit {
         }, (err) => {
             console.log(err);
         });
-    }
-
-
-    ngOnInit() {
-        this.today = new Date().toISOString().split('T')[0];
-
     }
 
     onAssignMentor(mentor_id) {

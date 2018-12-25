@@ -29,8 +29,17 @@
                 <a mat-list-item [routerLink]="['/mentor-list']" routerLinkActive="active">Mentors</a>
                 <a mat-list-item [routerLink]="['/admin-list']" routerLinkActive="active">Admins</a>
             </mat-expansion-panel>
-            <a mat-list-item *ngIf="authService.getUserType()=='admin'" [routerLink]="['/classes-report']" routerLinkActive="active">Reports</a>
-            <!--<a mat-list-item [routerLink]="['/profile']" routerLinkActive="active">Profile</a>-->
+
+            <mat-expansion-panel *ngIf="authService.getUserType()=='admin'" class="sidenav" style="box-shadow: none;">
+                <mat-expansion-panel-header style="padding-left: 0px !important;">
+                    <a mat-list-item>Reports</a>
+                </mat-expansion-panel-header>
+                <a mat-list-item [routerLink]="['/classes-report']" routerLinkActive="active">Classes</a>
+                <a mat-list-item [routerLink]="['/survey-list']" routerLinkActive="active">Feedbacks</a>
+                <a mat-list-item [routerLink]="['/mentoring-meetings']" routerLinkActive="active">Mnt. Meetings</a>
+            </mat-expansion-panel>
+
+
             <a (click)="logout(drawer)" mat-list-item>Logout</a>
         </mat-nav-list>
     </mat-sidenav>

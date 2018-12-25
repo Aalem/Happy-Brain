@@ -5,6 +5,7 @@ import {Component, ViewChild} from '@angular/core';
 import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {ExportExcelService} from '../../../services/export-excel/export-excel.service';
 import {MentorDetailsComponent} from '../details/mentor-details.component';
+import {ConfirmComponent} from "../../dialogs/confirm/confirm.component";
 
 @Component({
     selector: 'app-mentor-list',
@@ -12,7 +13,7 @@ import {MentorDetailsComponent} from '../details/mentor-details.component';
     styleUrls: ['./mentor-list.component.css']
 })
 export class MentorListComponent {
-    displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'gender', 'edit', 'delete'];
+    displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'gender', 'delete'];
     dataSource: MatTableDataSource<Object>;
     isDataLoaded: boolean;
 
@@ -49,7 +50,7 @@ export class MentorListComponent {
                         Email: mentors[index].email,
                         Phone: mentors[index].phone,
                         Gender: mentors[index].gender,
-                        Subjects: mentors[index].subject,
+                        Subjects: mentors[index].subjects,
                         VCE_Subjects: mentors[index].vce_subjects,
                         CurrentlyStudying: mentors[index].studying,
                         Language: mentors[index].language,
@@ -62,8 +63,8 @@ export class MentorListComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.users);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
     }
@@ -89,6 +90,22 @@ export class MentorListComponent {
 
         dialogRef.afterClosed().subscribe(result => {
             console.log(`Dialog result: ${result}`);
+        });
+    }
+
+    deleteMentorDialog(id) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this mentor?',
+                warning: 'This action can\'t be reverted!'
+            }});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteMentor(id);
+            }
         });
     }
 

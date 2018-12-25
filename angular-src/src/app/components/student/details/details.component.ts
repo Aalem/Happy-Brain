@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
@@ -6,7 +6,7 @@ import {MAT_DIALOG_DATA} from '@angular/material';
     templateUrl: './details.component.html',
     styleUrls: ['./details.component.css']
 })
-export class StudentDetailsComponent implements OnInit {
+export class StudentDetailsComponent {
     student: any;
 
     displayedColumns: string[] = ['name'];
@@ -14,9 +14,6 @@ export class StudentDetailsComponent implements OnInit {
     constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
         console.log(data.name);
         this.student = data;
-    }
-
-    ngOnInit() {
     }
 
     valueOf(field) {

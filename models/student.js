@@ -85,7 +85,7 @@ module.exports.getStudentById = function (id, callback) {
 }
 
 module.exports.getStudentByEmail = function (email, callback) {
-    const query = {email: email}
+    const query = {email: email};
     Student.findOne(query, callback);
 }
 
@@ -94,17 +94,13 @@ module.exports.addStudent = function (newStudent, callback) {
         bcrypt.hash(newStudent.password, salt, (err, hash) => {
         if(err) throw err;
     newStudent.password = hash;
-    newStudent.save(callback);
-})
-    ;
-})
-    ;
+    newStudent.save(callback);});
+    });
 }
 
 module.exports.comparePassword = function (candidatePassword, hash, callback) {
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if(err) throw err;
-    callback(null, isMatch);
-})
-    ;
+        callback(null, isMatch);
+    });
 }

@@ -15,7 +15,7 @@ export class CreateMentoringMeetingComponent {
     session: any;
     duration: any;
     comment: any;
-    section: any;
+    // section: any;
     subject: any;
     sectinos: any;
     student: any;
@@ -30,7 +30,7 @@ export class CreateMentoringMeetingComponent {
         this.studentSubjectService.getStudentSubjectsById(this.activatedRoute.snapshot.params['id']).subscribe(data => {
             this.studentSubject = data;
             this.subject = this.studentSubject[0].subject[0].name;
-            this.sectinos = this.studentSubject[0].subject[0].section;
+            // this.sectinos = this.studentSubject[0].subject[0].section;
             this.student = this.studentSubject[0].student[0].name;
 
         });
@@ -48,7 +48,7 @@ export class CreateMentoringMeetingComponent {
         const mentoring_meeting = {
             student_subject: this.studentSubject[0]._id,
             date: this.date,
-            section: this.section,
+            // section: this.section,
             session: this.session,
             duration: this.duration,
             comment: this.comment

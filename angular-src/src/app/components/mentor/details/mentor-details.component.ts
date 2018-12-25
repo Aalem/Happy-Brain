@@ -6,16 +6,13 @@ import {MAT_DIALOG_DATA} from '@angular/material';
     templateUrl: './mentor-details.component.html',
     styleUrls: ['./mentor-details.component.css']
 })
-export class MentorDetailsComponent implements OnInit {
+export class MentorDetailsComponent {
     mentor: any;
 
     displayedColumns: string[] = ['name'];
 
     constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
         this.mentor = data;
-    }
-
-    ngOnInit() {
     }
 
     valueOf(field) {

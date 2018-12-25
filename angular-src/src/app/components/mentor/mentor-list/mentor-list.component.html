@@ -48,24 +48,24 @@
             </ng-container>
             <!-- Status Column -->
             <!--<ng-container matColumnDef="status">-->
-                <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>-->
+                <!--<th mat-header-cell *matHeaderCellDef mat-unassignedSort-header> Status</th>-->
                 <!--<td mat-cell *matCellDef="let row"> {{row.status}}</td>-->
             <!--</ng-container>-->
             <!-- Edit Column -->
-            <ng-container matColumnDef="edit">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit</th>
-                <td mat-cell *matCellDef="let row"><a [routerLink]="['/mentor-edit', row._id]">
-                    <mat-icon style="color: darkgreen">edit</mat-icon>
-                </a>
+            <!--<ng-container matColumnDef="edit">-->
+                <!--<th mat-header-cell *matHeaderCellDef mat-unassignedSort-header> Edit</th>-->
+                <!--<td mat-cell *matCellDef="let row"><a [routerLink]="['/mentor-edit', row._id]">-->
+                    <!--<mat-icon style="color: darkgreen">edit</mat-icon>-->
+                <!--</a>-->
 
-                </td>
-            </ng-container>
+                <!--</td>-->
+            <!--</ng-container>-->
 
             <!-- Delete Column -->
             <ng-container matColumnDef="delete">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete</th>
                 <td mat-cell *matCellDef="let row"><a [routerLink]="['/mentor-list', row._id]"
-                                                      (click)="deleteMentor(row._id)">
+                                                      (click)="deleteMentorDialog(row._id)">
                     <mat-icon style="color: red">delete</mat-icon>
                 </a>
 

@@ -25,11 +25,64 @@ router.post('/register', function (req, res, next) {
 
 router.get('/getMentoringMeetingCount/:id', function (req, res, next) {
 
-    MentoringMeeting.count({student_subject: mongoose.Types.ObjectId(req.params.id)},function (err, count) {
+    MentoringMeeting.count({student_subject: mongoose.Types.ObjectId(req.params.id)}, function (err, count) {
         if (err) {
             res.send(err);
         }
         res.json(count);
+    });
+
+});
+
+router.get('/getAllMentoringMeetings', function (req, res, next) {
+
+    MentoringMeeting.aggregate([
+        // {$match: {teacher_assigned: false}},
+        {
+            $lookup: {
+                from: "studentsubjects",
+                localField: "student_subject",
+                foreignField: "_id",
+                as: "student_subjects"
+            }
+        },
+        {
+            $unwind: {
+                path: "$student_subjects",
+                preserveNullAndEmptyArrays: true
+            }
+        },
+
+        {
+            $lookup:
+                {
+                    from: "students",
+                    localField: "student_subjects.student_id",
+                    foreignField: "_id", as: "student_subjects.student"
+                }
+        },
+        {
+            $lookup:
+                {
+                    from: "mentors",
+                    localField: "student_subjects.mentor_id",
+                    foreignField: "_id", as: "student_subjects.mentor"
+                }
+        },
+
+        {
+            $lookup:
+                {
+                    from: "subjects",
+                    localField: "student_subjects.subject_id",
+                    foreignField: "_id", as: "student_subjects.subject"
+                }
+        }
+    ], function (err, mentor_subject) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(mentor_subject);
     });
 
 });

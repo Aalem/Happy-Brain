@@ -6,12 +6,21 @@ const config = require('../config/database');
 const SurveySchema = mongoose.Schema({
     student_subject: {
         type: mongoose.Schema.Types.ObjectId
+    },student_id: {
+        type: mongoose.Schema.Types.ObjectId
+    },mentor_id: {
+        type: mongoose.Schema.Types.ObjectId
+    },subject_id: {
+        type: mongoose.Schema.Types.ObjectId
     }, date: {
-        type: String
+        type: String,
+        required: true
     }, comment: {
-        type: String
+        type: String,
+        required: true
     }, rating: {
-        type: String
+        type: String,
+        required: true
     }
 });
 

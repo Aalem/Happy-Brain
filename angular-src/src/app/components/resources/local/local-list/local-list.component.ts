@@ -2,8 +2,9 @@ import {Router} from '@angular/router';
 import {LocalResService} from '../../../../services/local_res/local-res.service';
 import {saveAs} from 'file-saver';
 import {Component, ViewChild} from '@angular/core';
-import {MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
 import {AuthService} from '../../../../services/auth.service';
+import {ConfirmComponent} from "../../../dialogs/confirm/confirm.component";
 
 @Component({
     selector: 'app-local-list',
@@ -23,7 +24,11 @@ export class LocalListComponent {
 
     resources: any;
 
-    constructor(private authService: AuthService, private localResService: LocalResService, private router: Router, private snackBar: MatSnackBar) {
+    constructor(private authService: AuthService,
+                private localResService: LocalResService,
+                private matDialog: MatDialog,
+                private router: Router,
+                private snackBar: MatSnackBar) {
         this.isDataLoaded = false;
         this.isAdmin = false;
         this.localResService.getLocalRess()
@@ -40,8 +45,8 @@ export class LocalListComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.resources);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
         this.isAdmin = this.authService.getUserType() === 'admin';
@@ -49,7 +54,7 @@ export class LocalListComponent {
 
     deleteFile(index) {
         // deleteRes(id);
-        var fileUplaod = this.resources[index].fileUplaod;
+        const fileUplaod = this.resources[index].fileUplaod;
 
         this.localResService.deleteFile(fileUplaod)
             .subscribe(
@@ -66,16 +71,20 @@ export class LocalListComponent {
         }
     }
 
-    deleteRes(id, i) {
-        this.deleteFile(i - 1);
+    deleteRes(id) {
         this.localResService.deleteLocalRes(id).then((result) => {
-            this.router.navigate(['/local-list']);
-            this.resources.splice(i - 1, 1);
+            // this.router.navigate(['/local-list']);
+            for (const index in this.resources) {
+                if (id === this.resources[index]._id) {
+                    this.deleteFile(index);
+                    this.resources.splice(index, 1);
+                    break;
+                }
+            }
             this.dataSource = new MatTableDataSource(this.resources);
         }, (err) => {
             console.log(err);
         });
-
     }
 
     download(index) {
@@ -86,6 +95,22 @@ export class LocalListComponent {
                 error => this.snackBar.open('File Not Found', 'Dismiss', {duration: 2500})
             );
 
+    }
+
+    deleteResDialog(id, index) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this resource?',
+                warning: 'This action can\'t be reverted!'
+            }});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteRes(id);
+            }
+        });
     }
 
 

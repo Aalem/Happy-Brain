@@ -2,7 +2,8 @@ import {AdminService} from '../../../services/admin.service';
 import {Router} from '@angular/router';
 
 import {Component,  ViewChild} from '@angular/core';
-import {MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {ConfirmComponent} from '../../dialogs/confirm/confirm.component';
 
 @Component({
     selector: 'app-admin-list',
@@ -22,6 +23,7 @@ export class AdminListComponent  {
 
     constructor(private adminService: AdminService,
                 private router: Router,
+                private matDialog: MatDialog,
                 private snackBar: MatSnackBar) {
 
         this.isDataLoaded = false;
@@ -40,8 +42,8 @@ export class AdminListComponent  {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.users);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
             });
     }
@@ -57,11 +59,27 @@ export class AdminListComponent  {
     deleteAdmin(id) {
         this.adminService.deleteAdmin(id).then((result) => {
             this.router.navigate(['/admin-list']);
-            this.snackBar.open('User deleted!', 'Dimiss', {duration: 2000});
+            this.snackBar.open('Admin deleted!', 'Dimiss', {duration: 2000});
         }, (err) => {
             console.log(err);
         });
 
+    }
+
+    deleteAdminDialog(id) {
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Deletion',
+                message: 'Are you sure you want to delete this admin?',
+                warning: 'This action can\'t be reverted!'
+            }});
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.deleteAdmin(id);
+            }
+        });
     }
 
 }

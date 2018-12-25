@@ -19,6 +19,7 @@ export class CreateSurveyComponent implements OnInit {
     date: any;
     comment: any;
     mentor: any;
+    student: any;
     subject: any;
 
     constructor(private activatedRoute: ActivatedRoute,
@@ -28,9 +29,9 @@ export class CreateSurveyComponent implements OnInit {
                 private studentSubjectService: StudentSubjectService) {
         this.studentSubjectService.getStudentSubjectsById(this.activatedRoute.snapshot.params['id']).subscribe(data => {
             this.studentSubject = data;
-            this.subject = this.studentSubject[0].subject[0].name;
-            this.mentor = this.studentSubject[0].mentor[0].name;
-            console.log(data);
+            this.subject = this.studentSubject[0].subject[0];
+            this.mentor = this.studentSubject[0].mentor[0];
+            this.student = this.studentSubject[0].student[0];
         });
 
     }
@@ -41,23 +42,25 @@ export class CreateSurveyComponent implements OnInit {
     }
 
     onRatingChanged(rating) {
-        console.log(rating);
         this.rating = rating;
     }
 
     onSubmit() {
         const survey = {
             student_subject: this.studentSubject[0]._id,
+            student_id: this.student._id,
+            mentor_id: this.mentor._id,
+            subject_id: this.subject._id,
             date: this.date,
             comment: this.comment,
             rating: this.rating
         };
         this.surveySerive.registerSurvey(survey).subscribe(data => {
             if (data['success']) {
-                this.snackBar.open('Survey recorded', null, {duration: 1500});
+                this.snackBar.open('Thank you for the feedback!', null, {duration: 1500});
                 this.router.navigate(['/student-dashboard']);
             } else {
-                this.snackBar.open('Something went wrong', 'Dismiss', {duration: 2000});
+                this.snackBar.open('Please make sure you have filled the required fields and rated your mentor', 'Dismiss', {duration: 3000});
             }
         });
     }
