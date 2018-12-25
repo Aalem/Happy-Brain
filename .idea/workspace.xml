@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,77 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mentoring-meeting-list.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mentoring-meeting-list.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="52" column="62" lean-forward="false" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mentoring_meeting.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/mentoring_meeting.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="77" column="70" lean-forward="false" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mentoring-meeting.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_subject.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/student_subject.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="154" column="7" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="154" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="survey-list.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts">
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="77" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="3" selection-end-column="4" />
               <folding>
-                <element signature="e#0#70#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="survey-list.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html">
+      <file leaf-file-name="config.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="61" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,8 +89,6 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html" />
-        <option value="$PROJECT_DIR$/config/database.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/online_res/online-res.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" />
         <option value="$PROJECT_DIR$/routes/surveys.js" />
@@ -191,6 +136,8 @@
         <option value="$PROJECT_DIR$/routes/mentoring_meeting.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.html" />
+        <option value="$PROJECT_DIR$/config/database.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
       </list>
     </option>
   </component>
@@ -260,91 +207,7 @@
               <item name="angular-src" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="main-nav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-              <item name="create-mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-              <item name="create-survey" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-              <item name="survey-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -427,12 +290,12 @@
       <workItem from="1540617792551" duration="12372000" />
       <workItem from="1542776005475" duration="3330000" />
       <workItem from="1544783552432" duration="81969000" />
-      <workItem from="1545640343969" duration="8343000" />
+      <workItem from="1545640343969" duration="8809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468898000" />
+    <option name="totallyTimeSpent" value="469364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -475,23 +338,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/onlines.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="62" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -839,7 +685,7 @@
     <entry file="file://$PROJECT_DIR$/routes/student_subject.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="154" column="7" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="154" selection-end-column="7" />
+          <caret line="154" column="7" lean-forward="false" selection-start-line="145" selection-start-column="4" selection-end-line="154" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -886,6 +732,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
