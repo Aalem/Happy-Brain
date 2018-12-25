@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/1539234257336.profile1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/details/details.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/details/details.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/data-table/data-table-datasource.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/data-table/data-table-datasource.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/mentor.js" afterPath="$PROJECT_DIR$/models/mentor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/student.js" afterPath="$PROJECT_DIR$/models/student.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/subject.js" afterPath="$PROJECT_DIR$/models/subject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/survey.js" afterPath="$PROJECT_DIR$/models/survey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.20d4bdba48d397bc852e.js" afterPath="$PROJECT_DIR$/public/main.20d4bdba48d397bc852e.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mentoring_meeting.js" afterPath="$PROJECT_DIR$/routes/mentoring_meeting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/surveys.js" afterPath="$PROJECT_DIR$/routes/surveys.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -470,16 +427,15 @@
       <workItem from="1540617792551" duration="12372000" />
       <workItem from="1542776005475" duration="3330000" />
       <workItem from="1544783552432" duration="81969000" />
-      <workItem from="1545640343969" duration="8051000" />
+      <workItem from="1545640343969" duration="8343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468606000" />
+    <option name="totallyTimeSpent" value="468898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20366456" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
@@ -490,7 +446,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21994536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21994536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20789288" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
