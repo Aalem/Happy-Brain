@@ -19,7 +19,7 @@ export class SurveyListComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    displayedColumns: string[] = ['id', 'student', 'mentor', 'subject', 'date', 'comment', 'rating'];
+    displayedColumns: string[] = ['id', 'student_name', 'mentor_name', 'subject_name', 'date', 'comment', 'rating'];
     dataSource: MatTableDataSource<Object>;
 
     constructor(private surveyService: SurveyService,
@@ -45,8 +45,8 @@ export class SurveyListComponent {
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.surveysArray);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
+                setTimeout(() => this.dataSource.paginator = this.paginator);
+                setTimeout(() => this.dataSource.sort = this.sort);
                 this.isDataLoaded = true;
                 if (data['length'] == 0) {
                     this.isNoData = true;

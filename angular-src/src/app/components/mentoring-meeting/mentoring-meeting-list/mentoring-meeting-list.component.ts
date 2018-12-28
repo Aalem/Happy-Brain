@@ -8,9 +8,9 @@ import {CommentComponent} from '../../surveys/comment-dialog/comment/comment.com
 import {MentoringMeetingService} from "../../../services/mentoring-meeting/mentoring-meeting.service";
 
 @Component({
-  selector: 'app-mentoring-meeting-list',
-  templateUrl: './mentoring-meeting-list.component.html',
-  styleUrls: ['./mentoring-meeting-list.component.css']
+    selector: 'app-mentoring-meeting-list',
+    templateUrl: './mentoring-meeting-list.component.html',
+    styleUrls: ['./mentoring-meeting-list.component.css']
 })
 export class MentoringMeetingListComponent {
 
@@ -33,28 +33,29 @@ export class MentoringMeetingListComponent {
         this.isNoData = false;
 
         this.MMService.getAllMentoringMeetings().subscribe(data => {
-           console.log(data[0].student_subjects.student[0]);
-            for (const index in data) {
-                this.MMArray.push({
-                    id: Number(index),
-                    date: data[index].date.split('T')[0],
-                    comment: data[index].comment,
-                    session: data[index].session,
-                    student_name: data[index].student_subjects.student[0].name + ' ' +
+            if (data['length'] == 0) {
+                this.isNoData = true;
+            } else {
+
+                for (const index in data) {
+                    this.MMArray.push({
+                        id: Number(index),
+                        date: data[index].date.split('T')[0],
+                        comment: data[index].comment,
+                        session: data[index].session,
+                        student_name: data[index].student_subjects.student[0].name + ' ' +
                         data[index].student_subjects.student[0].last_name,
-                    student: data[index].student_subjects.student[0],
-                    mentor: data[index].student_subjects.mentor[0],
-                    mentor_name: data[index].student_subjects.mentor[0].name,
-                    subject_name: data[index].student_subjects.subject[0].name,
-                });
+                        student: data[index].student_subjects.student[0],
+                        mentor: data[index].student_subjects.mentor[0],
+                        mentor_name: data[index].student_subjects.mentor[0].name,
+                        subject_name: data[index].student_subjects.subject[0].name,
+                    });
+                }
             }
             this.dataSource = new MatTableDataSource(this.MMArray);
             setTimeout(() => this.dataSource.paginator = this.paginator);
             setTimeout(() => this.dataSource.sort = this.sort);
             this.isDataLoaded = true;
-            if (data['length'] == 0) {
-                this.isNoData = true;
-            }
         });
 
     }

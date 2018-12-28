@@ -17,21 +17,25 @@ export class CreateSurveyComponent implements OnInit {
 
     studentSubject: any;
     date: any;
+    mydate: any;
     comment: any;
     mentor: any;
     student: any;
     subject: any;
+    isDataLoaded: boolean;
 
     constructor(private activatedRoute: ActivatedRoute,
                 private snackBar: MatSnackBar,
                 private router: Router,
                 private surveySerive: SurveyService,
                 private studentSubjectService: StudentSubjectService) {
+        this.isDataLoaded = false;
         this.studentSubjectService.getStudentSubjectsById(this.activatedRoute.snapshot.params['id']).subscribe(data => {
             this.studentSubject = data;
             this.subject = this.studentSubject[0].subject[0];
             this.mentor = this.studentSubject[0].mentor[0];
             this.student = this.studentSubject[0].student[0];
+            this.isDataLoaded = true;
         });
 
     }

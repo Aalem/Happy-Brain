@@ -54,6 +54,8 @@ export class SubjectListComponent {
         this.subjectService.deleteSubject(id).then((result) => {
             this.subjectArray.splice(index, 1);
             this.dataSource = new MatTableDataSource(this.subjectArray);
+            setTimeout(() => this.dataSource.paginator = this.paginator);
+            setTimeout(() => this.dataSource.sort = this.sort);
             this.snackBar.open('Subject Deleted', null, {duration: 1500});
         }, (err) => {
             console.log(err);
