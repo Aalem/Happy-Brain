@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
     </list>
@@ -37,12 +30,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-survey.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create-survey.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-346">
-              <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="18">
+              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +149,6 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" />
         <option value="$PROJECT_DIR$/routes/mentoring_meeting.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
-        <option value="$PROJECT_DIR$/config/database.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" />
@@ -143,6 +156,8 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
+        <option value="$PROJECT_DIR$/config/database.js" />
       </list>
     </option>
   </component>
@@ -181,6 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,8 +372,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,11 +428,12 @@
       <workItem from="1542776005475" duration="3330000" />
       <workItem from="1544783552432" duration="81969000" />
       <workItem from="1545640343969" duration="18631000" />
+      <workItem from="1545994586321" duration="109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479186000" />
+    <option name="totallyTimeSpent" value="479295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -426,19 +442,19 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20366456" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21994536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20789288" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20789288" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -471,7 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="109" column="5" lean-forward="true" selection-start-line="95" selection-start-column="4" selection-end-line="109" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -566,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="82" column="13" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="82" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1108">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="71" column="69" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,11 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1584">
           <caret line="140" column="58" lean-forward="false" selection-start-line="140" selection-start-column="58" selection-end-line="140" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#93#0" expanded="false" />
-            <element signature="e#2062#3539#0" expanded="false" />
-            <element signature="e#3627#5336#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="72" lean-forward="false" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="128" column="116" lean-forward="false" selection-start-line="128" selection-start-column="116" selection-end-line="128" selection-end-column="116" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="57" column="69" lean-forward="false" selection-start-line="57" selection-start-column="69" selection-end-line="57" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
           <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,9 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="108" column="73" lean-forward="false" selection-start-line="108" selection-start-column="73" selection-end-line="108" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="154" column="7" lean-forward="false" selection-start-line="145" selection-start-column="4" selection-end-line="154" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -745,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="38" column="99" lean-forward="false" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
-          <folding>
-            <marker date="1545718233903" expanded="false" signature="3378:3417" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="77" column="70" lean-forward="false" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,9 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
           <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-829">
           <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
           <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,9 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,25 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="56" column="73" lean-forward="true" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,9 +820,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        <state relative-caret-position="18">
+          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
