@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Mentor Details</h2>
 <mat-dialog-content class="mat-typography">
-    <table>
+    <table *ngIf="authService.getUserType()!='student'">
 
         <tr>
             <td style="color: #757575">Name:</td>
@@ -64,6 +64,27 @@
         </tr>
 
 
+    </table>
+    <table *ngIf="authService.getUserType()=='student'">
+
+        <tr>
+            <td style="color: #757575">Name:</td>
+            <td>{{mentor.name}} {{valueOf(mentor.last_name)}}
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">Email:</td>
+            <td>{{mentor.email}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="color: #757575">Contact:</td>
+            <td>{{valueOf(mentor.phone)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+
+            <td style="color: #757575">VCE Subjects:</td>
+            <td>{{valueOf(mentor.vce_subjects)}}</td>
+            <td>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
     </table>
     <br/>
     <br/>

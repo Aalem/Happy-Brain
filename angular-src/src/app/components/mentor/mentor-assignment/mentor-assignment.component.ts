@@ -3,7 +3,14 @@ import {MentorSubjectService} from '../../../services/mentor-subject/mentor-subj
 import {MentorService} from '../../../services/mentor.service';
 import {StudentSubjectService} from '../../../services/student-subject/student-subject.service';
 import {Router} from '@angular/router';
-import {MatDatepickerInputEvent, MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
+import {
+    MatDatepickerInputEvent,
+    MatDialog,
+    MatPaginator,
+    MatSnackBar,
+    MatSort,
+    MatTableDataSource
+} from '@angular/material';
 import {MentorDetailsComponent} from '../details/mentor-details.component';
 
 
@@ -25,10 +32,10 @@ export class MentorAssignmentComponent {
     mentor_id: String;
     mentors: any;
     isDataLoaded: boolean;
+    filterAssignedMentors = true;
 
     isNoMentor: boolean;
 
-    i = 0;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
@@ -45,7 +52,6 @@ export class MentorAssignmentComponent {
         this.subject = JSON.parse(localStorage.getItem('assignment_data')).subject;
         this.student_subject_id = JSON.parse(localStorage.getItem('assignment_data'))._id;
         this.mentors = [];
-
         this.mentorSubjectService.getMentorSubjectsBySubjectId(this.subject._id).subscribe(data => {
                 this.subject_mentors = data;
                 this.mentor_data = [];
@@ -60,36 +66,58 @@ export class MentorAssignmentComponent {
 
     }
 
+    reloadMentors() {
+        this.filterAssignedMentors = !this.filterAssignedMentors;
+        this.mentors = [];
+        this.dataSource = new MatTableDataSource;
+        this.getMentors(this.subject_mentors);
+    }
+
     addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
         this.today = event.value.toISOString().split('T')[0];
     }
 
     getMentors(mentor) {
-        this.mentorService.getMentor(this.subject_mentors[this.i].mentor_id).then((mentor_data) => {
-            if (mentor_data != null) {
-                this.mentors.push({
-                    id: this.i,
-                    _id: mentor_data['_id'],
-                    name: mentor_data['name'],
-                    phone: mentor_data['phone'],
-                    location: mentor_data['location'],
-                    starting_date: mentor_data['starting_date'],
-                    mentor_data: mentor_data
-                });
-            }
+        for (let curMentor in mentor) {
 
-            this.i++;
-            if (this.subject_mentors['length'] > this.i) {
-                this.getMentors(this.mentors);
-            } else {
-                this.dataSource = new MatTableDataSource(this.mentors);
-                this.dataSource.paginator = this.paginator;
-                this.dataSource.sort = this.sort;
-                this.isDataLoaded = true;
-            }
-        }, (err) => {
-            console.log(err);
-        });
+            this.mentorService.getMentor(mentor[curMentor].mentor_id).then((mentor_data) => {
+                if (mentor_data != null) {
+                    if (this.filterAssignedMentors) {
+                        if (!mentor_data['assigned']) {
+                            this.mentors.push({
+                                id: curMentor,
+                                _id: mentor_data['_id'],
+                                name: mentor_data['name'],
+                                phone: mentor_data['phone'],
+                                location: mentor_data['location'],
+                                starting_date: mentor_data['starting_date'],
+                                mentor_data: mentor_data
+                            });
+                        }
+                    } else {
+                        this.mentors.push({
+                            id: curMentor,
+                            _id: mentor_data['_id'],
+                            name: mentor_data['name'],
+                            phone: mentor_data['phone'],
+                            location: mentor_data['location'],
+                            starting_date: mentor_data['starting_date'],
+                            mentor_data: mentor_data
+                        });
+                    }
+                }
+            }, (err) => {
+                console.log(err);
+            }).then(d => {
+                if (Number(curMentor) === mentor.length - 1) {
+                    this.dataSource = new MatTableDataSource(this.mentors);
+                    this.dataSource.paginator = this.paginator;
+                    this.dataSource.sort = this.sort;
+                    this.isDataLoaded = true;
+                }
+            });
+        }
+
     }
 
     onAssignMentor(mentor_id) {
@@ -99,6 +127,10 @@ export class MentorAssignmentComponent {
             teacher_assigned: true,
             status: 'in_progress'
         };
+        const mentor = {
+            assigned: true
+        };
+        this.mentorService.editMentor(mentor_id, mentor);
         this.studentSubjectService.editStudentSubject(this.student_subject_id, student_subject).then((result) => {
             this.router.navigate(['/dashboard']);
             this.snackBar.open('Mentor assigned', null, {duration: 1500});

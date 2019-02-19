@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
     selector: 'app-details',
@@ -11,7 +12,7 @@ export class MentorDetailsComponent {
 
     displayedColumns: string[] = ['name'];
 
-    constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    constructor(@Inject(MAT_DIALOG_DATA) public data: any, private authService: AuthService) {
         this.mentor = data;
     }
 

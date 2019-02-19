@@ -62,7 +62,8 @@ router.post('/register',function (req,res,next) {
         deleted:  'no',
         type:  'mentor',
         wwcc_front:  req.body.wwcc_front,
-        wwcc_back:  req.body.wwcc_back
+        wwcc_back:  req.body.wwcc_back,
+        assigned: false
     });
 Mentor.addMentor(newMentor,function (err,mentor) {
     if(err){
@@ -133,6 +134,7 @@ router.get('/getMentors', function (req, res, next) {
     }).sort({_id: -1});
 
 });
+
 
 /* GET SINGLE Student BY ID */
 router.get('/:id', function (req, res, next) {

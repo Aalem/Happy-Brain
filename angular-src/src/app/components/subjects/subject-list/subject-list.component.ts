@@ -67,7 +67,7 @@ export class SubjectListComponent {
             data: {
                 title: 'Deletion',
                 message: 'Are you sure you want to delete this subject?',
-                warning: 'This action can\'t be reverted!'
+                warning: 'This action can\'t be reversed!'
             }
         });
 

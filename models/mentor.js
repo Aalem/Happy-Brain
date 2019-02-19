@@ -62,6 +62,9 @@ const MentorSchema = mongoose.Schema ({
     },
     wwcc_back: {
         type: String
+    },
+    assigned: {
+        type: Boolean
     }
 });
 

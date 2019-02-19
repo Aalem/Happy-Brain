@@ -11,7 +11,7 @@
         </mat-toolbar>
 
         <mat-nav-list>
-            <a mat-list-item (click)="goToDashboard()"  routerLinkActive="active">Dashboard</a>
+            <a mat-list-item (click)="goToDashboard()"  routerLinkActive="active">{{authService.getUserType()=='mentor'?'My Students':authService.getUserType()=='student'?'My Mentors':'Dashboard'}}</a>
             <a mat-list-item *ngIf="authService.getUserType()=='admin'"  routerLinkActive="active" [routerLink]="['/subject-list']">Subjects</a>
             <a mat-list-item  *ngIf="authService.getUserType()=='mentor'" [routerLink]="['/select-subject']" routerLinkActive="active">My Subjects</a>
             <mat-expansion-panel class="sidenav" style="box-shadow: none;">
@@ -27,7 +27,7 @@
                 </mat-expansion-panel-header>
                 <a mat-list-item [routerLink]="['/student-list']"  routerLinkActive="active">Students</a>
                 <a mat-list-item [routerLink]="['/mentor-list']" routerLinkActive="active">Mentors</a>
-                <a mat-list-item [routerLink]="['/admin-list']" routerLinkActive="active">Admins</a>
+                <a mat-list-item [routerLink]="['/admin-list']" routerLinkActive="active">Access Staff</a>
             </mat-expansion-panel>
 
             <mat-expansion-panel *ngIf="authService.getUserType()=='admin'" class="sidenav" style="box-shadow: none;">
@@ -35,7 +35,7 @@
                     <a mat-list-item>Reports</a>
                 </mat-expansion-panel-header>
                 <a mat-list-item [routerLink]="['/classes-report']" routerLinkActive="active">Classes</a>
-                <a mat-list-item [routerLink]="['/survey-list']" routerLinkActive="active">Feedbacks</a>
+                <a mat-list-item [routerLink]="['/survey-list']" routerLinkActive="active">Feedback</a>
                 <a mat-list-item [routerLink]="['/mentoring-meetings']" routerLinkActive="active">Mnt. Meetings</a>
             </mat-expansion-panel>
 

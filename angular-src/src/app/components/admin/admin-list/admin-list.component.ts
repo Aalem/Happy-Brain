@@ -71,7 +71,7 @@ export class AdminListComponent  {
             data: {
                 title: 'Deletion',
                 message: 'Are you sure you want to delete this admin?',
-                warning: 'This action can\'t be reverted!'
+                warning: 'This action can\'t be reversed!'
             }});
 
         dialogRef.afterClosed().subscribe(result => {

@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.js" afterPath="$PROJECT_DIR$/config/database.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/mentor.js" afterPath="$PROJECT_DIR$/models/mentor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mentors.js" afterPath="$PROJECT_DIR$/routes/mentors.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,44 +37,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create-survey.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html">
+      <file leaf-file-name="mentor-assignment.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="116" lean-forward="false" selection-start-line="5" selection-start-column="116" selection-end-line="5" selection-end-column="116" />
+            <state relative-caret-position="1274">
+              <caret line="138" column="57" lean-forward="false" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-survey.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts">
+      <file leaf-file-name="mentor-assignment.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state relative-caret-position="317">
+              <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+      <file leaf-file-name="mentor.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/mentor.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="373">
+              <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/database.js">
+      <file leaf-file-name="mentors.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/mentors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="1341">
+              <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mentor_subject.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/mentor_subject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="students.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/students.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,10 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mat-icon</find>
-      <find>flash</find>
-      <find>dialog</find>
-      <find>port</find>
       <find>connect</find>
       <find>http://localhost:300</find>
       <find>local</find>
@@ -84,7 +115,6 @@
       <find>parents</find>
       <find>email</find>
       <find>location</find>
-      <find>subject</find>
       <find>which subj</find>
       <find>loca</find>
       <find>details</find>
@@ -96,6 +126,11 @@
       <find>Details</find>
       <find>date</find>
       <find>alreadyHasSubjects</find>
+      <find>subject</find>
+      <find>select a</find>
+      <find>isDataLoaded</find>
+      <find>this.mentors</find>
+      <find>this.mentors</find>
     </findStrings>
     <replaceStrings>
       <replace>mentor</replace>
@@ -107,13 +142,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/online_res/online-res.service.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" />
         <option value="$PROJECT_DIR$/routes/surveys.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" />
-        <option value="$PROJECT_DIR$/models/mentor.js" />
         <option value="$PROJECT_DIR$/models/student.js" />
         <option value="$PROJECT_DIR$/models/subject.js" />
         <option value="$PROJECT_DIR$/models/survey.js" />
@@ -124,27 +153,17 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dialogs/confirm/confirm.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dialogs/confirm/confirm.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" />
@@ -153,11 +172,27 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
         <option value="$PROJECT_DIR$/config/database.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/config.service.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.html" />
+        <option value="$PROJECT_DIR$/models/mentor.js" />
+        <option value="$PROJECT_DIR$/routes/mentor_subject.js" />
+        <option value="$PROJECT_DIR$/routes/mentors.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts" />
       </list>
     </option>
   </component>
@@ -238,7 +273,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="mentor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -247,8 +282,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="mentor-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="mentor" type="462c0819:PsiDirectoryNode" />
+              <item name="details" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -257,88 +292,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="mentor-dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="mentor-dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="mentor-dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="mentor-dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="select-subject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting" type="462c0819:PsiDirectoryNode" />
-              <item name="mentoring-meeting-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="subjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="subjects" type="462c0819:PsiDirectoryNode" />
-              <item name="subject-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-              <item name="create-survey" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meanauthapp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-              <item name="survey-list" type="462c0819:PsiDirectoryNode" />
+              <item name="mentor" type="462c0819:PsiDirectoryNode" />
+              <item name="mentor-assignment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meanauthapp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -428,12 +383,14 @@
       <workItem from="1542776005475" duration="3330000" />
       <workItem from="1544783552432" duration="81969000" />
       <workItem from="1545640343969" duration="18631000" />
-      <workItem from="1545994586321" duration="109000" />
+      <workItem from="1545994586321" duration="701000" />
+      <workItem from="1548231748592" duration="3683000" />
+      <workItem from="1549267929508" duration="10604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479295000" />
+    <option name="totallyTimeSpent" value="494174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -442,13 +399,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20366456" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21994536" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20789288" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -476,132 +433,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/subject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/survey.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/surveys.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="52" column="76" lean-forward="false" selection-start-line="52" selection-start-column="76" selection-end-line="52" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/comment-dialog/comment/comment.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/comment-dialog/comment/comment.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dialogs/confirm/confirm.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dialogs/confirm/confirm.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/material/bundles/material-sort.umd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="273" column="32" lean-forward="false" selection-start-line="273" selection-start-column="32" selection-end-line="273" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/student/details/details.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="109" column="5" lean-forward="true" selection-start-line="95" selection-start-column="4" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="67" column="90" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="82" column="13" lean-forward="true" selection-start-line="76" selection-start-column="12" selection-end-line="82" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1108">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="71" column="69" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -637,20 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="128" column="116" lean-forward="false" selection-start-line="128" selection-start-column="116" selection-end-line="128" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="57" column="69" lean-forward="false" selection-start-line="57" selection-start-column="69" selection-end-line="57" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
@@ -658,31 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -697,7 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,9 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="834">
           <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,45 +517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="38" column="99" lean-forward="false" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/mentoring_meeting.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="77" column="70" lean-forward="false" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/mentor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -803,13 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="56" column="73" lean-forward="true" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -820,27 +570,243 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="576">
           <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/config.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin/admin-list/admin-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="73" column="56" lean-forward="false" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="87" column="54" lean-forward="false" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dialogs/confirm/confirm.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-811">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-list/mentor-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="100" column="54" lean-forward="false" selection-start-line="100" selection-start-column="54" selection-end-line="100" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/page-not-found/page-not-found.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="57" column="69" lean-forward="false" selection-start-line="57" selection-start-column="69" selection-end-line="57" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/local/local-list/local-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="104" column="54" lean-forward="false" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/resources/online/online-list/online-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/student/student-list/student-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="104" column="54" lean-forward="false" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/subjects/subject-list/subject-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="69" column="54" lean-forward="false" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-397">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/register/mentor-register/mentor-register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="99" lean-forward="false" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/mentor-dashboard/mentor-dashboard/mentor-dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#56#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard/student-dashboard/student-dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1278">
+          <caret line="71" column="79" lean-forward="false" selection-start-line="71" selection-start-column="71" selection-end-line="71" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/details/mentor-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="83" column="57" lean-forward="true" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/students.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="97" column="17" lean-forward="false" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/mentor_subject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/mentor-subject/mentor-subject.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/mentor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/mentors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1341">
+          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/mentor_subject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/mentor.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="138" column="57" lean-forward="false" selection-start-line="138" selection-start-column="57" selection-end-line="138" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/mentor/mentor-assignment/mentor-assignment.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
