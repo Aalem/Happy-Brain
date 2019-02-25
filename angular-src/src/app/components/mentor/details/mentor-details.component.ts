@@ -12,7 +12,7 @@ export class MentorDetailsComponent {
 
     displayedColumns: string[] = ['name'];
 
-    constructor(@Inject(MAT_DIALOG_DATA) public data: any, private authService: AuthService) {
+    constructor(@Inject(MAT_DIALOG_DATA) public data: any, public authService: AuthService) {
         this.mentor = data;
     }
 
