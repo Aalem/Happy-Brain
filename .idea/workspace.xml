@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard/dashboard.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/main-nav/main-nav.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/reports/classes/classes.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/create-survey/create-survey.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/surveys/survey-list/survey-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/mentoring-meeting/mentoring-meeting.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/student-subject/student-subject.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/student-subject/student-subject.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/survey/survey.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/mentor_subject.js" afterPath="$PROJECT_DIR$/models/mentor_subject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/mentoring_meeting.js" afterPath="$PROJECT_DIR$/models/mentoring_meeting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/survey.js" afterPath="$PROJECT_DIR$/models/survey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mentoring_meeting.js" afterPath="$PROJECT_DIR$/routes/mentoring_meeting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/student_subject.js" afterPath="$PROJECT_DIR$/routes/student_subject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/surveys.js" afterPath="$PROJECT_DIR$/routes/surveys.js" />
-    </list>
+    <list default="true" id="8e22371a-9585-4d29-b683-b55f81ed8455" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -173,7 +150,7 @@
     <handled-path value="$PROJECT_DIR$/angular-src/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
@@ -496,15 +473,15 @@
       <workItem from="1545994586321" duration="701000" />
       <workItem from="1548231748592" duration="3683000" />
       <workItem from="1549267929508" duration="10604000" />
-      <workItem from="1550997126148" duration="34221000" />
+      <workItem from="1550997126148" duration="34782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528395000" />
+    <option name="totallyTimeSpent" value="528956000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1440" height="817" extended-state="1" />
+    <frame x="-1" y="23" width="1440" height="817" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20366456" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
