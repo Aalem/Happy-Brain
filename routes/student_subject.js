@@ -184,6 +184,7 @@ router.get('/getStudentSubjectsByStudentAndMentor/:ids', function (req, res, nex
 
 router.get('/getAllStudentSubjects', function (req, res, next) {
     StudentSubject.aggregate([
+        {$match:{teacher_assigned: true}},
         {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
         {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
         {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}},
