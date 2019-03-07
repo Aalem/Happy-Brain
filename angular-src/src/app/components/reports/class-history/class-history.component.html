@@ -1,0 +1,84 @@
+<h1 class="mat-h2">Classes History:</h1>
+
+<div class="center-me" *ngIf="!isDataLoaded">
+  <mat-progress-spinner style="margin-top: -100px"
+                        color="primary"
+                        mode="indeterminate">
+  </mat-progress-spinner>
+</div>
+
+<div *ngIf="isDataLoaded" style="width: 100%;">
+  <h1 class="mat-h3" ><strong>Student</strong>: {{AssignedStudents[0].student.name+' '+AssignedStudents[0].student.last_name}}</h1>
+  <h1 class="mat-h3" ><strong>Mentor</strong>: {{AssignedStudents[0].mentor.name+' '+AssignedStudents[0].mentor.last_name}}</h1>
+  <div *ngIf="hasStudents2" style="margin: 15px">
+    <!--<button style="float: right" mat-raised-button color="primary" (click)="exportAsXLSX()">Export to-->
+      <!--Excel-->
+    <!--</button>-->
+
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource2" matSort>
+
+        <!-- Number Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> No.</th>
+          <td mat-cell *matCellDef="let row"> {{row.id+1}}</td>
+        </ng-container>
+
+
+
+        <!-- Subject Column -->
+        <ng-container matColumnDef="subject_name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Subject</th>
+          <td mat-cell *matCellDef="let row">{{row.subject_name}}</td>
+        </ng-container>
+
+        <!-- Country Column -->
+        <ng-container matColumnDef="start_date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Start Date</th>
+          <td mat-cell *matCellDef="let row"> {{row.start_date}}</td>
+        </ng-container>
+
+        <!-- Country Column -->
+        <ng-container matColumnDef="end_date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> End Date</th>
+          <td mat-cell *matCellDef="let row"> {{row.end_date}}</td>
+        </ng-container>
+
+        <!-- Country Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
+          <td mat-cell *matCellDef="let row"> {{row.status}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="feedback">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Feedbacks</th>
+          <td mat-cell *matCellDef="let row">
+            <div class="button-row">
+              <button mat-button
+                      color="accent" (click)="showFeedbacks(row._id)" type="submit">Show
+              </button>
+            </div>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns2;">
+        </tr>
+      </table>
+
+
+      <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+  <div *ngIf="!hasStudents2">
+    <br/>
+    <mat-label><i>There are no students waiting to be assigned a mentor!</i></mat-label>
+  </div>
+</div>
+
+

@@ -31,6 +31,10 @@ export class StudentSubjectService {
         return this.http.get(this.url + '/student-subject/getStudentSubjectsInProgress');
     }
 
+    getStudentSubjectsByStudentAndMentor(ids) {
+        return this.http.get(this.url + '/student-subject/getStudentSubjectsByStudentAndMentor' + ids);
+    }
+
     getStudentSubjectsById(id) {
         return this.http.get(this.url + '/student-subject/getStudentSubjectsById/' + id);
     }
@@ -65,6 +69,18 @@ export class StudentSubjectService {
     editStudentSubject(id, data) {
         return new Promise((resolve, reject) => {
             this.http.put(this.url + '/student-subject/' + id, data)
+                .map(res => res)
+                .subscribe(res => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+    }
+
+    unmatch(id, data) {
+        return new Promise((resolve, reject) => {
+            this.http.put(this.url + '/student-subject/unmatch/' + id, data)
                 .map(res => res)
                 .subscribe(res => {
                     resolve(res);

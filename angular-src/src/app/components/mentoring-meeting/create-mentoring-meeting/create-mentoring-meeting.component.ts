@@ -15,6 +15,7 @@ export class CreateMentoringMeetingComponent {
     session: any;
     duration: any;
     comment: any;
+    generalComment;
     // section: any;
     subject: any;
     sectinos: any;
@@ -51,7 +52,8 @@ export class CreateMentoringMeetingComponent {
             // section: this.section,
             session: this.session,
             duration: this.duration,
-            comment: this.comment
+            comment: this.comment,
+            generalComment: this.generalComment
         };
         this.mentoringMeetingService.registerMentoringMeeting(mentoring_meeting).subscribe(data => {
             // console.log(mentoring_meeting);

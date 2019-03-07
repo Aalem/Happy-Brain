@@ -2,11 +2,13 @@ import {StudentSubjectService} from '../../services/student-subject/student-subj
 import {Router} from '@angular/router';
 
 import {Component, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
 import {StudentDetailsComponent} from '../student/details/details.component';
 import {MentorDetailsComponent} from '../mentor/details/mentor-details.component';
 import {ExportExcelService} from '../../services/export-excel/export-excel.service';
 import {ConfirmComponent} from '../dialogs/confirm/confirm.component';
+import {MentoringMeetingService} from '../../services/mentoring-meeting/mentoring-meeting.service';
+import {SurveyService} from '../../services/survey/survey.service';
 
 
 @Component({
@@ -16,7 +18,7 @@ import {ConfirmComponent} from '../dialogs/confirm/confirm.component';
 })
 export class DashboardComponent {
     unAssignedDisplayedColumns: string[] = ['id', 'name', 'phone', 'country', 'subject_name', 'assign', 'delete'];
-    assignedDisplayColumns: string[] = ['id', 'student_name', 'mentor_name', 'subject_name', 'start_date'];
+    assignedDisplayColumns: string[] = ['id', 'student_name', 'mentor_name', 'subject_name', 'start_date', 'unmatch'];
     unAssignedDataSource: MatTableDataSource<Object>;
     assignedDataSource: MatTableDataSource<Object>;
 
@@ -36,8 +38,16 @@ export class DashboardComponent {
 
     constructor(private router: Router,
                 private matDialog: MatDialog,
+                private snackBar: MatSnackBar,
                 private excelService: ExportExcelService,
+                private mentoringMeetingService: MentoringMeetingService,
+                private surveyService: SurveyService,
                 private studentSubjectService: StudentSubjectService) {
+        this.loadData();
+
+    }
+
+    loadData() {
         this.hasStudents = true;
         this.hasStudents2 = true;
         this.isDataLoaded = false;
@@ -125,6 +135,37 @@ export class DashboardComponent {
 
     openDialog(student) {
         const dialogRef = this.matDialog.open(StudentDetailsComponent, {data: student});
+    }
+
+    unmatch(row) {
+        const studentSubject = {
+            mentor_id: null,
+            teacher_assigned: false
+        };
+
+        const dialogRef = this.matDialog.open(ConfirmComponent, {
+            data: {
+                title: 'Warning!',
+                message: 'Unmatching the student and mentor removes all the Mentoring Meetings and Student\'s Feedbacks',
+                warning: 'Do you want to continue??'
+            }
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+            if (result === 'true') {
+                this.studentSubjectService.unmatch(row._id, studentSubject).then((res) => {
+                    this.mentoringMeetingService.deleteMentoringMeetingsBySubject(row._id).subscribe(data => {
+                        this.surveyService.deleteSurveyBySubject(row._id).subscribe(d => {
+                            this.loadData();
+                            this.snackBar.open('Unmatch completed!', null, {duration: 2000});
+                        });
+                    });
+                }, (err) => {
+                    console.log(err);
+                });
+            }
+        });
     }
 
     openDialogMentor(mentor) {

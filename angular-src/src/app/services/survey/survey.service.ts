@@ -25,4 +25,8 @@ export class SurveyService {
         return this.http.get(this.url + '/survey/getAllSurveys/');
     }
 
+    deleteSurveyBySubject(id) {
+        return this.http.delete(this.url + '/survey/deleteSurveyBySubject/' + id);
+    }
+
 }

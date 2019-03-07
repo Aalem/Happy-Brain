@@ -16,8 +16,6 @@ const MentorSubjectSchema = mongoose.Schema({
 
 const MentorSubject = module.exports = mongoose.model('MentorSubject', MentorSubjectSchema);
 
-
-
 module.exports.addMentorSubject = function (MentorSubject, callback) {
     MentorSubject.save(callback);
 }

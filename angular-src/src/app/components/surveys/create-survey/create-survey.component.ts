@@ -19,6 +19,7 @@ export class CreateSurveyComponent implements OnInit {
     date: any;
     mydate: any;
     comment: any;
+    generalComment: any;
     mentor: any;
     student: any;
     subject: any;
@@ -57,7 +58,8 @@ export class CreateSurveyComponent implements OnInit {
             subject_id: this.subject._id,
             date: this.date,
             comment: this.comment,
-            rating: this.rating
+            rating: this.rating,
+            generalComment: this.generalComment
         };
         this.surveySerive.registerSurvey(survey).subscribe(data => {
             if (data['success']) {

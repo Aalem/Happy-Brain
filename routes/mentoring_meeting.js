@@ -11,7 +11,8 @@ router.post('/register', function (req, res, next) {
         section: req.body.section,
         session: req.body.session,
         duration: req.body.duration,
-        comment: req.body.comment
+        comment: req.body.comment,
+        generalComment: req.body.generalComment
     });
 
     MentoringMeeting.addMentoringMeeting(newMentoringMeeting, function (err, mentoring_meeting) {
@@ -22,6 +23,8 @@ router.post('/register', function (req, res, next) {
         }
     });
 });
+
+
 
 router.get('/getMentoringMeetingCount/:id', function (req, res, next) {
 
@@ -34,10 +37,17 @@ router.get('/getMentoringMeetingCount/:id', function (req, res, next) {
 
 });
 
+router.delete('/deleteMentoringMeetingBySubject/:id', function (req, res, next) {
+    MentoringMeeting.remove({"student_subject": mongoose.Types.ObjectId(req.params.id)}, function (err, post) {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
+
 router.get('/getAllMentoringMeetings', function (req, res, next) {
 
     MentoringMeeting.aggregate([
-        // {$match: {teacher_assigned: false}},
+        // {$match: {teacher_assigned: true}},
         {
             $lookup: {
                 from: "studentsubjects",

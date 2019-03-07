@@ -21,6 +21,9 @@ const SurveySchema = mongoose.Schema({
     }, rating: {
         type: String,
         required: true
+    },
+    general_comment :{
+        type: String
     }
 });
 

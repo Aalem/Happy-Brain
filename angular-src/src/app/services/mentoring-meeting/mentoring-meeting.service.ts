@@ -25,4 +25,8 @@ export class MentoringMeetingService {
     getAllMentoringMeetings() {
         return this.http.get(this.url + '/mentoring-meeting/getAllMentoringMeetings');
     }
+
+    deleteMentoringMeetingsBySubject(id) {
+        return this.http.delete(this.url + '/mentoring-meeting/deleteMentoringMeetingBySubject/' + id);
+    }
 }

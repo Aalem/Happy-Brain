@@ -16,6 +16,8 @@ const MentoringMeetingSchema = mongoose.Schema({
         type: String
     }, comment: {
         type: String
+    }, general_comment:{
+        type: String
     }
 });
 

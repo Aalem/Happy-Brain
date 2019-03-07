@@ -63,6 +63,7 @@ import { SurveyListComponent } from './components/surveys/survey-list/survey-lis
 import { CommentComponent } from './components/surveys/comment-dialog/comment/comment.component';
 import { ConfirmComponent } from './components/dialogs/confirm/confirm.component';
 import { MentoringMeetingListComponent } from './components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component';
+import { ClassHistoryComponent } from './components/reports/class-history/class-history.component';
 
 
 
@@ -106,7 +107,9 @@ const appRoutes: Routes = [
     {path: 'create-survey/:id', component: CreateSurveyComponent, canActivate: [RoleGuard], data: {expectedRole: 'student'}},
     {path: 'classes-report', component: ClassesComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'survey-list', component: SurveyListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'survey-list/:id', component: SurveyListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'mentoring-meetings', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'class-history', component: ClassHistoryComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'page-not-found', component: PageNotFoundComponent},
     ];
 
@@ -157,6 +160,7 @@ export function tokenGetter() {
         CommentComponent,
         ConfirmComponent,
         MentoringMeetingListComponent,
+        ClassHistoryComponent,
     ],
     imports: [
         BrowserModule,

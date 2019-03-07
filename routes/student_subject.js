@@ -136,13 +136,6 @@ router.get('/getStudentSubjects', function (req, res, next) {
 });
 
 router.get('/getUnassignedStudentSubjects', function (req, res, next) {
-    //
-    // StudentSubject.find({teacher_assigned: false}, function (err, student_subjects) {
-    //     if (err) {
-    //         res.send(err);
-    //     }
-    //     res.json(student_subjects);
-    // });
     StudentSubject.aggregate([
         {$match: {teacher_assigned: false}},
         {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
@@ -158,7 +151,7 @@ router.get('/getUnassignedStudentSubjects', function (req, res, next) {
 
 router.get('/getStudentSubjectsInProgress', function (req, res, next) {
     StudentSubject.aggregate([
-        {$match: {status: "in_progress"}},
+        {$match: {status: "in_progress", teacher_assigned: true}},
         {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
         {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
         {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
@@ -169,14 +162,32 @@ router.get('/getStudentSubjectsInProgress', function (req, res, next) {
         res.json(mentor_subject);
     });
 
+});
+
+router.get('/getStudentSubjectsByStudentAndMentor/:ids', function (req, res, next) {
+    const student_id = req.params.ids.split('-')[0];
+    const mentor_id = req.params.ids.split('-')[1];
+
+    StudentSubject.aggregate([
+        {$match: {student_id: mongoose.Types.ObjectId(student_id), mentor_id: mongoose.Types.ObjectId(mentor_id)}},
+        {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
+        {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
+        {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
+    ], function (err, mentor_subject) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(mentor_subject);
+        console.log(""+mentor_subject[0]._id);
+    });
 });
 
 router.get('/getAllStudentSubjects', function (req, res, next) {
     StudentSubject.aggregate([
-        // {$match: {status: "in_progress"}},
         {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
         {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
-        {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
+        {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}},
+        {$group:{_id:{student_id:"$student_id", mentor_id: "$mentor_id"}, data:{$push: {mentor:"$mentor", student:"$student", subject:"$subject"}}}}
     ], function (err, mentor_subject) {
         if (err) {
             res.send(err);
@@ -184,6 +195,20 @@ router.get('/getAllStudentSubjects', function (req, res, next) {
         res.json(mentor_subject);
     });
 });
+
+// router.get('/getAllStudentSubjects', function (req, res, next) {
+//     StudentSubject.aggregate([
+//         // {$match: {status: "in_progress"}},
+//         {$lookup: {from: "students", localField: "student_id", foreignField: "_id", as: "student"}},
+//         {$lookup: {from: "mentors", localField: "mentor_id", foreignField: "_id", as: "mentor"}},
+//         {$lookup: {from: "subjects", localField: "subject_id", foreignField: "_id", as: "subject"}}
+//     ], function (err, mentor_subject) {
+//         if (err) {
+//             res.send(err);
+//         }
+//         res.json(mentor_subject);
+//     });
+// });
 
 /* GET SINGLE Student BY ID */
 router.get('/:id', function (req, res, next) {
@@ -201,10 +226,17 @@ router.delete('/:id', function (req, res, next) {
     });
 });
 
-
 //Update one student
 router.put('/:id', function (req, res, next) {
     StudentSubject.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+        if (err) return next(err);
+        res.json(post);
+
+    });
+});
+
+router.put('/unmatch/:id', function (req, res, next) {
+    StudentSubject.findByIdAndUpdate(mongoose.Types.ObjectId(req.params.id), req.body, function (err, post) {
         if (err) return next(err);
         res.json(post);
 

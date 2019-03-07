@@ -12,7 +12,8 @@ router.post('/register', function (req, res, next) {
         subject_id: mongoose.Types.ObjectId(req.body.subject_id),
         date: req.body.date,
         comment: req.body.comment,
-        rating: req.body.rating
+        rating: req.body.rating,
+        generalComment: req.body.generalComment
     });
 
     Survey.addSurvey(newSurvey, function (err, survey) {
@@ -38,7 +39,7 @@ router.post('/register', function (req, res, next) {
 //
 
 router.get('/getSurveysByStudentSubject/:id', function (req, res, next) {
-    Survey.find({student_subject: req.params.id},function (err, student_subjects) {
+    Survey.find({student_subject: mongoose.Types.ObjectId(req.params.id)},function (err, student_subjects) {
         if (err) {
             res.send(err);
         }
@@ -75,32 +76,14 @@ router.get('/getAllSurveys', function (req, res, next) {
     });
 
 });
-//
-// /* GET SINGLE Student BY ID */
-// router.get('/:id', function (req, res, next) {
-//     MentorSubject.findById(req.params.id, function (err, post) {
-//         if (err) return next(err);
-//         res.json(post);
-//     });
-// });
-//
-// //Delete one student
-// router.delete('/:id', function (req, res, next) {
-//     MentorSubject.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-//         if (err) return next(err);
-//         res.json(post);
-//     });
-// });
-//
-//
-// //Update one student
-// router.put('/:id', function (req, res, next) {
-//     MentorSubject.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
-//         if (err) return next(err);
-//         res.json(post);
-//
-//     });
-// });
 
+
+//Delete survey(s) by subject id
+router.delete('/deleteSurveyBySubject/:id', function (req, res, next) {
+    Survey.remove({"student_subject": mongoose.Types.ObjectId(req.params.id)}, function (err, post) {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
 
 module.exports = router;

@@ -41,21 +41,27 @@
                 </ng-container>
 
                 <!-- Subject Column -->
-                <ng-container matColumnDef="subject_name">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Subject</th>
-                    <td mat-cell *matCellDef="let row">{{row.subject_name}}</td>
-                </ng-container>
+                <!--<ng-container matColumnDef="subject_name">-->
+                <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> Subject</th>-->
+                <!--<td mat-cell *matCellDef="let row">{{row.subject_name}}</td>-->
+                <!--</ng-container>-->
 
                 <!-- Country Column -->
-                <ng-container matColumnDef="start_date">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Start Date</th>
-                    <td mat-cell *matCellDef="let row"> {{row.start_date}}</td>
-                </ng-container>
+                <!--<ng-container matColumnDef="start_date">-->
+                <!--<th mat-header-cell *matHeaderCellDef mat-sort-header> Start Date</th>-->
+                <!--<td mat-cell *matCellDef="let row"> {{row.start_date}}</td>-->
+                <!--</ng-container>-->
 
                 <!-- Country Column -->
                 <ng-container matColumnDef="status">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
-                    <td mat-cell *matCellDef="let row"> {{row.status}}</td>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> History</th>
+                    <td mat-cell *matCellDef="let row">
+                        <div class="button-row">
+                            <button mat-button [disabled]="row.mentor._id==null?true:false"
+                                    color="accent" (click)="ShowHistory(row)" type="submit">History
+                            </button>
+                        </div>
+                    </td>
                 </ng-container>
 
 

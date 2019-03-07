@@ -20,13 +20,17 @@
         <textarea required matInput rows="10" type="textarea" placeholder="Comment" [(ngModel)]="comment"
                   name="comment"></textarea>
     </mat-form-field>
-
+    <mat-form-field required class="example-full-width">
+        <textarea required matInput rows="3" type="textarea" placeholder="Do you have any additional general comment for your mentor?" [(ngModel)]="generalComment"
+                  name="generalComment"></textarea>
+    </mat-form-field>
     <mat-label>Rate your mentor:* &nbsp;</mat-label>
     <app-star-rating [rating]="rating" [starCount]="starCount" [color]="starColor"
                      (ratingUpdated)="onRatingChanged($event)"></app-star-rating>
 
     <br/>
     <br/>
+
     <br/>
 
     <div class="button-row">

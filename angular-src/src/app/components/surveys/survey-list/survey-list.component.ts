@@ -5,6 +5,7 @@ import {MatDialog, MatPaginator, MatSort, MatTableDataSource} from '@angular/mat
 import {StudentDetailsComponent} from '../../student/details/details.component';
 import {MentorDetailsComponent} from '../../mentor/details/mentor-details.component';
 import {CommentComponent} from '../comment-dialog/comment/comment.component';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'app-survey-list',
@@ -15,33 +16,39 @@ export class SurveyListComponent {
     isNoData: boolean;
     surveysArray: any;
     isDataLoaded: boolean;
+    subjectId: any;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
     displayedColumns: string[] = ['id', 'student_name', 'mentor_name', 'subject_name', 'date', 'comment', 'rating'];
     dataSource: MatTableDataSource<Object>;
+    dataHistory: any;
+    student_name: any;
+    mentor_name: any;
+    subject_name: any;
 
     constructor(private surveyService: SurveyService,
-                private matDialog: MatDialog) {
+                private matDialog: MatDialog,
+                private activatedRoute: ActivatedRoute) {
+        this.dataHistory = JSON.parse(localStorage.getItem('historyData'));
 
         this.surveysArray = [];
         this.isDataLoaded = false;
         this.isNoData = false;
-
-        this.surveyService.getAllSurveys()
+        this.student_name = this.dataHistory.student_name;
+        this.mentor_name = this.dataHistory.mentor_name;
+        this.subject_name = this.dataHistory.subject_name;
+        this.subjectId = this.activatedRoute.snapshot.params['id'];
+        this.surveyService.getSurveysByStudentSubject(this.subjectId)
             .subscribe(data => {
                 for (const index in data) {
+
                     this.surveysArray.push({
                         id: Number(index),
                         date: data[index].date.split('T')[0],
                         comment: data[index].comment,
-                        rating: data[index].rating,
-                        student_name: data[index].student[0].name + ' ' + data[index].student[0].last_name,
-                        student: data[index].student[0],
-                        mentor: data[index].mentor[0],
-                        mentor_name: data[index].mentor[0].name,
-                        subject_name: data[index].subject[0].name,
+                        rating: data[index].rating
                     });
                 }
                 this.dataSource = new MatTableDataSource(this.surveysArray);
@@ -53,6 +60,16 @@ export class SurveyListComponent {
                 }
             });
     }
+
+
+    // getStudentSubjectServey(id) {
+    //     this.surveyService.getSurveysByStudentSubject(id).then((res) => {
+    //         this.student = res;
+    //         this.isDataLoaded = true;
+    //     }, (err) => {
+    //         console.log(err);
+    //     });
+    // }
 
     applyFilter(filterValue: string) {
         this.dataSource.filter = filterValue.trim().toLowerCase();
