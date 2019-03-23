@@ -4,6 +4,7 @@ import {StudentService} from '../../services/student.service';
 import {MentorService} from '../../services/mentor.service';
 import {AdminService} from '../../services/admin.service';
 import {MatSnackBar} from '@angular/material';
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -16,17 +17,32 @@ export class LoginComponent {
     password: String;
     type: String;
 
-    constructor(
+    constructor(private httpClient: HttpClient,
                 private studentService: StudentService,
                 private mentorService: MentorService,
                 private adminService: AdminService,
                 private router: Router,
                 private snackBar: MatSnackBar) {
         this.type = 'admin';
+
+    //     this.httpClient.post('http://localhost:3000/send-email', {}).subscribe((val) => {
+    //             console.log("POST call successful value returned in body",
+    //                 val);
+    //         },
+    //         response => {
+    //             console.log("POST call in error", response);
+    //         },
+    //         () => {
+    //             console.log("The POST observable is now completed.");
+    //         });
+    // )
+    //     ;
+
     }
 
 
     onLoginSubmit() {
+
         const user = {
             email: this.email,
             password: this.password

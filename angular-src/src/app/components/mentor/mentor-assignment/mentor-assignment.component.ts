@@ -12,6 +12,8 @@ import {
     MatTableDataSource
 } from '@angular/material';
 import {MentorDetailsComponent} from '../details/mentor-details.component';
+import {HttpClient} from "@angular/common/http";
+import {ConfigService} from "../../../services/config.service";
 
 
 @Component({
@@ -39,7 +41,11 @@ export class MentorAssignmentComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor(private mentorSubjectService: MentorSubjectService,
+    url: any;
+
+    constructor(private configService: ConfigService,
+        private mentorSubjectService: MentorSubjectService,
+                private httpClient: HttpClient,
                 private mentorService: MentorService,
                 private matDialog: MatDialog,
                 private router: Router,
@@ -47,6 +53,7 @@ export class MentorAssignmentComponent {
                 private snackBar: MatSnackBar) {
         this.isDataLoaded = false;
         this.isNoMentor = false;
+        this.url = configService.getUrl();
 
         this.student = JSON.parse(localStorage.getItem('assignment_data')).student;
         this.subject = JSON.parse(localStorage.getItem('assignment_data')).subject;
@@ -85,7 +92,7 @@ export class MentorAssignmentComponent {
                     if (this.filterAssignedMentors) {
                         if (!mentor_data['assigned']) {
                             this.mentors.push({
-                                id: curMentor,
+                                id: Number(curMentor) + 1,
                                 _id: mentor_data['_id'],
                                 name: mentor_data['name'],
                                 phone: mentor_data['phone'],
@@ -96,7 +103,7 @@ export class MentorAssignmentComponent {
                         }
                     } else {
                         this.mentors.push({
-                            id: curMentor,
+                            id: Number(curMentor) + 1,
                             _id: mentor_data['_id'],
                             name: mentor_data['name'],
                             phone: mentor_data['phone'],
@@ -120,7 +127,8 @@ export class MentorAssignmentComponent {
 
     }
 
-    onAssignMentor(mentor_id) {
+    onAssignMentor(mentor_id, m_email) {
+        console.log(m_email, this.student.email);
         const student_subject = {
             mentor_id: mentor_id,
             start_date: this.today,
@@ -133,6 +141,14 @@ export class MentorAssignmentComponent {
         this.mentorService.editMentor(mentor_id, mentor);
         this.studentSubjectService.editStudentSubject(this.student_subject_id, student_subject).then((result) => {
             this.router.navigate(['/dashboard']);
+
+            this.httpClient.post(this.url + '/send-email', {
+                s_email: this.student.email,
+                m_email: m_email,
+                c_email: this.student.cm_email
+            }).subscribe((val) => {
+
+            });
             this.snackBar.open('Mentor assigned', null, {duration: 1500});
 
         }, (err) => {

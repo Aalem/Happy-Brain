@@ -6,6 +6,7 @@ import {StudentDetailsComponent} from '../../student/details/details.component';
 import {MentorDetailsComponent} from '../../mentor/details/mentor-details.component';
 import {CommentComponent} from '../../surveys/comment-dialog/comment/comment.component';
 import {MentoringMeetingService} from "../../../services/mentoring-meeting/mentoring-meeting.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: 'app-mentoring-meeting-list',
@@ -17,22 +18,26 @@ export class MentoringMeetingListComponent {
     isNoData: boolean;
     MMArray: any;
     isDataLoaded: boolean;
+    subjectId: any;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    displayedColumns: string[] = ['id', 'subject_name', 'mentor_name', 'student_name', 'session', 'date', 'comment'];
+    displayedColumns: string[] = ['id', 'session', 'date', 'duration', 'comment'];
     dataSource: MatTableDataSource<Object>;
 
     constructor(private surveyService: SurveyService,
+                private activatedRoute: ActivatedRoute,
                 private MMService: MentoringMeetingService,
                 private matDialog: MatDialog) {
 
         this.MMArray = [];
         this.isDataLoaded = false;
         this.isNoData = false;
+        this.subjectId = this.activatedRoute.snapshot.params['id'];
 
-        this.MMService.getAllMentoringMeetings().subscribe(data => {
+        this.MMService.getMentoringMeetingsByStudentSubject(this.subjectId).subscribe(data => {
+            console.log(data);
             if (data['length'] == 0) {
                 this.isNoData = true;
             } else {
@@ -43,12 +48,7 @@ export class MentoringMeetingListComponent {
                         date: data[index].date.split('T')[0],
                         comment: data[index].comment,
                         session: data[index].session,
-                        student_name: data[index].student_subjects.student[0].name + ' ' +
-                        data[index].student_subjects.student[0].last_name,
-                        student: data[index].student_subjects.student[0],
-                        mentor: data[index].student_subjects.mentor[0],
-                        mentor_name: data[index].student_subjects.mentor[0].name,
-                        subject_name: data[index].student_subjects.subject[0].name,
+                        duration: data[index].duration
                     });
                 }
             }

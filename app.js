@@ -81,3 +81,60 @@ app.set('port', process.env.PORT || 3000);
 app.listen(process.env.PORT || 3000, function () {
     console.log("Server started on port" + process.env.PORT);
 });
+
+"use strict";
+const nodemailer = require("nodemailer");
+
+app.post('/send-email', (req, res) => {
+    console.log("send email", req.body.email);
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'info@codetoinspire.org', // generated ethereal user
+            pass: 'AfghanCode2015' // generated ethereal password
+        },
+        tls: {
+            // rejectUnauthorized: false
+        }
+    });
+
+    // setup email data with unicode symbols
+    var studentMailOptions = {
+        from: '"CTI" <info@codetoinspire.org>', // sender address
+        to: req.body.s_email, // list of receivers
+        subject: "Test Message for Student", // Subject line
+        text: "This is a test message", // plain text body
+        // html: "<b>Hello world?</b>" // html body
+    };
+
+    var mentorMailOptions = {
+        from: '"CTI" <info@codetoinspire.org>', // sender address
+        to: req.body.m_email, // list of receivers
+        subject: "Test Message for Mentor", // Subject line
+        text: "This is a test message", // plain text body
+        // html: "<b>Hello world?</b>" // html body
+    };
+
+    var cmMailOptions = {
+        from: '"CTI" <info@codetoinspire.org>', // sender address
+        to: req.body.c_email, // list of receivers
+        subject: "Test Message for Case Manager", // Subject line
+        text: "This is a test message", // plain text body
+        // html: "<b>Hello world?</b>" // html body
+    };
+
+    // send mail with defined transport object
+    var info =  transporter.sendMail(studentMailOptions);
+    var info2 =  transporter.sendMail(mentorMailOptions);
+    var info3 =  transporter.sendMail(cmMailOptions);
+
+    console.log("Message sent: %s", info.messageId);
+    console.log("Message sent: %s", info2.messageId);
+    console.log("Message sent: %s", info3.messageId);
+    // Preview only available when sending through an Ethereal account
+    // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+});

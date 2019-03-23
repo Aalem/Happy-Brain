@@ -109,6 +109,7 @@ const appRoutes: Routes = [
     {path: 'survey-list', component: SurveyListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'survey-list/:id', component: SurveyListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'mentoring-meetings', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'mentoring-meetings/:id', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'class-history', component: ClassHistoryComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'page-not-found', component: PageNotFoundComponent},
     ];

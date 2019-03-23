@@ -25,6 +25,15 @@ router.post('/register', function (req, res, next) {
 });
 
 
+router.get('/getMentoringMeetingsByStudentSubject/:id', function (req, res, next) {
+    MentoringMeeting.find({student_subject: mongoose.Types.ObjectId(req.params.id)},function (err, student_subjects) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(student_subjects);
+    });
+});
+
 
 router.get('/getMentoringMeetingCount/:id', function (req, res, next) {
 

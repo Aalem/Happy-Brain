@@ -55,11 +55,22 @@
         </ng-container>
 
         <ng-container matColumnDef="feedback">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Feedbacks</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Feedback</th>
           <td mat-cell *matCellDef="let row">
             <div class="button-row">
               <button mat-button
                       color="accent" (click)="showFeedbacks(row._id)" type="submit">Show
+              </button>
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mentoringmeeting">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Mentoring Meeting</th>
+          <td mat-cell *matCellDef="let row">
+            <div class="button-row">
+              <button mat-button
+                      color="accent" (click)="showMentoringMeeting(row._id)" type="submit">Show
               </button>
             </div>
           </td>

@@ -12,7 +12,7 @@ import {MentorDetailsComponent} from '../../mentor/details/mentor-details.compon
     styleUrls: ['./class-history.component.css']
 })
 export class ClassHistoryComponent {
-    displayedColumns2: string[] = ['id', 'subject_name', 'start_date', 'end_date', 'status', 'feedback'];
+    displayedColumns2: string[] = ['id', 'subject_name', 'start_date', 'end_date', 'status', 'feedback', 'mentoringmeeting'];
     dataSource2: MatTableDataSource<Object>;
 
     AssignedStudents: any;
@@ -94,6 +94,10 @@ export class ClassHistoryComponent {
 
     showFeedbacks(id) {
         this.router.navigate(['/survey-list',id]);
+    }
+
+    showMentoringMeeting(id) {
+        this.router.navigate(['/mentoring-meetings',id]);
     }
 
     exportAsXLSX() {
