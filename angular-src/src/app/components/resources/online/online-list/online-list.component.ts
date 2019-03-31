@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import {Component, ViewChild} from '@angular/core';
 import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from '@angular/material';
 import {AuthService} from '../../../../services/auth.service';
-import {ConfirmComponent} from "../../../dialogs/confirm/confirm.component";
+import {ConfirmComponent} from '../../../dialogs/confirm/confirm.component';
 
 @Component({
     selector: 'app-online-list',

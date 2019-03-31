@@ -50,7 +50,8 @@ import {
     MatMenu, MatMenuModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatFormFieldControl, MatInputModule,
     MatRadioModule, MatCheckboxModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatSortModule,
     MatDatepickerModule, MatNativeDateModule, MatExpansionModule, MatStepperModule, MatTooltipModule,
-    MatProgressBarModule, MatDialogModule, MatSpinner, MatProgressSpinnerModule, MatGridListModule, MatTabsModule
+    MatProgressBarModule, MatDialogModule, MatSpinner, MatProgressSpinnerModule, MatGridListModule, MatTabsModule,
+    MatBadgeModule
 } from '@angular/material';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CreateMentoringMeetingComponent } from './components/mentoring-meeting/create-mentoring-meeting/create-mentoring-meeting.component';
@@ -64,6 +65,7 @@ import { CommentComponent } from './components/surveys/comment-dialog/comment/co
 import { ConfirmComponent } from './components/dialogs/confirm/confirm.component';
 import { MentoringMeetingListComponent } from './components/mentoring-meeting/mentoring-meeting-list/mentoring-meeting-list.component';
 import { ClassHistoryComponent } from './components/reports/class-history/class-history.component';
+import { MessageComponent } from './components/messages/message/message.component';
 
 
 
@@ -111,6 +113,7 @@ const appRoutes: Routes = [
     {path: 'mentoring-meetings', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'mentoring-meetings/:id', component: MentoringMeetingListComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
     {path: 'class-history', component: ClassHistoryComponent, canActivate: [RoleGuard], data: {expectedRole: 'admin'}},
+    {path: 'notifications', component: MessageComponent},
     {path: 'page-not-found', component: PageNotFoundComponent},
     ];
 
@@ -162,6 +165,7 @@ export function tokenGetter() {
         ConfirmComponent,
         MentoringMeetingListComponent,
         ClassHistoryComponent,
+        MessageComponent,
     ],
     imports: [
         BrowserModule,
@@ -198,6 +202,7 @@ export function tokenGetter() {
         MatProgressBarModule,
         MatProgressSpinnerModule,
         MatGridListModule,
+        MatBadgeModule,
         MatTabsModule,
         JwtModule.forRoot({
             config: {

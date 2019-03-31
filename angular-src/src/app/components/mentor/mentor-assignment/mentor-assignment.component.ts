@@ -14,6 +14,7 @@ import {
 import {MentorDetailsComponent} from '../details/mentor-details.component';
 import {HttpClient} from "@angular/common/http";
 import {ConfigService} from "../../../services/config.service";
+import {MessageService} from "../../../services/messages/message.service";
 
 
 @Component({
@@ -48,6 +49,7 @@ export class MentorAssignmentComponent {
                 private httpClient: HttpClient,
                 private mentorService: MentorService,
                 private matDialog: MatDialog,
+                private messageService: MessageService,
                 private router: Router,
                 private studentSubjectService: StudentSubjectService,
                 private snackBar: MatSnackBar) {
@@ -128,7 +130,6 @@ export class MentorAssignmentComponent {
     }
 
     onAssignMentor(mentor_id, m_email) {
-        console.log(m_email, this.student.email);
         const student_subject = {
             mentor_id: mentor_id,
             start_date: this.today,
@@ -142,14 +143,26 @@ export class MentorAssignmentComponent {
         this.studentSubjectService.editStudentSubject(this.student_subject_id, student_subject).then((result) => {
             this.router.navigate(['/dashboard']);
 
-            this.httpClient.post(this.url + '/send-email', {
-                s_email: this.student.email,
-                m_email: m_email,
-                c_email: this.student.cm_email
-            }).subscribe((val) => {
+            // this.httpClient.post(this.url + '/send-email', {
+            //     s_email: this.student.email,
+            //     m_email: m_email,
+            //     c_email: this.student.cm_email
+            // }).subscribe((val) => {
+            //
+            // });
 
-            });
             this.snackBar.open('Mentor assigned', null, {duration: 1500});
+            this.messageService.sendNotification({
+                title: 'Class Notification',
+                message: 'Your ' + this.subject.name + ' class starts on ' + student_subject.start_date,
+                user: this.student._id
+            }).subscribe(d=> {});
+
+            this.messageService.sendNotification({
+                title: 'Class Notification',
+                message: 'Your ' + this.subject.name + ' class starts on ' + student_subject.start_date,
+                user: mentor_id
+            }).subscribe(d=> {});
 
         }, (err) => {
             console.log(err);
@@ -165,11 +178,9 @@ export class MentorAssignmentComponent {
     }
 
     openDialog(mentor) {
-        // console.log(mentor);
         const dialogRef = this.matDialog.open(MentorDetailsComponent, {data: mentor});
 
         dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
         });
     }
 

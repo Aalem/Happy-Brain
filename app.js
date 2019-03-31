@@ -29,6 +29,7 @@ const student_subject = require('./routes/student_subject');
 const mentor_subject = require('./routes/mentor_subject');
 const mentoring_meeting = require('./routes/mentoring_meeting');
 const survey = require('./routes/surveys');
+const message = require('./routes/messages');
 
 const port = 3000;
 //Cors middleware
@@ -69,6 +70,7 @@ app.use('/student-subject', student_subject);
 app.use('/mentor-subject', mentor_subject);
 app.use('/mentoring-meeting', mentoring_meeting);
 app.use('/survey', survey);
+app.use('/message', message);
 
 //index routes
 app.get('/', function (req, res) {

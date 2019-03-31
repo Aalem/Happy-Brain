@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {ValidateService} from '../../../../services/validate.service';
 import {StudentService} from '../../../../services/student.service';
 import {MatRadioChange, MatSnackBar} from '@angular/material';
+import {MessageService} from "../../../../services/messages/message.service";
 
 @Component({
     selector: 'app-student-register',
@@ -40,6 +41,7 @@ export class StudentRegisterComponent {
     constructor(private validateService: ValidateService,
                 private studentService: StudentService,
                 private router: Router,
+                private messageService: MessageService,
                 private snackBar: MatSnackBar) {
     }
 
@@ -72,7 +74,7 @@ export class StudentRegisterComponent {
             cm_email: this.cm_email,
             address: this.address,
             mentoring_address: this.mentoring_address
-        }
+        };
 
         // Required Fields
         if (!this.validateService.validateRegister(student)) {
@@ -91,6 +93,13 @@ export class StudentRegisterComponent {
         // Register user
         this.studentService.registerStudent(student).subscribe(data => {
             if (data['success']) {
+                const Message = {
+                    title: 'New Student Registered',
+                    message: student.name + ' ' + student.last_name + ' has registered to the system, as Student, and needs to be verified!',
+                    user: '1'
+                };
+
+                this.messageService.sendNotification(Message).subscribe(d => {console.log(d); });
                 this.snackBar.open('You are now registered and can now login', null, {duration: 3000});
                 this.router.navigate(['/login']);
             } else {

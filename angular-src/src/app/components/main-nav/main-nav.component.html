@@ -14,6 +14,9 @@
             <a mat-list-item (click)="goToDashboard()"  routerLinkActive="active">{{authService.getUserType()=='mentor'?'My Students':authService.getUserType()=='student'?'My Mentors':'Dashboard'}}</a>
             <a mat-list-item *ngIf="authService.getUserType()=='admin'"  routerLinkActive="active" [routerLink]="['/subject-list']">Subjects</a>
             <a mat-list-item  *ngIf="authService.getUserType()=='mentor'" [routerLink]="['/select-subject']" routerLinkActive="active">My Subjects</a>
+            <a mat-list-item  [routerLink]="['/notifications']" routerLinkActive="active">
+                <p matBadge="{{notifications>0?notifications:''}}" matBadgeOverlap="false" matBadgeColor="accent">Notifications</p>
+            </a>
             <mat-expansion-panel class="sidenav" style="box-shadow: none;">
                 <mat-expansion-panel-header style="padding-left: 0px !important;">
                     <a mat-list-item>Resources</a>

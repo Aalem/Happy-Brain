@@ -7,6 +7,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FileUploader} from 'ng2-file-upload';
 import {saveAs} from 'file-saver';
 import {ConfigService} from "../../../../services/config.service";
+import {MessageService} from "../../../../services/messages/message.service";
 
 const uri = 'mentor_subjects/upload';
 
@@ -53,6 +54,7 @@ export class MentorRegisterComponent implements OnInit {
                 private mentorService: MentorService,
                 private router: Router,
                 private config: ConfigService,
+                private messageService: MessageService,
                 private snackBar: MatSnackBar,
                 private validateService: ValidateService) {
         this.uploader = new FileUploader({url: config.getUrl() + '/' + uri});
@@ -133,6 +135,13 @@ export class MentorRegisterComponent implements OnInit {
 
         this.mentorService.registerMentor(mentor).subscribe(data => {
             if (data['success']) {
+                const Message = {
+                    title: 'New Mentor Registered',
+                    message: mentor.name + ' has registered to the system, as Mentor, and needs to be verified!',
+                    user: '1'
+                };
+
+                this.messageService.sendNotification(Message).subscribe(d => {console.log(d); });
                 this.snackBar.open('New mentor added', null, {duration: 3000});
                 this.router.navigate(['/login']);
             } else {
